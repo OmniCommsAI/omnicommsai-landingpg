@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import LogoMarquee from '@/components/LogoMarquee';
 import FeaturesSection from '@/components/FeaturesSection';
+import UniqueFeatures from '@/components/UniqueFeatures';
 import WaveGoodbyeSection from '@/components/WaveGoodbyeSection';
 import StatsSection from '@/components/StatsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -17,6 +18,7 @@ const Index = () => {
       <HeroSection />
       <LogoMarquee />
       <FeaturesSection />
+      <UniqueFeatures />
       <WaveGoodbyeSection />
       <StatsSection />
       <TestimonialsSection />

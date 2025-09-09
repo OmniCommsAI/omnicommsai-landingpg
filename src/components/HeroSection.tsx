@@ -8,46 +8,46 @@ const HeroSection = () => {
       {/* Complex gradient background */}
       <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden">
         {/* Left abstract shapes */}
-        <div className="absolute top-0 left-[-120px] w-[378px] h-[571px] blur-[2px]">
-          <div className="relative w-[420px] h-[571px] left-[-42px]">
+        <div className="absolute top-0 left-[-60px] sm:left-[-120px] w-[200px] sm:w-[300px] lg:w-[378px] h-[300px] sm:h-[450px] lg:h-[571px] blur-[1px] sm:blur-[2px]">
+          <div className="relative w-[220px] sm:w-[320px] lg:w-[420px] h-[300px] sm:h-[450px] lg:h-[571px] left-[-20px] sm:left-[-42px]">
             {/* Blurred circles - first layer */}
-            <div className="absolute w-[207px] h-[207px] top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[200px]"></div>
-            <div className="absolute w-[207px] h-[207px] top-[363px] left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[200px]"></div>
-            <div className="absolute w-[207px] h-[207px] top-0 left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[200px]"></div>
-            <div className="absolute w-[207px] h-[207px] top-[80px] left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[200px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[100px] sm:top-[155px] lg:top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[180px] sm:w-[270px] lg:top-[363px] left-[18px] sm:left-[28px] lg:left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-0 left-[106px] sm:left-[160px] lg:left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[40px] sm:top-[60px] lg:top-[80px] left-[4px] sm:left-[7px] lg:left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
             
             {/* Blurred circles - second layer */}
-            <div className="absolute w-[207px] h-[207px] top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[100px]"></div>
-            <div className="absolute w-[207px] h-[207px] top-[363px] left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[100px]"></div>
-            <div className="absolute w-[207px] h-[207px] top-0 left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[100px]"></div>
-            <div className="absolute w-[207px] h-[207px] top-[80px] left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[100px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[100px] sm:top-[155px] lg:top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[50px] sm:blur-[75px] lg:blur-[100px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[180px] sm:top-[270px] lg:top-[363px] left-[18px] sm:left-[28px] lg:left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[50px] sm:blur-[75px] lg:blur-[100px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-0 left-[106px] sm:left-[160px] lg:left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[50px] sm:blur-[75px] lg:blur-[100px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[40px] sm:top-[60px] lg:top-[80px] left-[4px] sm:left-[7px] lg:left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[50px] sm:blur-[75px] lg:blur-[100px]"></div>
           </div>
         </div>
 
         {/* Right abstract shapes */}
-        <div className="absolute top-0 right-[-120px] w-[378px] h-[571px] blur-[2px] rotate-180">
-          <div className="relative w-[420px] h-[571px] left-[-42px]">
+        <div className="absolute top-0 right-[-60px] sm:right-[-120px] w-[200px] sm:w-[300px] lg:w-[378px] h-[300px] sm:h-[450px] lg:h-[571px] blur-[1px] sm:blur-[2px] rotate-180">
+          <div className="relative w-[220px] sm:w-[320px] lg:w-[420px] h-[300px] sm:h-[450px] lg:h-[571px] left-[-20px] sm:left-[-42px]">
             {/* Blurred circles - first layer */}
-            <div className="absolute w-[207px] h-[207px] top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[200px]"></div>
-            <div className="absolute w-[207px] h-[207px] top-[363px] left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[200px]"></div>
-            <div className="absolute w-[207px] h-[207px] top-0 left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[200px]"></div>
-            <div className="absolute w-[207px] h-[207px] top-[80px] left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[200px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[100px] sm:top-[155px] lg:top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[180px] sm:top-[270px] lg:top-[363px] left-[18px] sm:left-[28px] lg:left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-0 left-[106px] sm:left-[160px] lg:left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
+            <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[40px] sm:top-[60px] lg:top-[80px] left-[4px] sm:left-[7px] lg:left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
             
             {/* Rotated layer */}
-            <div className="absolute w-[420px] h-[571px] top-[20px] left-[-50px] -rotate-[25deg]">
-              <div className="absolute w-[207px] h-[207px] top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[100px]"></div>
-              <div className="absolute w-[207px] h-[207px] top-[363px] left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[100px]"></div>
-              <div className="absolute w-[207px] h-[207px] top-0 left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[100px]"></div>
-              <div className="absolute w-[207px] h-[207px] top-[80px] left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[100px]"></div>
+            <div className="absolute w-[220px] sm:w-[320px] lg:w-[420px] h-[300px] sm:h-[450px] lg:h-[571px] top-[10px] sm:top-[15px] lg:top-[20px] left-[-25px] sm:left-[38px] lg:left-[-50px] -rotate-[25deg]">
+              <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[100px] sm:top-[155px] lg:top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[50px] sm:blur-[75px] lg:blur-[100px]"></div>
+              <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[180px] sm:top-[270px] lg:top-[363px] left-[18px] sm:left-[28px] lg:left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[50px] sm:blur-[75px] lg:blur-[100px]"></div>
+              <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-0 left-[106px] sm:left-[160px] lg:left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[50px] sm:blur-[75px] lg:blur-[100px]"></div>
+              <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[40px] sm:top-[60px] lg:top-[80px] left-[4px] sm:left-[7px] lg:left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[50px] sm:blur-[75px] lg:blur-[100px]"></div>
             </div>
           </div>
         </div>
 
         {/* Top gradient */}
-        <div className="absolute inset-x-0 top-0 h-[414px] bg-gradient-to-b from-[rgb(242,240,238)] to-transparent"></div>
+        <div className="absolute inset-x-0 top-0 h-[200px] sm:h-[300px] lg:h-[414px] bg-gradient-to-b from-[rgb(242,240,238)] to-transparent"></div>
 
-        {/* Vertical grid lines */}
-        <div className="absolute inset-0 flex">
+        {/* Vertical grid lines - hidden on mobile for better performance */}
+        <div className="absolute inset-0 hidden sm:flex">
           {Array.from({ length: 24 }).map((_, i) => (
             <div 
               key={i}
@@ -59,12 +59,12 @@ const HeroSection = () => {
         {/* Bottom gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[rgb(242,240,238)] to-transparent"></div>
 
-        {/* Noise overlay */}
+        {/* Noise overlay - reduced on mobile */}
         <div 
-          className="absolute inset-0 opacity-75 mix-blend-overlay"
+          className="absolute inset-0 opacity-50 sm:opacity-75 mix-blend-overlay"
           style={{
             backgroundImage: 'url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png")',
-            backgroundSize: '128px',
+            backgroundSize: '64px sm:128px',
             backgroundRepeat: 'repeat'
           }}
         ></div>

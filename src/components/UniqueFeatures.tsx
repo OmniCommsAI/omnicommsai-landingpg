@@ -78,9 +78,9 @@ const UniqueFeatures = () => {
               const Icon = feature.icon;
               const isActive = activeIndex === index;
               const zIndex = isActive ? 30 : 20 - index;
-              const translateY = isActive ? 0 : index * 40;
-              const rotateX = isActive ? 0 : index * -5;
-              const scale = isActive ? 1 : 0.95 - index * 0.05;
+              const translateY = isActive ? 0 : index * 20; // Reduced from 40 to 20
+              const rotateX = isActive ? 0 : index * -3; // Reduced rotation
+              const scale = isActive ? 1 : 0.98 - index * 0.02; // Less scale difference
               
               return (
                 <div 
@@ -175,10 +175,10 @@ const UniqueFeatures = () => {
           </div>
 
           {/* Decorative element */}
-          <div className="absolute top-52 right-10 w-36 h-26 z-10 opacity-30">
+          <div className="absolute top-40 right-20 w-36 h-26 z-10">
             <img
               src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
-              alt="Decorative element"
+              alt="Click me arrow"
               className="w-full h-full object-cover"
             />
           </div>

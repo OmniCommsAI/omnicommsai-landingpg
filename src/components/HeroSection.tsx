@@ -5,16 +5,78 @@ import heroDashboard from '@/assets/hero-dashboard.png';
 const HeroSection = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0" 
-        style={{
-          backgroundImage: 'url(/lovable-uploads/2c75a0ef-f8c0-4464-9c6f-72c60eabd14f.png)',
-          backgroundSize: 'auto',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      ></div>
+      {/* Complex gradient background */}
+      <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden">
+        {/* Left abstract shapes */}
+        <div className="absolute top-0 left-[-120px] w-[378px] h-[571px] blur-[2px]">
+          <div className="relative w-[420px] h-[571px] left-[-42px]">
+            {/* Blurred circles - first layer */}
+            <div className="absolute w-[207px] h-[207px] top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[200px]"></div>
+            <div className="absolute w-[207px] h-[207px] top-[363px] left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[200px]"></div>
+            <div className="absolute w-[207px] h-[207px] top-0 left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[200px]"></div>
+            <div className="absolute w-[207px] h-[207px] top-[80px] left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[200px]"></div>
+            
+            {/* Blurred circles - second layer */}
+            <div className="absolute w-[207px] h-[207px] top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[100px]"></div>
+            <div className="absolute w-[207px] h-[207px] top-[363px] left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[100px]"></div>
+            <div className="absolute w-[207px] h-[207px] top-0 left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[100px]"></div>
+            <div className="absolute w-[207px] h-[207px] top-[80px] left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[100px]"></div>
+          </div>
+        </div>
+
+        {/* Right abstract shapes */}
+        <div className="absolute top-0 right-[-120px] w-[378px] h-[571px] blur-[2px] rotate-180">
+          <div className="relative w-[420px] h-[571px] left-[-42px]">
+            {/* Blurred circles - first layer */}
+            <div className="absolute w-[207px] h-[207px] top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[200px]"></div>
+            <div className="absolute w-[207px] h-[207px] top-[363px] left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[200px]"></div>
+            <div className="absolute w-[207px] h-[207px] top-0 left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[200px]"></div>
+            <div className="absolute w-[207px] h-[207px] top-[80px] left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[200px]"></div>
+            
+            {/* Rotated layer */}
+            <div className="absolute w-[420px] h-[571px] top-[20px] left-[-50px] -rotate-[25deg]">
+              <div className="absolute w-[207px] h-[207px] top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[100px]"></div>
+              <div className="absolute w-[207px] h-[207px] top-[363px] left-[37px] rounded-full bg-[rgb(213,17,253)] blur-[100px]"></div>
+              <div className="absolute w-[207px] h-[207px] top-0 left-[213px] rounded-full bg-[rgb(239,123,22)] blur-[100px]"></div>
+              <div className="absolute w-[207px] h-[207px] top-[80px] left-[9px] rounded-full bg-[rgb(255,47,47)] blur-[100px]"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Top gradient */}
+        <div className="absolute inset-x-0 top-0 h-[414px] bg-gradient-to-b from-[rgb(242,240,238)] to-transparent"></div>
+
+        {/* Vertical grid lines */}
+        <div className="absolute inset-0 flex">
+          {Array.from({ length: 24 }).map((_, i) => (
+            <div 
+              key={i}
+              className="flex-1 h-full backdrop-blur-[25px] bg-gradient-to-r from-[rgba(242,240,238,0.2)] to-transparent border-r border-white/10"
+            ></div>
+          ))}
+        </div>
+
+        {/* Bottom gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgb(242,240,238)] to-transparent"></div>
+
+        {/* Noise overlay */}
+        <div 
+          className="absolute inset-0 opacity-75 mix-blend-overlay"
+          style={{
+            backgroundImage: 'url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png")',
+            backgroundSize: '128px',
+            backgroundRepeat: 'repeat'
+          }}
+        ></div>
+
+        {/* Mask */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            mask: 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(0,0,0) 37%)'
+          }}
+        ></div>
+      </div>
       
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">

@@ -69,54 +69,56 @@ const UniqueFeatures = () => {
             </p>
           </div>
 
-          {/* Features Cards */}
-          <div className="w-full max-w-4xl relative">
-            <div className="space-y-12">
+          {/* Features Cards - Stacked Layout */}
+          <div className="w-full max-w-6xl relative">
+            <div className="space-y-6">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
                   <div 
                     key={feature.category}
-                    className="relative"
+                    className="relative transition-all duration-300"
                     style={{ opacity: feature.opacity }}
                   >
-                    <div className="card-elevated bg-white rounded-xl border-2 border-white shadow-lg overflow-hidden">
-                      {/* Card Header */}
-                      <div className="bg-muted p-6 rounded-t-xl">
-                        <div className="flex items-center gap-4">
-                          <div className="p-3 rounded-lg" style={{ color: feature.color }}>
-                            <Icon className="w-8 h-8" />
+                    <div className="bg-white rounded-xl shadow-lg border-2 border-white overflow-hidden">
+                      <div className="flex">
+                        {/* Left Side - Content */}
+                        <div className="flex-1 p-8">
+                          {/* Category Header */}
+                          <div className="flex items-center gap-3 mb-6">
+                            <div className="p-2 rounded-lg" style={{ color: feature.color }}>
+                              <Icon className="w-6 h-6" />
+                            </div>
+                            <span className="text-sm font-medium text-muted-foreground">
+                              {feature.category}
+                            </span>
                           </div>
-                          <h3 className="text-lg font-medium text-foreground">
-                            {feature.category}
-                          </h3>
-                        </div>
-                      </div>
-
-                      {/* Card Content */}
-                      <div className="bg-white p-6">
-                        <div className="flex flex-col lg:flex-row gap-8">
-                          <div className="flex-1">
-                            <h4 className="text-2xl font-bold text-foreground mb-4">
+                          
+                          {/* Main Content */}
+                          <div className="max-w-lg">
+                            <h3 className="text-3xl font-bold text-foreground mb-4">
                               {feature.title}
-                            </h4>
-                            <p className="text-muted-foreground leading-relaxed">
+                            </h3>
+                            <p className="text-muted-foreground leading-relaxed text-lg">
                               {feature.description}
                             </p>
                           </div>
-                          
-                          {/* Feature Image */}
-                          <div className="lg:w-80">
+                        </div>
+
+                        {/* Right Side - Interface Preview */}
+                        <div className="flex-1 p-8 flex items-center justify-center">
+                          <div className="w-full max-w-lg">
                             <div 
-                              className="h-64 bg-gradient-to-b from-muted to-transparent rounded-lg overflow-hidden"
+                              className="bg-gradient-to-b from-muted/50 to-transparent rounded-lg overflow-hidden"
                               style={{
                                 mask: 'linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 49%)'
                               }}
                             >
                               <img
                                 src={feature.image}
-                                alt={feature.category}
-                                className="w-full h-full object-contain"
+                                alt={`${feature.category} interface`}
+                                className="w-full h-auto object-contain"
+                                style={{ minHeight: '300px' }}
                               />
                             </div>
                           </div>

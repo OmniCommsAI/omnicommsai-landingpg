@@ -98,7 +98,7 @@ const ProductOverviewSection = () => {
                     <div className="absolute -right-4 top-0 bottom-0 w-px hidden md:block">
                       {index === 1 ? (
                         // Center divider with colorful gradient
-                        <div className="w-full h-full bg-gradient-to-b from-red-500 via-orange-500 via-purple-500 to-pink-500"></div>
+                        <div className="w-full bg-gradient-to-b from-red-500 via-orange-500 via-purple-500 to-pink-500" style={{ height: 'calc(100% + 6rem)' }}></div>
                       ) : (
                         // Regular gradient dividers
                         <div className="w-full h-full bg-gradient-to-b from-transparent via-zinc-700 to-transparent"></div>

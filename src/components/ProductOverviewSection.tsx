@@ -112,12 +112,12 @@ const ProductOverviewSection = () => {
             {/* Main Dashboard Image */}
             <div className="w-full aspect-[1.6/1] relative overflow-visible rounded-2xl z-10">
               {/* Gradient Border */}
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl p-1">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl p-5">
                 <div className="w-full h-full bg-white rounded-xl overflow-visible relative">
                   <img 
                     src="/lovable-uploads/9d4cb87e-2329-4405-978a-f5e9367968d3.png" 
                     alt="Dashboard Interface" 
-                    className="w-full h-full object-cover rounded-2xl"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
@@ -131,7 +131,7 @@ const ProductOverviewSection = () => {
                   <img 
                     src="https://framerusercontent.com/images/59dXbAMOkWcJevijvnmRv2OiOAE.png?width=981&height=1063" 
                     alt="Floating dashboard element" 
-                    style={{ display: 'block', width: '245px', height: '265px', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
+                    style={{ display: 'block', width: '445px', height: '265px', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
                   />
                 </div>
               </div>

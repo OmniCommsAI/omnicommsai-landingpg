@@ -23,7 +23,7 @@ const LogoMarquee = () => {
           <div 
             className="flex animate-scroll-x space-x-16"
             style={{
-              maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 15%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%)'
+              maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%)'
             }}
           >
             {/* First set of logos */}

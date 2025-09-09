@@ -140,69 +140,44 @@ const WaveGoodbyeSection = () => {
               </div>
             </div>
 
-            {/* Decorative line behind stats */}
-            <div className="ssr-variant hidden-1mhxy22">
-              <div className="framer-h5gmnp hidden-vcrtlr" data-framer-name="Abstract Design">
-                <div style={{position:'absolute',borderRadius:'inherit',top:0,right:0,bottom:0,left:0}} data-framer-background-image-wrapper="true">
-                  <img 
-                    decoding="auto" 
-                    width="1240" 
-                    height="10" 
-                    sizes="min(100vw - 80px, 1240px)" 
-                    srcSet="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=512&width=1240&height=10 512w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=1024&width=1240&height=10 1024w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10 1240w" 
-                    src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10" 
-                    alt="" 
-                    style={{display:'block',width:'100%',height:'100%',borderRadius:'inherit',objectPosition:'center',objectFit:'cover'}}
-                  />
-                </div>
-              </div>
+            {/* Decorative line behind stats - positioned absolutely */}
+            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-0" style={{height: '10px'}}>
+              <img 
+                decoding="auto" 
+                width="1240" 
+                height="10" 
+                sizes="min(100vw - 80px, 1240px)" 
+                srcSet="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=512&width=1240&height=10 512w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=1024&width=1240&height=10 1024w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10 1240w" 
+                src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10" 
+                alt="" 
+                className="w-full h-full object-cover"
+              />
             </div>
 
-            {/* Stats Container - positioned to intersect with the line */}
-            <div className="flex flex-wrap justify-center gap-16 -mt-16">
+            {/* Stats Container */}
+            <div className="flex justify-center items-center gap-16 relative z-10">
               {/* Team Collaborations */}
-              <div className="flex flex-col items-center gap-8 z-10">
-                <div className="flex items-center gap-2">
+              <div className="flex flex-col items-center gap-4">
+                <div className="flex items-center gap-1">
                   <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(-9deg)' }}>
                     <img 
                       src="https://framerusercontent.com/images/bOZe3ThmdFaGjs87Gu7Fup6M4.png"
                       alt="Avatar"
-                      className="w-full h-full object-cover rounded block"
-                      style={{ 
-                        width: '100%', 
-                        height: '100%', 
-                        borderRadius: 'inherit', 
-                        objectPosition: 'center', 
-                        objectFit: 'cover' 
-                      }}
+                      className="w-full h-full object-cover rounded"
                     />
                   </div>
                   <div className="w-7 h-7 rounded border border-white">
                     <img 
                       src="https://framerusercontent.com/images/70rKUELh1Zj5uRxlcEji6neFc.png"
                       alt="Avatar" 
-                      className="w-full h-full object-cover rounded block"
-                      style={{ 
-                        width: '100%', 
-                        height: '100%', 
-                        borderRadius: 'inherit', 
-                        objectPosition: 'center', 
-                        objectFit: 'fill' 
-                      }}
+                      className="w-full h-full object-cover rounded"
                     />
                   </div>
                   <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(9deg)' }}>
                     <img 
                       src="https://framerusercontent.com/images/czofpZZGkqkn3CC2oLdJdIIzZ6g.png"
                       alt="Avatar"
-                      className="w-full h-full object-cover rounded block"
-                      style={{ 
-                        width: '100%', 
-                        height: '100%', 
-                        borderRadius: 'inherit', 
-                        objectPosition: 'center', 
-                        objectFit: 'cover' 
-                      }}
+                      className="w-full h-full object-cover rounded"
                     />
                   </div>
                 </div>
@@ -213,27 +188,11 @@ const WaveGoodbyeSection = () => {
               </div>
 
               {/* Tasks Completed */}
-              <div className="flex flex-col items-center gap-8 z-10">
+              <div className="flex flex-col items-center gap-4">
                 <div className="relative">
-                  <div className="absolute inset-0 rounded-full">
-                    <img 
-                      src="https://framerusercontent.com/images/YJNYG46InTZzZfc46sZp4bmlo8.png"
-                      alt="Background"
-                      className="w-full h-full object-cover rounded-full block"
-                      style={{ 
-                        width: '100%', 
-                        height: '100%', 
-                        borderRadius: 'inherit', 
-                        objectPosition: 'center', 
-                        objectFit: 'cover' 
-                      }}
-                    />
-                  </div>
-                  <div className="relative p-1">
-                    <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
-                      <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
-                        <CheckCircle className="w-7 h-7 text-white" />
-                      </div>
+                  <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
+                    <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
+                      <CheckCircle className="w-7 h-7 text-white" />
                     </div>
                   </div>
                 </div>
@@ -244,27 +203,11 @@ const WaveGoodbyeSection = () => {
               </div>
 
               {/* Projects Managed */}
-              <div className="flex flex-col items-center gap-8 z-10">
+              <div className="flex flex-col items-center gap-4">
                 <div className="relative">
-                  <div className="absolute inset-0 rounded-full">
-                    <img 
-                      src="https://framerusercontent.com/images/YJNYG46InTZzZfc46sZp4bmlo8.png"
-                      alt="Background"
-                      className="w-full h-full object-cover rounded-full block"
-                      style={{ 
-                        width: '100%', 
-                        height: '100%', 
-                        borderRadius: 'inherit', 
-                        objectPosition: 'center', 
-                        objectFit: 'cover' 
-                      }}
-                    />
-                  </div>
-                  <div className="relative p-1">
-                    <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
-                      <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
-                        <Briefcase className="w-7 h-7 text-white" />
-                      </div>
+                  <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
+                    <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
+                      <Briefcase className="w-7 h-7 text-white" />
                     </div>
                   </div>
                 </div>
@@ -275,27 +218,11 @@ const WaveGoodbyeSection = () => {
               </div>
 
               {/* Successful Integrations */}
-              <div className="flex flex-col items-center gap-8 z-10">
+              <div className="flex flex-col items-center gap-4">
                 <div className="relative">
-                  <div className="absolute inset-0 rounded-full">
-                    <img 
-                      src="https://framerusercontent.com/images/YJNYG46InTZzZfc46sZp4bmlo8.png"
-                      alt="Background"
-                      className="w-full h-full object-cover rounded-full block"
-                      style={{ 
-                        width: '100%', 
-                        height: '100%', 
-                        borderRadius: 'inherit', 
-                        objectPosition: 'center', 
-                        objectFit: 'cover' 
-                      }}
-                    />
-                  </div>
-                  <div className="relative p-1">
-                    <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
-                      <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
-                        <Zap className="w-7 h-7 text-white" />
-                      </div>
+                  <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
+                    <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
+                      <Zap className="w-7 h-7 text-white" />
                     </div>
                   </div>
                 </div>

@@ -28,7 +28,7 @@ const WaveGoodbyeSection = () => {
         <div className="flex flex-col items-center gap-24">
           
           {/* Wave Goodbye Container */}
-          <div className="relative flex items-center justify-center gap-5 max-w-4xl w-full">
+          <div className="relative flex items-center max-w-6xl w-full min-h-[400px]">
             {/* Left decorative element */}
             <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
               <img 
@@ -39,7 +39,7 @@ const WaveGoodbyeSection = () => {
             </div>
 
             {/* Right decorative element */}
-            <div className="absolute -right-16 top-1/2 -translate-y-1/2 w-32 h-32 z-10">
+            <div className="absolute top-8 right-8 w-32 h-32 z-10">
               <img 
                 src="https://framerusercontent.com/images/QoTZyI7CkM97mFm0elr4g0yNc.svg" 
                 alt="Decorative element"
@@ -47,27 +47,28 @@ const WaveGoodbyeSection = () => {
               />
             </div>
 
-            {/* Main heading */}
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground whitespace-nowrap">
-              Wave goodbye to
-            </h2>
+            {/* Main heading - positioned left */}
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20">
+              <h2 className="text-5xl md:text-6xl font-bold text-foreground whitespace-nowrap">
+                Wave goodbye to
+              </h2>
+            </div>
 
-            {/* Animated text container */}
-            <div className="relative flex-1 min-w-0">
-              {/* Dark overlay top */}
-              <div className="absolute inset-x-0 top-0 h-16 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
-              
-              {/* Animated text area */}
-              <div 
-                className="relative h-80 overflow-hidden"
-                style={{
-                  mask: 'linear-gradient(0deg, rgba(0,0,0,0) -6%, rgb(0,0,0) 48%, rgba(0,0,0,0) 100%)'
-                }}
-              >
-                <div className="flex flex-col items-start gap-2 animate-scroll-vertical">
+            {/* Background faded text */}
+            <div className="absolute inset-0 flex flex-col justify-center items-center opacity-30">
+              <div className="text-4xl md:text-5xl font-bold text-muted-foreground mb-4">slow progress</div>
+              <div className="text-4xl md:text-5xl font-bold text-muted-foreground mb-8">wasted time</div>
+              <div className="text-4xl md:text-5xl font-bold text-muted-foreground mt-8">task overload</div>
+              <div className="text-4xl md:text-5xl font-bold text-muted-foreground mt-4">missed deadlines</div>
+            </div>
+
+            {/* Animated gradient text - positioned center-right */}
+            <div className="absolute right-8 top-1/2 -translate-y-1/2 z-20">
+              <div className="overflow-hidden h-20">
+                <div className="animate-scroll-vertical">
                   {[...waveGoodbyeItems, ...waveGoodbyeItems].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2 py-4">
-                      <h2 className="text-5xl md:text-6xl font-bold">
+                    <div key={index} className="h-20 flex items-center">
+                      <h2 className="text-5xl md:text-6xl font-bold whitespace-nowrap">
                         <span 
                           className="bg-gradient-to-r from-[rgb(255,46,46)] via-[rgb(238,123,22)] via-[rgb(138,67,225)] to-[rgb(213,16,252)] bg-clip-text text-transparent"
                           style={{
@@ -81,9 +82,6 @@ const WaveGoodbyeSection = () => {
                   ))}
                 </div>
               </div>
-              
-              {/* Dark overlay bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-16 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
             </div>
           </div>
 

@@ -1,9 +1,39 @@
 import { Check, Folder, Crown, Building, ToggleLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const PricingSection = () => {
   const [isYearly, setIsYearly] = useState(false);
+  const [visibleCards, setVisibleCards] = useState<boolean[]>([]);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Trigger staggered animation for cards
+            plans.forEach((_, index) => {
+              setTimeout(() => {
+                setVisibleCards(prev => {
+                  const newVisible = [...prev];
+                  newVisible[index] = true;
+                  return newVisible;
+                });
+              }, index * 150);
+            });
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const plans = [
     {
@@ -57,26 +87,26 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-beige-light">
+    <section ref={sectionRef} id="pricing" className="py-24 bg-beige-light overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
           {/* Badge */}
-          <div className="inline-flex items-center bg-white rounded-full px-4 py-2 mb-6 shadow-sm">
+          <div className="inline-flex items-center bg-white rounded-full px-4 py-2 mb-6 shadow-sm animate-fade-in hover:shadow-md transition-all duration-300 hover:scale-105">
             <span className="text-foreground text-sm font-medium">Pricing & Plans</span>
           </div>
           
-          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
+          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Affordable Pricing Plans
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             Flexible, transparent pricing to support your team's productivity and growth at every stage.
           </p>
           
           {/* Billing Toggle */}
-          <div className="inline-flex items-center bg-white rounded-full p-1 mb-8 shadow-sm">
+          <div className="inline-flex items-center bg-white rounded-full p-1 mb-8 shadow-sm animate-fade-in hover:shadow-md transition-all duration-300" style={{ animationDelay: '0.6s' }}>
             <button 
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${
                 !isYearly 
                   ? 'bg-foreground text-background shadow-sm' 
                   : 'text-muted-foreground hover:text-foreground'
@@ -87,13 +117,13 @@ const PricingSection = () => {
             </button>
             <div className="relative mx-2">
               <ToggleLeft 
-                className={`h-6 w-6 text-foreground transition-transform duration-300 ${
+                className={`h-6 w-6 text-foreground transition-transform duration-500 hover:scale-110 ${
                   isYearly ? 'rotate-180' : ''
                 }`}
               />
             </div>
             <button 
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${
                 isYearly 
                   ? 'bg-foreground text-background shadow-sm' 
                   : 'text-muted-foreground hover:text-foreground'
@@ -109,18 +139,25 @@ const PricingSection = () => {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
+            const isVisible = visibleCards[index];
             return (
               <div 
                 key={plan.name}
-                className={`relative animate-fade-in-up overflow-hidden rounded-[20px]`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`relative overflow-hidden rounded-[20px] transition-all duration-700 hover:scale-105 hover:-translate-y-2 group cursor-pointer ${
+                  isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-8'
+                } ${plan.popular ? 'scale-105 shadow-2xl' : 'hover:shadow-xl'}`}
+                style={{ 
+                  transitionDelay: isVisible ? `${index * 150}ms` : '0ms'
+                }}
               >
                 {/* Main Card */}
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden group-hover:shadow-2xl transition-all duration-500">
                   <div className="p-8">
                     {/* Icon */}
-                    <div className="w-16 h-16 bg-beige rounded-2xl flex items-center justify-center mb-6">
-                      <Icon className="h-8 w-8 text-foreground" />
+                    <div className="w-16 h-16 bg-beige rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                      <Icon className="h-8 w-8 text-foreground transition-all duration-300 group-hover:scale-110" />
                     </div>
                     
                     {/* Content */}
@@ -134,7 +171,7 @@ const PricingSection = () => {
                       
                       {/* Price */}
                       <div className="flex items-baseline mb-6">
-                        <span className="text-5xl font-bold text-foreground">
+                        <span className="text-5xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                           {plan.price}
                         </span>
                         <span className="text-muted-foreground ml-2">
@@ -143,19 +180,23 @@ const PricingSection = () => {
                       </div>
                       
                       {/* CTA Button */}
-                      <Button className="w-full">
+                      <Button className="w-full hover:scale-105 transition-all duration-300 hover:shadow-lg">
                         {plan.cta}
                       </Button>
                     </div>
                   </div>
                   
                   {/* Features Section */}
-                  <div className="bg-beige px-8 py-6">
+                  <div className="bg-beige px-8 py-6 group-hover:bg-beige-dark transition-colors duration-300">
                     <div className="space-y-4">
                       {plan.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center">
-                          <Check className="h-5 w-5 text-foreground mr-3 flex-shrink-0" />
-                          <span className="text-foreground font-medium text-sm">
+                        <div 
+                          key={featureIndex} 
+                          className="flex items-center opacity-80 group-hover:opacity-100 transition-all duration-300 hover:translate-x-1"
+                          style={{ transitionDelay: `${featureIndex * 50}ms` }}
+                        >
+                          <Check className="h-5 w-5 text-foreground mr-3 flex-shrink-0 transition-all duration-300 group-hover:text-primary group-hover:scale-110" />
+                          <span className="text-foreground font-medium text-sm transition-colors duration-300">
                             {feature}
                           </span>
                         </div>
@@ -167,8 +208,13 @@ const PricingSection = () => {
                 {/* Gradient accent for Pro plan */}
                 {plan.popular && (
                   <>
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-orange-500 via-purple-600 to-pink-600 rounded-b-2xl"></div>
-                    <div className="absolute bottom-1 left-1 right-1 h-1 bg-beige rounded-b-2xl"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-orange-500 via-purple-600 to-pink-600 rounded-b-2xl group-hover:h-2 transition-all duration-300"></div>
+                    <div className="absolute bottom-1 left-1 right-1 h-1 bg-beige rounded-b-2xl group-hover:bottom-2 transition-all duration-300"></div>
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                      <div className="bg-gradient-to-r from-red-500 via-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                        Most Popular
+                      </div>
+                    </div>
                   </>
                 )}
               </div>
@@ -177,11 +223,11 @@ const PricingSection = () => {
         </div>
 
         {/* Startup Program */}
-        <div className="text-center">
-          <div className="inline-block bg-beige rounded-xl border border-beige-dark p-6 text-left max-w-md mx-auto">
+        <div className="text-center animate-fade-in" style={{ animationDelay: '1s' }}>
+          <div className="inline-block bg-beige rounded-xl border border-beige-dark p-6 text-left max-w-md mx-auto hover:scale-105 hover:shadow-lg transition-all duration-300 hover:bg-white cursor-pointer group">
             <div className="text-sm text-foreground">
-              <span className="text-muted-foreground">We just launched our startup program - </span>
-              <span className="font-semibold text-foreground">get 6 months free.</span>
+              <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">We just launched our startup program - </span>
+              <span className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">get 6 months free.</span>
             </div>
           </div>
         </div>

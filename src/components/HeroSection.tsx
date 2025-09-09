@@ -7,12 +7,17 @@ const HeroSection = () => {
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Complex gradient background */}
       <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden">
-        {/* Gradient overlay */}
+        {/* Gradient overlay - behind hero image */}
         <div 
-          className="framer-17zx9vw absolute inset-0 rounded-[18px] opacity-20 overflow-visible z-[1]" 
+          className="framer-17zx9vw absolute rounded-[18px] opacity-20 overflow-visible z-0" 
           data-framer-name="Gradiant"
           style={{
-            background: 'linear-gradient(180deg, #ff2f2f, #ef7b16 35.87832457397675%, #8a43e1 69.92196209587513%, #d511fd)'
+            background: 'linear-gradient(180deg, #ff2f2f, #ef7b16 35.87832457397675%, #8a43e1 69.92196209587513%, #d511fd)',
+            top: '40%',
+            left: '50%',
+            width: '120%',
+            height: '60%',
+            transform: 'translate(-50%, -50%)'
           }}
         ></div>
         

@@ -143,21 +143,21 @@ const PricingSection = () => {
             return (
               <div 
                 key={plan.name}
-                className={`relative overflow-hidden rounded-[20px] transition-all duration-700 hover:scale-105 hover:-translate-y-2 group cursor-pointer ${
+                className={`relative overflow-hidden rounded-[20px] transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 group cursor-pointer ${
                   isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-8'
-                } ${plan.popular ? 'scale-105 shadow-2xl' : 'hover:shadow-xl'}`}
+                } ${plan.popular ? 'scale-[1.02] shadow-lg' : ''}`}
                 style={{ 
                   transitionDelay: isVisible ? `${index * 150}ms` : '0ms'
                 }}
               >
                 {/* Main Card */}
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden group-hover:shadow-2xl transition-all duration-500">
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                   <div className="p-8">
                     {/* Icon */}
-                    <div className="w-16 h-16 bg-beige rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                      <Icon className="h-8 w-8 text-foreground transition-all duration-300 group-hover:scale-110" />
+                    <div className="w-16 h-16 bg-beige rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-beige-dark">
+                      <Icon className="h-8 w-8 text-foreground transition-all duration-300" />
                     </div>
                     
                     {/* Content */}
@@ -171,7 +171,7 @@ const PricingSection = () => {
                       
                       {/* Price */}
                       <div className="flex items-baseline mb-6">
-                        <span className="text-5xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                        <span className="text-5xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
                           {plan.price}
                         </span>
                         <span className="text-muted-foreground ml-2">
@@ -180,23 +180,22 @@ const PricingSection = () => {
                       </div>
                       
                       {/* CTA Button */}
-                      <Button className="w-full hover:scale-105 transition-all duration-300 hover:shadow-lg">
+                      <Button className="w-full transition-all duration-300 hover:shadow-md">
                         {plan.cta}
                       </Button>
                     </div>
                   </div>
                   
                   {/* Features Section */}
-                  <div className="bg-beige px-8 py-6 group-hover:bg-beige-dark transition-colors duration-300">
+                  <div className="bg-beige px-8 py-6 transition-colors duration-300 group-hover:bg-beige-dark">
                     <div className="space-y-4">
                       {plan.features.map((feature, featureIndex) => (
                         <div 
                           key={featureIndex} 
-                          className="flex items-center opacity-80 group-hover:opacity-100 transition-all duration-300 hover:translate-x-1"
-                          style={{ transitionDelay: `${featureIndex * 50}ms` }}
+                          className="flex items-center transition-all duration-200"
                         >
-                          <Check className="h-5 w-5 text-foreground mr-3 flex-shrink-0 transition-all duration-300 group-hover:text-primary group-hover:scale-110" />
-                          <span className="text-foreground font-medium text-sm transition-colors duration-300">
+                          <Check className="h-5 w-5 text-foreground mr-3 flex-shrink-0 transition-colors duration-300 group-hover:text-primary" />
+                          <span className="text-foreground font-medium text-sm">
                             {feature}
                           </span>
                         </div>
@@ -208,13 +207,8 @@ const PricingSection = () => {
                 {/* Gradient accent for Pro plan */}
                 {plan.popular && (
                   <>
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-orange-500 via-purple-600 to-pink-600 rounded-b-2xl group-hover:h-2 transition-all duration-300"></div>
-                    <div className="absolute bottom-1 left-1 right-1 h-1 bg-beige rounded-b-2xl group-hover:bottom-2 transition-all duration-300"></div>
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                      <div className="bg-gradient-to-r from-red-500 via-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                        Most Popular
-                      </div>
-                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-orange-500 via-purple-600 to-pink-600 rounded-b-2xl"></div>
+                    <div className="absolute bottom-1 left-1 right-1 h-1 bg-beige rounded-b-2xl"></div>
                   </>
                 )}
               </div>
@@ -224,9 +218,9 @@ const PricingSection = () => {
 
         {/* Startup Program */}
         <div className="text-center animate-fade-in" style={{ animationDelay: '1s' }}>
-          <div className="inline-block bg-beige rounded-xl border border-beige-dark p-6 text-left max-w-md mx-auto hover:scale-105 hover:shadow-lg transition-all duration-300 hover:bg-white cursor-pointer group">
+          <div className="inline-block bg-beige rounded-xl border border-beige-dark p-6 text-left max-w-md mx-auto hover:shadow-md transition-all duration-300 cursor-pointer group">
             <div className="text-sm text-foreground">
-              <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">We just launched our startup program - </span>
+              <span className="text-muted-foreground">We just launched our startup program - </span>
               <span className="font-semibold text-foreground group-hover:text-primary transition-colors duration-300">get 6 months free.</span>
             </div>
           </div>

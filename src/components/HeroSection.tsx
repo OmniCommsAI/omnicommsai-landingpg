@@ -78,7 +78,7 @@ const HeroSection = () => {
         ></div>
       </div>
       
-      <div className="relative mx-auto max-w-7xl px-60 lg:px-8">
+      <div className="relative mx-auto max-w-7xl mt-100 px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           {/* Badge */}
           <div className="inline-flex flex-col items-center text-center animate-fade-in-up">

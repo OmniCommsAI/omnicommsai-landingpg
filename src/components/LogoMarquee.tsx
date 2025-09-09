@@ -3,8 +3,8 @@ import companyLogos from '@/assets/company-logos.png';
 const LogoMarquee = () => {
   // Mock logos for demonstration
   const logos = [
-    { name: 'TechCorp', url: companyLogos },
-    { name: 'InnovateCo', url: companyLogos },
+    { name: 'TechCorp', url: 'https://framerusercontent.com/images/5nYj2i6tU9yLEAOJRESakSDvp0g.svg?width=102&height=24' },
+    { name: 'InnovateCo', url: 'https://framerusercontent.com/images/0EIEmxtogiwTpTo7lEjARtFLa8.svg?width=96&height=24' },
     { name: 'FutureSoft', url: companyLogos },
     { name: 'NextGen', url: companyLogos },
     { name: 'CloudTech', url: companyLogos },

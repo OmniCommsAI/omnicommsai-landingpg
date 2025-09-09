@@ -129,7 +129,7 @@ const ProductOverviewSection = () => {
               >
                 <div style={{ position: 'absolute', borderRadius: 'inherit', top: 0, right: 0, bottom: 0, left: 0 }}>
                   <img 
-                    src="/lovable-uploads/2c75a0ef-f8c0-4464-9c6f-72c60eabd14f.png" 
+                    src="https://framerusercontent.com/images/59dXbAMOkWcJevijvnmRv2OiOAE.png?width=981&height=1063" 
                     alt="Floating dashboard element" 
                     style={{ display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
                   />

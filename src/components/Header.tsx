@@ -13,9 +13,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="absolute top-0 w-full z-50 bg-transparent border-b border-border">
+    <header className="absolute top-0 w-full z-50 bg-transparent border-b border-border mb-16">
       <nav className="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
-        <div className="flex w-full items-center justify-between py-6 mb-8">
+        <div className="flex w-full items-center justify-between py-6">
           <div className="flex items-center">
             <a href="#" className="flex items-center">
               <img 

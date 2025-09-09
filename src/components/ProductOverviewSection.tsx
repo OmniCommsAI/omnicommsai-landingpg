@@ -81,12 +81,12 @@ const ProductOverviewSection = () => {
           </div>
 
           {/* Features Grid */}
-          <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8 mt-12 relative">
+          <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8 mt-12 relative border-t border-zinc-700">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               
               return (
-                <div key={index} className="flex flex-col items-start gap-5 text-left relative">
+                <div key={index} className="flex flex-col items-start gap-5 text-left relative pt-8">
                   <Icon className="w-8 h-8 text-white" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
@@ -95,13 +95,13 @@ const ProductOverviewSection = () => {
                   
                   {/* Vertical divider lines */}
                   {index < 3 && (
-                    <div className="absolute -right-4 top-0 bottom-0 w-px hidden md:block">
+                    <div className="absolute -right-4 -top-0 w-px hidden md:block" style={{ height: 'calc(100% + 8rem)' }}>
                       {index === 1 ? (
                         // Center divider with colorful gradient
-                        <div className="w-full bg-gradient-to-b from-red-500 via-orange-500 via-purple-500 to-pink-500" style={{ height: 'calc(100% + 6rem)' }}></div>
+                        <div className="w-full h-full bg-gradient-to-b from-zinc-700 via-red-500 via-orange-500 via-purple-500 to-pink-500"></div>
                       ) : (
                         // Regular gradient dividers
-                        <div className="w-full h-full bg-gradient-to-b from-transparent via-zinc-700 to-transparent"></div>
+                        <div className="w-full h-full bg-gradient-to-b from-zinc-700 via-zinc-700 to-transparent"></div>
                       )}
                     </div>
                   )}

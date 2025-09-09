@@ -131,7 +131,7 @@ const ProductOverviewSection = () => {
                   <img 
                     src="https://framerusercontent.com/images/59dXbAMOkWcJevijvnmRv2OiOAE.png?width=981&height=1063" 
                     alt="Floating dashboard element" 
-                    style={{ display: 'block', width: '245px', height: '265px', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
+                    style={{ display: 'block', width: '245', height: '265', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
                   />
                 </div>
               </div>

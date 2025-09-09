@@ -109,7 +109,7 @@ const ProductOverviewSection = () => {
             {/* Main Dashboard Image */}
             <div className="w-full aspect-[1.6/1] relative overflow-hidden rounded-2xl">
               {/* Background Gradient Border (larger, behind) */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl opacity-60"></div>
+              <div className="absolute -inset-6 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-3xl opacity-60"></div>
               
               {/* Gradient Border */}
               <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl p-1">

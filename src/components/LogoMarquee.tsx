@@ -28,6 +28,7 @@ const LogoMarquee = () => {
                   <span className="text-muted-foreground font-semibold text-sm">
                     {logo.name}
                   </span>
+                  <img src={logo.url} />
                 </div>
               </div>
             ))}

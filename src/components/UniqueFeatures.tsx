@@ -101,7 +101,7 @@ const UniqueFeatures = () => {
               }
               
               const zIndex = 30 - stackPosition; // Higher number = front
-              const translateY = -(stackPosition * 40);
+              const translateY = -(stackPosition * 80);
               const rotateX = stackPosition * -2;
               const scale = 1 - stackPosition * 0.03;
               

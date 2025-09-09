@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 const UniqueFeatures = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   
   const features = [
     {
@@ -101,7 +102,12 @@ const UniqueFeatures = () => {
               }
               
               const zIndex = 30 - stackPosition; // Higher number = front
-              const translateY = -(stackPosition * 85); // Responsive spacing handled by CSS
+              const baseTranslateY = -(stackPosition * 85);
+              
+              // Apply hover effect: if this card is hovered and not active, slide it up
+              const isHovered = hoveredIndex === index && !isActive;
+              const translateY = isHovered ? baseTranslateY + 30 : baseTranslateY; // Slide up by 30px on hover
+              
               const rotateX = stackPosition * -2;
               const scale = 1 - stackPosition * 0.12; // Slightly more compression for mobile
               const opacity = stackPosition === 0 ? 1 : stackPosition === 1 ? 0.8 : 0.6;
@@ -117,6 +123,8 @@ const UniqueFeatures = () => {
                     transformStyle: 'preserve-3d'
                   }}
                   onClick={() => setActiveIndex(index)}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="bg-white rounded-xl shadow-2xl border-2 border-white overflow-hidden h-full">
                     {/* Top Grey Bar with Icon and Title */}

@@ -103,8 +103,17 @@ const ProductOverviewSection = () => {
 
         {/* Dashboard Image Section with Floating Elements */}
         <div className="w-full max-w-5xl p-4 flex flex-col items-center gap-2.5 relative">
+          {/* Background Gradient */}
+          <div 
+            className="absolute inset-0 opacity-20 rounded-2xl -m-20 z-0"
+            style={{
+              background: 'linear-gradient(180deg, #ff2f2f, #ef7b16 35.87832457397675%, #8a43e1 69.92196209587513%, #d511fd)',
+              borderRadius: '18px'
+            }}
+          ></div>
+          
           {/* Main Dashboard Container */}
-          <div className="w-full relative">
+          <div className="w-full relative z-10">
             {/* Main Dashboard Image */}
             <div className="w-full aspect-[1.6/1] relative overflow-hidden rounded-2xl">
               {/* Gradient Border */}

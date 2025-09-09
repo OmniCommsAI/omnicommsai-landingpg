@@ -127,7 +127,7 @@ const ProductOverviewSection = () => {
                 className="absolute top-4 left-4 w-16 h-20 rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-1"
                 style={{ willChange: 'transform' }}
               >
-                <div style={{ position: 'absolute', borderRadius: 'inherit', top: 0, right: 0, bottom: 0, left: -75 }}>
+                <div style={{ position: 'absolute', borderRadius: 'inherit', top: 0, right: 0, bottom: 0, left: -175 }}>
                   <img 
                     src="https://framerusercontent.com/images/59dXbAMOkWcJevijvnmRv2OiOAE.png?width=981&height=1063" 
                     alt="Floating dashboard element" 

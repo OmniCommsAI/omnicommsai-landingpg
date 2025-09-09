@@ -58,7 +58,7 @@ const UniqueFeatures = () => {
         <div className="flex flex-col items-center gap-20">
           
           {/* Header Section */}
-          <div className="text-center max-w-2xl mx-auto px-30 mb-16">
+          <div className="text-center max-w-2xl mx-auto px-30 mb-32">
             <div className="inline-flex items-center px-4 py-2 bg-white rounded-full shadow-sm border mb-4">
               <span className="text-sm font-medium text-foreground">Unique Features</span>
             </div>
@@ -101,7 +101,7 @@ const UniqueFeatures = () => {
               }
               
               const zIndex = 30 - stackPosition; // Higher number = front
-              const translateY = -(stackPosition * 90);
+              const translateY = -(stackPosition * 80);
               const rotateX = stackPosition * -2;
               const scale = 1 - stackPosition * 0.1;
               

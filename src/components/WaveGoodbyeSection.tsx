@@ -105,7 +105,7 @@ const WaveGoodbyeSection = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="relative w-full max-w-[1240px] mx-auto">
+          <div className="relative w-full max-w-[1240px] mx-auto mt-36">
             {/* Top decorative line - positioned to intersect with stats */}
             <div 
               className="absolute w-full"

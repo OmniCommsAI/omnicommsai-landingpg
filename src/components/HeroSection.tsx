@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
+      <div className="absolute inset-0" style={{background: 'var(--gradient-hero-soft)'}}></div>
       
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">

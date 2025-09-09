@@ -101,7 +101,7 @@ const UniqueFeatures = () => {
               }
               
               const zIndex = 30 - stackPosition; // Higher number = front
-              const translateY = -(stackPosition * 60); // Responsive spacing handled by CSS
+              const translateY = -(stackPosition * 80); // Responsive spacing handled by CSS
               const rotateX = stackPosition * -2;
               const scale = 1 - stackPosition * 0.12; // Slightly more compression for mobile
               
@@ -118,7 +118,7 @@ const UniqueFeatures = () => {
                 >
                   <div className="bg-white rounded-xl shadow-2xl border-2 border-white overflow-hidden h-full">
                     {/* Top Grey Bar with Icon and Title */}
-                    <div className="bg-muted/70 px-6 py-4 border-b border-muted/20">
+                    <div className="bg-muted/40 px-6 py-4 border-b border-muted/20">
                       <div className="flex items-center gap-3">
                         <div className="p-2 rounded-lg bg-white/80" style={{ color: feature.color }}>
                           <Icon className="w-5 h-5" />

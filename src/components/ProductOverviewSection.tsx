@@ -141,11 +141,11 @@ const ProductOverviewSection = () => {
                 className="absolute top-6 right-6 w-20 h-12 rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-2"
                 style={{ willChange: 'transform' }}
               >
-                <div style={{ position: 'absolute', borderRadius: 'inherit', top: 0, right: 0, bottom: 0, left: 0 }}>
+                <div style={{ position: 'absolute', borderRadius: 'inherit', top: 0, right: -175, bottom: 0, left: 0 }}>
                   <img 
                     src="/lovable-uploads/2c75a0ef-f8c0-4464-9c6f-72c60eabd14f.png" 
                     alt="Floating dashboard element" 
-                    style={{ display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
+                    style={{ display: 'block', width: '345px', height: '145px', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
                   />
                 </div>
               </div>

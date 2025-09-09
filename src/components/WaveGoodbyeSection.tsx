@@ -108,7 +108,20 @@ const WaveGoodbyeSection = () => {
           {/* Stats Section */}
           <div className="relative w-full max-w-[1240px] mx-auto">
             {/* Top decorative line - positioned to intersect with stats */}
-            <div className="relative w-full h-[54px] mb-8">
+            <div 
+              className="w-full mb-8"
+              style={{
+                aspectRatio: '23.846153846153847 / 1',
+                bottom: '139px',
+                flex: 'none',
+                height: 'var(--framer-aspect-ratio-supported, 47px)',
+                left: 0,
+                overflow: 'hidden',
+                position: 'absolute',
+                right: 0,
+                zIndex: 1
+              }}
+            >
               <div className="absolute inset-0">
                 <img 
                   decoding="auto"

@@ -75,7 +75,7 @@ const UniqueFeatures = () => {
           {/* Features Cards - 3D Stacked Layout */}
           <div className="w-full max-w-3xl sm:max-w-4xl lg:max-w-5xl relative h-[400px] sm:h-[500px] lg:h-[600px]" style={{ perspective: '1000px' }}>
             {/* Click me graphic positioned relative to stacked cards */}
-            <div className="absolute -top-32 right-4 sm:-top-40 sm:right-8 md:-top-48 md:-right-8 w-24 h-20 sm:w-32 sm:h-24 lg:w-36 lg:h-26 z-50 animate-bounce">
+            <div className="absolute -top-32 right-8 sm:-top-40 sm:right-16 md:-top-48 md:right-4 lg:-right-8 w-24 h-20 sm:w-32 sm:h-24 lg:w-36 lg:h-26 z-50 animate-bounce">
               <img
                 src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
                 alt="Click me arrow"

@@ -77,10 +77,21 @@ const UniqueFeatures = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               const isActive = activeIndex === index;
-              const zIndex = isActive ? 30 : 20 - index;
-              const translateY = isActive ? 0 : index * 60; // Increased to push cards down more
-              const rotateX = isActive ? 0 : index * -3; // Reduced rotation
-              const scale = isActive ? 1 : 0.98 - index * 0.02; // Less scale difference
+              
+              // Calculate position in stack - active card is at front (0), others stack behind
+              let stackPosition;
+              if (isActive) {
+                stackPosition = 0;
+              } else if (index > activeIndex) {
+                stackPosition = index - activeIndex;
+              } else {
+                stackPosition = (features.length - activeIndex) + index;
+              }
+              
+              const zIndex = isActive ? 30 : 20 - stackPosition;
+              const translateY = stackPosition * 60; // All cards offset by their stack position
+              const rotateX = stackPosition * -3;
+              const scale = 1 - stackPosition * 0.02;
               
               return (
                 <div 

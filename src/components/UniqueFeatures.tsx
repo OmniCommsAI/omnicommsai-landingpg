@@ -106,7 +106,7 @@ const UniqueFeatures = () => {
               
               // Apply hover effect: if this card is hovered and not active, slide it up
               const isHovered = hoveredIndex === index && !isActive;
-              const translateY = isHovered ? baseTranslateY + 30 : baseTranslateY; // Slide up by 30px on hover
+              const translateY = isHovered ? baseTranslateY + -35 : baseTranslateY; // Slide up by 30px on hover
               
               const rotateX = stackPosition * -2;
               const scale = 1 - stackPosition * 0.12; // Slightly more compression for mobile

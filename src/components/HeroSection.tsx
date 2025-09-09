@@ -4,7 +4,7 @@ import heroDashboard from '@/assets/hero-dashboard.png';
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-16 pb-20 overflow-hidden">
+    <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Complex gradient background */}
       <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden">
         {/* Left abstract shapes */}

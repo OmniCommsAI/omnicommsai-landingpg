@@ -104,6 +104,7 @@ const UniqueFeatures = () => {
               const translateY = -(stackPosition * 85); // Responsive spacing handled by CSS
               const rotateX = stackPosition * -2;
               const scale = 1 - stackPosition * 0.12; // Slightly more compression for mobile
+              const opacity = stackPosition === 0 ? 1 : stackPosition === 1 ? 0.8 : 0.6;
               
               return (
                 <div 
@@ -111,6 +112,7 @@ const UniqueFeatures = () => {
                   className="absolute inset-0 cursor-pointer transition-all duration-500 ease-out transform-gpu"
                   style={{ 
                     zIndex,
+                    opacity,
                     transform: `translateY(${translateY}px) rotateX(${rotateX}deg) scale(${scale})`,
                     transformStyle: 'preserve-3d'
                   }}

@@ -10,7 +10,7 @@ const HeroSection = () => {
         className="absolute inset-0" 
         style={{
           backgroundImage: 'url(/lovable-uploads/2c75a0ef-f8c0-4464-9c6f-72c60eabd14f.png)',
-          backgroundSize: 'cover',
+          backgroundSize: 'auto',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}

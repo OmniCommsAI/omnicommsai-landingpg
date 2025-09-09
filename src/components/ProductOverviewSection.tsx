@@ -80,17 +80,30 @@ const ProductOverviewSection = () => {
           </div>
 
           {/* Features Grid */}
-          <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+          <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8 mt-12 relative">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               
               return (
-                <div key={index} className="flex flex-col items-start gap-5 text-left">
+                <div key={index} className="flex flex-col items-start gap-5 text-left relative">
                   <Icon className="w-8 h-8 text-white" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                     <p className="text-sm text-neutral-400 leading-relaxed">{feature.description}</p>
                   </div>
+                  
+                  {/* Vertical divider lines */}
+                  {index < 3 && (
+                    <div className="absolute -right-4 top-0 bottom-0 w-px hidden md:block">
+                      {index === 1 ? (
+                        // Center divider with colorful gradient
+                        <div className="w-full h-full bg-gradient-to-b from-red-500 via-orange-500 via-purple-500 to-pink-500"></div>
+                      ) : (
+                        // Regular gradient dividers
+                        <div className="w-full h-full bg-gradient-to-b from-transparent via-zinc-700 to-transparent"></div>
+                      )}
+                    </div>
+                  )}
                 </div>
               );
             })}

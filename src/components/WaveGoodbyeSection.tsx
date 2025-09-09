@@ -153,7 +153,7 @@ const WaveGoodbyeSection = () => {
             </div>
 
             {/* Stats Container - Responsive */}
-            <div className="flex flex-wrap justify-center items-center gap-16 sm:gap-12 md:gap-16 relative z-10">
+            <div className="flex flex-wrap justify-evenly items-center gap-32 sm:gap-12 md:gap-16 relative z-10">
               {/* Team Collaborations */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="flex items-center gap-1">

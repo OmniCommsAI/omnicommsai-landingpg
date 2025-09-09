@@ -109,7 +109,7 @@ const WaveGoodbyeSection = () => {
           <div className="relative w-full max-w-[1240px] mx-auto">
             {/* Top decorative line - positioned to intersect with stats */}
             <div 
-              className="w-full mb-8"
+              className="w-full mb-8 mt-32"
               style={{
                 aspectRatio: '23.846153846153847 / 1',
                 bottom: '139px',

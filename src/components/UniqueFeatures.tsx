@@ -72,16 +72,15 @@ const UniqueFeatures = () => {
             </p>
           </div>
 
-          {/* Decorative element - moved above cards */}
-          <div className="absolute -top-10 right-32 w-36 h-26 z-50">
+          {/* Features Cards - 3D Stacked Layout */}
+          {/* Decorative arrow above cards */}
+          <div className="absolute -top-16 right-20 w-36 h-26 z-50">
             <img
               src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
               alt="Click me arrow"
               className="w-full h-full object-cover"
             />
           </div>
-
-          {/* Features Cards - 3D Stacked Layout */}
           <div className="w-full max-w-5xl relative h-[600px]" style={{ perspective: '1000px' }}>
             {features.map((feature, index) => {
               const Icon = feature.icon;

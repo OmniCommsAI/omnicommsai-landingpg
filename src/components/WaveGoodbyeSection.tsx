@@ -289,25 +289,20 @@ const WaveGoodbyeSection = () => {
             </div>
 
             {/* Bottom decorative element */}
-            <div className="relative w-[1200px] h-[10px] mx-auto mt-8">
-              <div className="absolute inset-0" style={{ borderRadius: 'inherit' }}>
-                <img 
-                  decoding="auto"
-                  width="1240" 
-                  height="10"
-                  sizes="1200px"
-                  srcSet="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=512&width=1240&height=10 512w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=1024&width=1240&height=10 1024w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10 1240w"
-                  src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10"
-                  alt=""
-                  style={{ 
-                    display: 'block',
-                    width: '100%', 
-                    height: '100%', 
-                    borderRadius: 'inherit', 
-                    objectPosition: 'center', 
-                    objectFit: 'cover' 
-                  }}
-                />
+            <div className="ssr-variant hidden-1mhxy22">
+              <div className="framer-h5gmnp hidden-vcrtlr" data-framer-name="Abstract Design">
+                <div style={{position: 'absolute', borderRadius: 'inherit', top: 0, right: 0, bottom: 0, left: 0}} data-framer-background-image-wrapper="true">
+                  <img 
+                    decoding="auto" 
+                    width="1240" 
+                    height="10" 
+                    sizes="min(100vw - 80px, 1240px)" 
+                    srcSet="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=512&width=1240&height=10 512w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=1024&width=1240&height=10 1024w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10 1240w" 
+                    src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10" 
+                    alt="" 
+                    style={{display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover'}} 
+                  />
+                </div>
               </div>
             </div>
           </div>

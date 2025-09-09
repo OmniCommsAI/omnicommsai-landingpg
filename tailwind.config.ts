@@ -28,6 +28,7 @@ export default {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          light: "hsl(var(--secondary-light))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -41,6 +42,11 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
           dark: "hsl(var(--accent-dark))",
+          light: "hsl(var(--accent-light))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          light: "hsl(var(--warning-light))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -109,6 +115,16 @@ export default {
           "100%": {
             transform: "translateX(-100%)"
           }
+        },
+        "prism-glow": {
+          "0%, 100%": {
+            filter: "brightness(1) saturate(1)",
+            opacity: "0.6"
+          },
+          "50%": {
+            filter: "brightness(1.2) saturate(1.3)",
+            opacity: "0.8"
+          }
         }
       },
       animation: {
@@ -118,6 +134,7 @@ export default {
         "slide-in": "slide-in 0.5s ease-out",
         "float": "float 6s ease-in-out infinite",
         "scroll-x": "scroll-x 30s linear infinite",
+        "prism-glow": "prism-glow 4s ease-in-out infinite",
       },
     },
   },

@@ -74,38 +74,63 @@ const FeaturesSection = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => {
             const Icon = feature.icon;
+            // Cycle through different gradient combinations for variety
+            const gradients = [
+              'from-primary to-accent',
+              'from-accent to-secondary', 
+              'from-secondary to-warning',
+              'from-warning to-primary',
+              'from-primary-light to-accent-light',
+              'from-accent-dark to-primary-dark',
+              'from-secondary-light to-accent',
+              'from-warning-light to-secondary'
+            ];
+            const gradient = gradients[index % gradients.length];
+            
             return (
               <div 
                 key={feature.title} 
-                className="card-elevated group animate-fade-in-up"
+                className="card-elevated group animate-fade-in-up relative overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="mb-6">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-white group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="h-6 w-6" />
+                {/* Colorful background gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
+                <div className="relative z-10">
+                  <div className="mb-6">
+                    <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${gradient} text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <Icon className="h-6 w-6" />
+                    </div>
                   </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
               </div>
             );
           })}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA with enhanced Prismo styling */}
         <div className="mt-20 text-center">
-          <div className="inline-flex items-center space-x-4 p-6 bg-gradient-primary rounded-2xl text-white">
-            <Zap className="h-6 w-6" />
-            <span className="text-lg font-semibold">
-              Ready to supercharge your communications?
-            </span>
-            <button className="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-lg font-medium transition-colors">
-              Get Started →
-            </button>
+          <div className="relative inline-flex items-center space-x-4 p-8 bg-gradient-to-r from-primary via-accent to-secondary rounded-3xl text-white overflow-hidden">
+            {/* Animated background elements */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-accent/80 to-secondary/80 animate-pulse"></div>
+            <div className="absolute -top-2 -right-2 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float"></div>
+            <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-white/10 rounded-full blur-xl animate-float" style={{animationDelay: '2s'}}></div>
+            
+            <div className="relative z-10 flex items-center space-x-4">
+              <Zap className="h-6 w-6 animate-pulse" />
+              <span className="text-lg font-semibold">
+                Ready to supercharge your communications?
+              </span>
+              <button className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 backdrop-blur-sm border border-white/30">
+                Get Started →
+              </button>
+            </div>
           </div>
         </div>
       </div>

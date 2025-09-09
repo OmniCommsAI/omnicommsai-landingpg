@@ -35,7 +35,7 @@ const UniqueFeatures = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-background overflow-hidden">
+    <section className="relative py-24 overflow-hidden" style={{ backgroundColor: '#F1F0EE' }}>
       {/* Background decorative elements */}
       <div className="absolute -right-32 -bottom-60 w-[575px] h-[575px] z-10 opacity-30">
         <div 
@@ -74,7 +74,7 @@ const UniqueFeatures = () => {
 
           {/* Features Cards - 3D Stacked Layout */}
           {/* Decorative arrow pointing to cards */}
-          <div className="absolute top-182 right-70 w-36 h-26 z-50">
+          <div className="absolute top-142 right-90 w-36 h-26 z-50">
             <img
               src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
               alt="Click me arrow"

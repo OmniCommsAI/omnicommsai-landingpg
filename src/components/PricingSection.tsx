@@ -4,125 +4,133 @@ import { Button } from '@/components/ui/button';
 const PricingSection = () => {
   const plans = [
     {
-      name: 'Basic',
-      price: '$10',
-      period: 'per member / month',
-      description: 'Perfect for small teams and startups.',
-      icon: '🪐', // Geometric red shape
-      iconColor: 'text-red-500',
+      name: 'Starter',
+      price: '$29',
+      description: 'Perfect for small teams getting started.',
+      icon: Zap,
       features: [
-        'Task Management',
-        'AI Summary',
-        'Progress Tracking',
-        'Smart Labels'
+        'Unified messaging across 3 channels',
+        'Basic AI automation',
+        'Team collaboration tools',
+        'Standard analytics',
+        'Email support',
+        '1,000 messages/month'
       ],
-      cta: 'Get Started',
+      cta: 'Start Free Trial',
       popular: false
     },
     {
-      name: 'Pro', 
-      price: '$25',
-      period: 'per member / month',
-      description: 'Ideal for growing teams and projects.',
-      icon: '🟠', // Geometric orange shape
-      iconColor: 'text-orange-500',
+      name: 'Professional', 
+      price: '$79',
+      description: 'Ideal for growing businesses and teams.',
+      icon: Crown,
       features: [
-        'Everything in Basic +',
-        'Team Collaboration',
-        'Bulk Actions',
-        '2-way Translation',
-        'Advanced Reporting',
-        'Customizable Dashboards',
-        'Priority Support'
+        'Everything in Starter +',
+        'Unlimited channels & integrations',
+        'Advanced AI & automation',
+        'Custom workflows',
+        'Priority support',
+        '10,000 messages/month',
+        'Advanced analytics & reporting',
+        'API access'
       ],
-      cta: 'Start 7-day free trial',
+      cta: 'Start Free Trial',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$39',
-      period: 'per member / month',
-      description: 'Built for large organizations needs.',
-      icon: '✦', // Geometric purple shape
-      iconColor: 'text-purple-500',
+      price: '$199',
+      description: 'Built for large organizations.',
+      icon: Rocket,
       features: [
-        'Everything in Basic +',
-        'SAML sso',
-        'Dedicated Account Manager',
-        'Enterprise Integrations',
-        'Data Analytics',
-        'Security Enhancements',
-        'Custom Workflows'
+        'Everything in Professional +',
+        'Dedicated account manager',
+        'Custom integrations',
+        'Advanced security & compliance',
+        'Unlimited messages',
+        '24/7 phone support',
+        'White-label options',
+        'Custom AI training'
       ],
-      cta: 'Start 7-day free trial',
+      cta: 'Contact Sales',
       popular: false
     }
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-background">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        {/* Billing Toggle */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-muted rounded-full p-1">
-            <button className="px-6 py-2 rounded-full bg-foreground text-background font-medium text-sm">
-              Billed Monthly
+    <section id="pricing" className="py-24 bg-muted/30">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
+            Simple, Transparent Pricing
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            Choose the perfect plan to transform your communications. All plans include a 14-day free trial.
+          </p>
+          
+          {/* Billing Toggle */}
+          <div className="inline-flex items-center bg-muted rounded-full p-1 mb-8">
+            <button className="px-6 py-2 rounded-full bg-background text-foreground font-medium shadow-sm">
+              Monthly
             </button>
-            <button className="px-6 py-2 text-muted-foreground font-medium text-sm">
-              Billed yearly
+            <button className="px-6 py-2 text-muted-foreground font-medium">
+              Annual (Save 20%)
             </button>
           </div>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {plans.map((plan, index) => {
+            const Icon = plan.icon;
             return (
               <div 
                 key={plan.name}
-                className={`relative bg-white rounded-2xl p-8 ${plan.popular ? 'border-2 border-red-400' : 'border border-gray-200'} animate-fade-in-up`}
+                className={`relative card-elevated ${plan.popular ? 'ring-2 ring-primary scale-105' : ''} animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-center">
-                  {/* Icon */}
-                  <div className="mb-6">
-                    <div className={`text-4xl ${plan.iconColor}`}>
-                      {plan.icon}
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <div className="bg-gradient-primary text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
                     </div>
                   </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <div className={`inline-flex h-16 w-16 items-center justify-center rounded-2xl ${plan.popular ? 'bg-gradient-primary text-white' : 'bg-muted text-muted-foreground'} mb-6`}>
+                    <Icon className="h-8 w-8" />
+                  </div>
                   
-                  {/* Plan Name */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
                     {plan.name}
                   </h3>
-                  
-                  {/* Description */}
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-muted-foreground mb-6">
                     {plan.description}
                   </p>
                   
-                  {/* Price */}
-                  <div className="mb-8">
-                    <span className="text-4xl font-bold text-gray-900">
+                  <div className="mb-6">
+                    <span className="text-5xl font-bold text-foreground">
                       {plan.price}
                     </span>
-                    <span className="text-gray-600 ml-2">
-                      {plan.period}
+                    <span className="text-muted-foreground ml-2">
+                      per month
                     </span>
                   </div>
                   
-                  {/* CTA Button */}
-                  <Button className="w-full mb-8">
+                  <Button 
+                    className={plan.popular ? 'btn-hero w-full' : 'btn-outline-hero w-full'}
+                  >
                     {plan.cta}
                   </Button>
                 </div>
                 
-                {/* Features List */}
                 <div className="space-y-4">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">
+                      <Check className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
+                      <span className="text-muted-foreground">
                         {feature}
                       </span>
                     </div>
@@ -133,6 +141,20 @@ const PricingSection = () => {
           })}
         </div>
 
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-primary rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Need a custom solution?
+            </h3>
+            <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+              We offer tailored enterprise solutions with custom integrations, dedicated support, and volume pricing.
+            </p>
+            <Button className="bg-white text-primary hover:bg-white/90">
+              Contact Sales Team
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );

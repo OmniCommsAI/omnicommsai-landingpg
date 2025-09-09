@@ -22,10 +22,28 @@ const WaveGoodbyeSection = () => {
   }, []);
 
   return (
-    <section className="relative py-24 bg-[rgb(241,240,238)] overflow-hidden">
+    <section 
+      className="relative overflow-visible flex flex-col items-center justify-center flex-none flex-nowrap w-full h-min"
+      style={{
+        alignContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'var(--token-0b85bf41-9970-464d-96f4-152f236b9294, #f1f0ee)',
+        display: 'flex',
+        flex: 'none',
+        flexDirection: 'column',
+        flexWrap: 'nowrap',
+        gap: '150px',
+        height: 'min-content',
+        justifyContent: 'center',
+        overflow: 'visible',
+        padding: '100px 40px',
+        position: 'relative',
+        width: '100%'
+      }}
+    >
       {/* Main Container - Full width */}
-      <div className="relative w-full px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-24">
+      <div className="relative w-full">
+        <div className="flex flex-col items-center">
           
           {/* Wave Goodbye Container - Expanded width */}
           <div className="relative flex items-center justify-center gap-5 w-full max-w-6xl">

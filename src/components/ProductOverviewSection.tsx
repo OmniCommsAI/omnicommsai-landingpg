@@ -113,7 +113,7 @@ const ProductOverviewSection = () => {
                 className="absolute inset-0 opacity-20 rounded-2xl -m-20 z-0"
                 style={{
                   background: 'linear-gradient(180deg, #ff2f2f, #ef7b16 35.87832457397675%, #8a43e1 69.92196209587513%, #d511fd)',
-                  borderRadius: '10px'
+                  borderRadius: '18px'
                 }}
               ></div>
               {/* Gradient Border */}

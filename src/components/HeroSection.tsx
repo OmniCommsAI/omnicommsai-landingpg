@@ -81,8 +81,20 @@ const HeroSection = () => {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           {/* Badge */}
-          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-6 py-2 text-sm font-medium text-primary animate-fade-in-up">
-            🚀 Powered by Advanced AI Technology
+          <div className="inline-flex flex-col items-center text-center animate-fade-in-up">
+            <div className="flex flex-col">
+              <p className="text-4xl font-bold mb-2">
+                <span 
+                  className="bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: 'linear-gradient(90deg, rgb(255, 46, 46) 0%, rgb(238, 123, 22) 36.2773%, rgb(138, 67, 225) 69.7515%, rgb(213, 16, 252) 100%)'
+                  }}
+                >
+                  200K+
+                </span>
+              </p>
+              <p className="text-sm text-foreground">Projects Managed Daily with Prismo</p>
+            </div>
           </div>
           
           {/* Main heading */}

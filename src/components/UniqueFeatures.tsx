@@ -116,7 +116,7 @@ const UniqueFeatures = () => {
                   }}
                   onClick={() => setActiveIndex(index)}
                 >
-                  <div className="bg-white rounded-xl shadow-2xl border-2 border-white overflow-hidden h-full pt-8">
+                  <div className="bg-white rounded-xl shadow-2xl border-2 border-white overflow-hidden h-full">
                     {/* Top Grey Bar with Icon and Title */}
                     <div className="bg-muted/70 px-6 py-4 border-b border-muted/20">
                       <div className="flex items-center gap-3">

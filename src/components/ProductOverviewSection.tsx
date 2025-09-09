@@ -143,17 +143,44 @@ const ProductOverviewSection = () => {
             </div>
 
             {/* Feature Tags */}
-            <div className="flex flex-wrap justify-center gap-4 max-w-4xl">
-              {additionalFeatures.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3 bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3">
-                  <div className={`w-3 h-3 rounded-full ${feature.color}`}></div>
-                  <span className="text-sm text-white">{feature.name}</span>
+            <div className="w-full max-w-5xl h-15 overflow-hidden">
+              <div 
+                className="flex items-center h-full"
+                style={{
+                  maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%)'
+                }}
+              >
+                <div 
+                  className="flex items-center gap-4"
+                  style={{
+                    animation: 'marquee 30s linear infinite'
+                  }}
+                >
+                  {[...additionalFeatures, ...additionalFeatures].map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3 bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 whitespace-nowrap">
+                      <div className={`w-3 h-3 rounded-full ${feature.color}`}></div>
+                      <span className="text-sm text-white">{feature.name}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <style>
+        {`
+          @keyframes marquee {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };

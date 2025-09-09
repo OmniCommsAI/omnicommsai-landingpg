@@ -63,22 +63,26 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden">
-            <div className="space-y-2 py-6">
+        {/* Mobile menu with smooth expand/collapse */}
+        <div 
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="bg-white/90 backdrop-blur-md rounded-lg mx-4 mb-4 shadow-lg border border-border/20">
+            <div className="space-y-2 py-6 px-6">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary"
+                  className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col space-y-4 pt-4">
-                <Button variant="ghost" className="text-muted-foreground justify-start">
+              <div className="flex flex-col space-y-3 pt-4 border-t border-border/20">
+                <Button variant="ghost" className="text-foreground justify-start hover:bg-muted/50">
                   Sign in
                 </Button>
                 <Button className="btn-hero justify-start">
@@ -87,7 +91,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-        )}
+        </div>
       </nav>
     </header>
   );

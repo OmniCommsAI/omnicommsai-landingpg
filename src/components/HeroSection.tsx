@@ -6,9 +6,18 @@ import noiseTexture from '@/assets/noise-texture.png';
 const HeroSection = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
-      {/* Layer 1: Noise texture background */}
+      {/* Layer 1: Main gradient background (purple to orange like Prismo) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400"></div>
+      
+      {/* Layer 2: Secondary gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-violet-700/80 via-fuchsia-600/60 to-amber-500/70"></div>
+      
+      {/* Layer 3: Tertiary gradient for depth */}
+      <div className="absolute inset-0 bg-gradient-to-bl from-indigo-600/40 via-transparent to-rose-500/40"></div>
+      
+      {/* Layer 4: Noise texture overlay */}
       <div 
-        className="absolute inset-0 opacity-40 mix-blend-overlay"
+        className="absolute inset-0 opacity-30 mix-blend-overlay"
         style={{
           backgroundImage: `url(${noiseTexture})`,
           backgroundSize: '400px 400px',
@@ -16,8 +25,8 @@ const HeroSection = () => {
         }}
       ></div>
       
-      {/* Layer 2: Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/30 to-secondary/25"></div>
+      {/* Layer 5: Additional gradient overlay for color richness */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 via-pink-400/20 to-orange-400/30"></div>
       
       {/* Layer 3: Vertical block slices container */}
       <div className="absolute inset-0 flex items-stretch justify-between">

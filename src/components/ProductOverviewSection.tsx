@@ -124,25 +124,29 @@ const ProductOverviewSection = () => {
               
               {/* Floating Element 1 - Top Left */}
               <div 
-                className="absolute top-4 left-4 w-16 h-20 bg-white rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-1"
+                className="absolute top-4 left-4 w-16 h-20 rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-1"
                 style={{ willChange: 'transform' }}
               >
-                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <div className="w-8 h-8 bg-white rounded opacity-80"></div>
+                <div style={{ position: 'absolute', borderRadius: 'inherit', top: 0, right: 0, bottom: 0, left: 0 }}>
+                  <img 
+                    src="/lovable-uploads/2c75a0ef-f8c0-4464-9c6f-72c60eabd14f.png" 
+                    alt="Floating dashboard element" 
+                    style={{ display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
+                  />
                 </div>
               </div>
               
               {/* Floating Element 2 - Top Right */}
               <div 
-                className="absolute top-6 right-6 w-20 h-12 bg-white rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-2"
+                className="absolute top-6 right-6 w-20 h-12 rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-2"
                 style={{ willChange: 'transform' }}
               >
-                <div className="w-full h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
+                <div style={{ position: 'absolute', borderRadius: 'inherit', top: 0, right: 0, bottom: 0, left: 0 }}>
+                  <img 
+                    src="/lovable-uploads/2c75a0ef-f8c0-4464-9c6f-72c60eabd14f.png" 
+                    alt="Floating dashboard element" 
+                    style={{ display: 'block', width: '100%', height: '100%', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
+                  />
                 </div>
               </div>
               

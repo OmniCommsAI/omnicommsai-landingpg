@@ -106,25 +106,29 @@ const WaveGoodbyeSection = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="relative w-full max-w-7xl mx-auto">
-            {/* Top decorative line */}
-            <div className="absolute inset-x-0 top-0 h-[54px]">
-              <img 
-                src="https://framerusercontent.com/images/PHE9EsmEfv8Zsyd0nV1rAMsyq28.svg"
-                alt="Decorative line"
-                className="w-full h-full object-cover block"
-                style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  borderRadius: 'inherit', 
-                  objectPosition: 'center', 
-                  objectFit: 'cover' 
-                }}
-              />
+          <div className="relative w-full max-w-[1240px] mx-auto">
+            {/* Top decorative line - positioned to intersect with stats */}
+            <div className="relative w-full h-[54px] mb-8">
+              <div className="absolute inset-0">
+                <img 
+                  decoding="auto"
+                  width="1240" 
+                  height="54"
+                  sizes="min(100vw - 80px, 1240px)"
+                  src="https://framerusercontent.com/images/PHE9EsmEfv8Zsyd0nV1rAMsyq28.svg"
+                  alt=""
+                  className="block w-full h-full object-cover"
+                  style={{ 
+                    borderRadius: 'inherit', 
+                    objectPosition: 'center', 
+                    objectFit: 'cover' 
+                  }}
+                />
+              </div>
             </div>
 
-            {/* Stats Container */}
-            <div className="flex flex-wrap justify-center gap-16 pt-16 pb-8">
+            {/* Stats Container - positioned to intersect with the line */}
+            <div className="flex flex-wrap justify-center gap-16 -mt-16">
               {/* Team Collaborations */}
               <div className="flex flex-col items-center gap-8 z-10">
                 <div className="flex items-center gap-2">
@@ -272,19 +276,23 @@ const WaveGoodbyeSection = () => {
             </div>
 
             {/* Bottom decorative element */}
-            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-full max-w-[1240px] h-[10px] z-10">
-              <img 
-                src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg"
-                alt="Bottom decorative"
-                className="w-full h-full object-cover block"
-                style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  borderRadius: 'inherit', 
-                  objectPosition: 'center', 
-                  objectFit: 'cover' 
-                }}
-              />
+            <div className="relative w-full h-[10px] mt-8">
+              <div className="absolute inset-0">
+                <img 
+                  decoding="auto"
+                  width="1240" 
+                  height="10"
+                  sizes="min(100vw - 80px, 1240px)"
+                  src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg"
+                  alt=""
+                  className="block w-full h-full object-cover"
+                  style={{ 
+                    borderRadius: 'inherit', 
+                    objectPosition: 'center', 
+                    objectFit: 'cover' 
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -105,48 +105,46 @@ const ProductOverviewSection = () => {
         <div className="w-full max-w-5xl p-4 flex flex-col items-center gap-2.5 relative">
           {/* Main Dashboard Container */}
           <div className="w-full relative">
-            {/* Main Dashboard Image with Pulse Border */}
-            <div className="w-full aspect-[1.6/1] relative overflow-visible rounded-2xl">
-              {/* Pulsing Gradient Border */}
-              <div className="absolute inset-0 rounded-2xl opacity-60 animate-pulse">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/40 via-orange-500/40 via-purple-500/40 to-pink-500/40 rounded-2xl blur-sm"></div>
-                <div className="absolute inset-1 bg-gradient-to-r from-red-500/60 via-orange-500/60 via-purple-500/60 to-pink-500/60 rounded-2xl blur-xs"></div>
+            {/* Main Dashboard Image */}
+            <div className="w-full aspect-[1.6/1] relative overflow-hidden rounded-2xl">
+              {/* Gradient Border */}
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl p-1">
+                <div className="w-full h-full bg-white rounded-xl overflow-hidden relative">
+                  <img 
+                    src="/lovable-uploads/9d4cb87e-2329-4405-978a-f5e9367968d3.png" 
+                    alt="Dashboard Interface" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               
-              {/* Main Image Container */}
-              <div className="relative z-10 w-full h-full bg-white rounded-2xl overflow-hidden border border-zinc-200/20">
-                <img 
-                  src="/lovable-uploads/9d4cb87e-2329-4405-978a-f5e9367968d3.png" 
-                  alt="Dashboard Interface" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Large Floating Element 1 - Left Side Overlap */}
+              {/* Floating Element 1 - Top Left */}
               <div 
-                className="absolute top-8 -left-12 w-48 h-64 bg-white rounded-2xl shadow-2xl transform transition-transform duration-1000 ease-out floating-element-1 z-20 border border-zinc-200/20"
-                style={{ willChange: 'transform', opacity: 0 }}
+                className="absolute top-4 left-4 w-16 h-20 bg-white rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-1"
+                style={{ willChange: 'transform' }}
               >
-                <div className="w-full h-full bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-4 flex items-center justify-center">
-                  <div className="text-center text-zinc-400">
-                    <div className="w-16 h-16 bg-zinc-200 rounded-xl mx-auto mb-3"></div>
-                    <p className="text-sm">Screenshot 1</p>
+                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-white rounded opacity-80"></div>
+                </div>
+              </div>
+              
+              {/* Floating Element 2 - Top Right */}
+              <div 
+                className="absolute top-6 right-6 w-20 h-12 bg-white rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-2"
+                style={{ willChange: 'transform' }}
+              >
+                <div className="w-full h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                  <div className="flex gap-1">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                 </div>
               </div>
               
-              {/* Large Floating Element 2 - Right Side Overlap */}
-              <div 
-                className="absolute top-12 -right-16 w-52 h-72 bg-white rounded-2xl shadow-2xl transform transition-transform duration-1000 ease-out floating-element-2 z-20 border border-zinc-200/20"
-                style={{ willChange: 'transform', opacity: 0 }}
-              >
-                <div className="w-full h-full bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-4 flex items-center justify-center">
-                  <div className="text-center text-zinc-400">
-                    <div className="w-20 h-20 bg-zinc-200 rounded-xl mx-auto mb-3"></div>
-                    <p className="text-sm">Screenshot 2</p>
-                  </div>
-                </div>
-              </div>
+              {/* Gradient Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none"></div>
             </div>
           </div>
 

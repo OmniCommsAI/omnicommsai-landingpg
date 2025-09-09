@@ -1,158 +1,188 @@
-import { Check, Zap, Crown, Rocket } from 'lucide-react';
+import { Check, Folder, Crown, Building, ToggleLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 
 const PricingSection = () => {
+  const [isYearly, setIsYearly] = useState(false);
+
   const plans = [
     {
-      name: 'Starter',
-      price: '$29',
-      description: 'Perfect for small teams getting started.',
-      icon: Zap,
+      name: 'Basic',
+      price: '$10',
+      description: 'Perfect for small teams and startups.',
+      icon: Folder,
       features: [
-        'Unified messaging across 3 channels',
-        'Basic AI automation',
-        'Team collaboration tools',
-        'Standard analytics',
-        'Email support',
-        '1,000 messages/month'
+        'Task Management',
+        'AI Summary',
+        'Progress Tracking',
+        'Smart Labels'
       ],
-      cta: 'Start Free Trial',
+      cta: 'Get Started',
       popular: false
     },
     {
-      name: 'Professional', 
-      price: '$79',
-      description: 'Ideal for growing businesses and teams.',
+      name: 'Pro',
+      price: '$25',
+      description: 'Ideal for growing teams and projects.',
       icon: Crown,
       features: [
-        'Everything in Starter +',
-        'Unlimited channels & integrations',
-        'Advanced AI & automation',
-        'Custom workflows',
-        'Priority support',
-        '10,000 messages/month',
-        'Advanced analytics & reporting',
-        'API access'
+        'Everything in Basic +',
+        'Team Collaboration',
+        'Bulk Actions',
+        '2-way Translation',
+        'Advanced Reporting',
+        'Customizable Dashboards',
+        'Priority Support'
       ],
-      cta: 'Start Free Trial',
+      cta: 'Start 7-day free trial',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
-      description: 'Built for large organizations.',
-      icon: Rocket,
+      price: '$39',
+      description: 'Built for large organizations needs.',
+      icon: Building,
       features: [
-        'Everything in Professional +',
-        'Dedicated account manager',
-        'Custom integrations',
-        'Advanced security & compliance',
-        'Unlimited messages',
-        '24/7 phone support',
-        'White-label options',
-        'Custom AI training'
+        'Everything in Basic +',
+        'SAML sso',
+        'Dedicated Account Manager',
+        'Enterprise Integrations',
+        'Data Analytics',
+        'Security Enhancements',
+        'Custom Workflows'
       ],
-      cta: 'Contact Sales',
+      cta: 'Start 7-day free trial',
       popular: false
     }
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-muted/30">
+    <section id="pricing" className="py-24 bg-beige-light">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
+          {/* Badge */}
+          <div className="inline-flex items-center bg-white rounded-full px-4 py-2 mb-6 shadow-sm">
+            <span className="text-foreground text-sm font-medium">Pricing & Plans</span>
+          </div>
+          
           <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
-            Simple, Transparent Pricing
+            Affordable Pricing Plans
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Choose the perfect plan to transform your communications. All plans include a 14-day free trial.
+            Flexible, transparent pricing to support your team's productivity and growth at every stage.
           </p>
           
           {/* Billing Toggle */}
-          <div className="inline-flex items-center bg-muted rounded-full p-1 mb-8">
-            <button className="px-6 py-2 rounded-full bg-background text-foreground font-medium shadow-sm">
-              Monthly
+          <div className="inline-flex items-center bg-white rounded-full p-1 mb-8 shadow-sm">
+            <button 
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                !isYearly 
+                  ? 'bg-foreground text-background shadow-sm' 
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+              onClick={() => setIsYearly(false)}
+            >
+              Billed Monthly
             </button>
-            <button className="px-6 py-2 text-muted-foreground font-medium">
-              Annual (Save 20%)
+            <div className="relative mx-2">
+              <ToggleLeft 
+                className={`h-6 w-6 text-foreground transition-transform duration-300 ${
+                  isYearly ? 'rotate-180' : ''
+                }`}
+              />
+            </div>
+            <button 
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                isYearly 
+                  ? 'bg-foreground text-background shadow-sm' 
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+              onClick={() => setIsYearly(true)}
+            >
+              Billed yearly
             </button>
           </div>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
             return (
               <div 
                 key={plan.name}
-                className={`relative card-elevated ${plan.popular ? 'ring-2 ring-primary scale-105' : ''} animate-fade-in-up`}
+                className={`relative animate-fade-in-up overflow-hidden rounded-[20px]`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                {/* Main Card */}
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                  <div className="p-8">
+                    {/* Icon */}
+                    <div className="w-16 h-16 bg-beige rounded-2xl flex items-center justify-center mb-6">
+                      <Icon className="h-8 w-8 text-foreground" />
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="mb-8">
+                      <h3 className="text-2xl font-bold text-foreground mb-2">
+                        {plan.name}
+                      </h3>
+                      <p className="text-muted-foreground mb-6">
+                        {plan.description}
+                      </p>
+                      
+                      {/* Price */}
+                      <div className="flex items-baseline mb-6">
+                        <span className="text-5xl font-bold text-foreground">
+                          {plan.price}
+                        </span>
+                        <span className="text-muted-foreground ml-2">
+                          per member / month
+                        </span>
+                      </div>
+                      
+                      {/* CTA Button */}
+                      <Button className="w-full">
+                        {plan.cta}
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  {/* Features Section */}
+                  <div className="bg-beige px-8 py-6">
+                    <div className="space-y-4">
+                      {plan.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center">
+                          <Check className="h-5 w-5 text-foreground mr-3 flex-shrink-0" />
+                          <span className="text-foreground font-medium text-sm">
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Gradient accent for Pro plan */}
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <div className="bg-gradient-primary text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </div>
-                  </div>
+                  <>
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-orange-500 via-purple-600 to-pink-600 rounded-b-2xl"></div>
+                    <div className="absolute bottom-1 left-1 right-1 h-1 bg-beige rounded-b-2xl"></div>
+                  </>
                 )}
-                
-                <div className="text-center mb-8">
-                  <div className={`inline-flex h-16 w-16 items-center justify-center rounded-2xl ${plan.popular ? 'bg-gradient-primary text-white' : 'bg-muted text-muted-foreground'} mb-6`}>
-                    <Icon className="h-8 w-8" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
-                    {plan.name}
-                  </h3>
-                  <p className="text-muted-foreground mb-6">
-                    {plan.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <span className="text-5xl font-bold text-foreground">
-                      {plan.price}
-                    </span>
-                    <span className="text-muted-foreground ml-2">
-                      per month
-                    </span>
-                  </div>
-                  
-                  <Button 
-                    className={plan.popular ? 'btn-hero w-full' : 'btn-outline-hero w-full'}
-                  >
-                    {plan.cta}
-                  </Button>
-                </div>
-                
-                <div className="space-y-4">
-                  {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                      <span className="text-muted-foreground">
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
-                </div>
               </div>
             );
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-primary rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Need a custom solution?
-            </h3>
-            <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-              We offer tailored enterprise solutions with custom integrations, dedicated support, and volume pricing.
-            </p>
-            <Button className="bg-white text-primary hover:bg-white/90">
-              Contact Sales Team
-            </Button>
+        {/* Startup Program */}
+        <div className="text-center">
+          <div className="inline-block bg-beige rounded-xl border border-beige-dark p-6 text-left max-w-md mx-auto">
+            <div className="text-sm text-foreground">
+              <span className="text-muted-foreground">We just launched our startup program - </span>
+              <span className="font-semibold text-foreground">get 6 months free.</span>
+            </div>
           </div>
         </div>
       </div>

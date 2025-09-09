@@ -31,6 +31,11 @@
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
     
+    /* Beige colors for pricing section */
+    --beige-light: 30 15% 94.5%; /* #F1F0EE */
+    --beige: 30 15% 90%; /* #E8E4E2 */
+    --beige-dark: 30 15% 85%;
+    
     /* UI colors */
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;

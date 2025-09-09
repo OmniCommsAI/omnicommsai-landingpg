@@ -73,15 +73,15 @@ const UniqueFeatures = () => {
           </div>
 
           {/* Features Cards - 3D Stacked Layout */}
-          {/* Decorative arrow pointing to cards */}
-          <div className="absolute top-142 right-90 w-36 h-26 z-50">
-            <img
-              src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
-              alt="Click me arrow"
-              className="w-full h-full object-cover"
-            />
-          </div>
           <div className="w-full max-w-5xl relative h-[600px]" style={{ perspective: '1000px' }}>
+            {/* Click me graphic positioned relative to stacked cards */}
+            <div className="absolute -top-16 -right-8 w-36 h-26 z-50 animate-bounce">
+              <img
+                src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
+                alt="Click me arrow"
+                className="w-full h-full object-cover transform rotate-12"
+              />
+            </div>
             {features.map((feature, index) => {
               const Icon = feature.icon;
               const isActive = activeIndex === index;

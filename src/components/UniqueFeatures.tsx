@@ -37,7 +37,7 @@ const UniqueFeatures = () => {
   return (
     <section className="relative py-24 overflow-hidden" style={{ backgroundColor: '#F1F0EE' }}>
       {/* Background decorative elements */}
-      <div className="absolute -right-48 -bottom-60 w-[575px] h-[575px] z-10 opacity-30">
+      <div className="absolute -right-32 -bottom-60 w-[575px] h-[575px] z-10 opacity-30">
         <div 
           className="w-full h-full bg-gradient-to-br from-primary/20 to-primary/10 rounded-full blur-3xl"
           style={{
@@ -75,7 +75,7 @@ const UniqueFeatures = () => {
           {/* Features Cards - 3D Stacked Layout */}
           <div className="w-full max-w-5xl relative h-[600px]" style={{ perspective: '1000px' }}>
             {/* Click me graphic positioned relative to stacked cards */}
-            <div className="absolute -top-32 -right-8 w-36 h-26 z-50 animate-bounce">
+            <div className="absolute -top-48 -right-8 w-36 h-26 z-50 animate-bounce">
               <img
                 src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
                 alt="Click me arrow"

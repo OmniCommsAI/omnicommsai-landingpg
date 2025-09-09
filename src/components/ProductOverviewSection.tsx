@@ -111,8 +111,11 @@ const ProductOverviewSection = () => {
 
           {/* Other Interesting Features */}
           <div className="w-full mt-16 flex flex-col items-center gap-8">
-            <div className="bg-zinc-900 border border-zinc-800 rounded-full px-6 py-3">
-              <span className="text-white font-medium">Other Interesting Features</span>
+            <div className="relative bg-zinc-900 border border-zinc-800 rounded-full px-6 py-3" data-border="true">
+              <div className="flex flex-col justify-start flex-shrink-0">
+                <p className="text-white font-medium">Other Interesting Features</p>
+              </div>
+              <div className="absolute left-1/2 top-0 w-36 h-px bg-gradient-to-r from-zinc-800 via-pink-500 via-purple-500 via-orange-500 via-red-500 to-zinc-800 transform -translate-x-1/2"></div>
             </div>
 
             {/* Feature Tags */}

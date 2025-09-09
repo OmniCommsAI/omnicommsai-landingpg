@@ -72,6 +72,15 @@ const UniqueFeatures = () => {
             </p>
           </div>
 
+          {/* Decorative element - moved above cards */}
+          <div className="absolute -top-10 right-32 w-36 h-26 z-50">
+            <img
+              src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
+              alt="Click me arrow"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
           {/* Features Cards - 3D Stacked Layout */}
           <div className="w-full max-w-5xl relative h-[600px]" style={{ perspective: '1000px' }}>
             {features.map((feature, index) => {
@@ -109,7 +118,17 @@ const UniqueFeatures = () => {
                   onClick={() => setActiveIndex(index)}
                 >
                   <div className="bg-white rounded-xl shadow-2xl border-2 border-white overflow-hidden h-full">
-                    <div className="flex h-full">
+                    {/* Top Grey Bar with Icon and Title */}
+                    <div className="bg-muted/70 px-6 py-4 border-b border-muted/20">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 rounded-lg bg-white/80" style={{ color: feature.color }}>
+                          <Icon className="w-5 h-5" />
+                        </div>
+                        <h4 className="font-semibold text-foreground text-lg">{feature.title}</h4>
+                      </div>
+                    </div>
+
+                    <div className="flex h-[calc(100%-80px)]">
                       {/* Left Side - Content */}
                       <div className="flex-1 p-8 flex flex-col justify-center">
                         {/* Category Header */}
@@ -189,14 +208,6 @@ const UniqueFeatures = () => {
             </div>
           </div>
 
-          {/* Decorative element */}
-          <div className="absolute top-20 right-32 w-36 h-26 z-40">
-            <img
-              src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
-              alt="Click me arrow"
-              className="w-full h-full object-cover"
-            />
-          </div>
         </div>
       </div>
     </section>

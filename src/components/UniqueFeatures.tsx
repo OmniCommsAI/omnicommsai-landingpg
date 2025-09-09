@@ -190,7 +190,7 @@ const UniqueFeatures = () => {
           </div>
 
           {/* Decorative element */}
-          <div className="absolute top-20 right-132 w-36 h-26 z-40">
+          <div className="absolute top-30 right-90 w-36 h-26 z-40">
             <img
               src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
               alt="Click me arrow"

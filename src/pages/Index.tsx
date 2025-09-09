@@ -21,8 +21,8 @@ const Index = () => {
       <LogoMarquee />
       <FeaturesSection />
       <UniqueFeatures />
-      <ProductOverviewSection />
       <WaveGoodbyeSection />
+      <ProductOverviewSection />
       <StatsSection />
       <TestimonialsSection />
       <PricingSection />

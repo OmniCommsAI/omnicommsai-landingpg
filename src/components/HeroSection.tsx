@@ -5,8 +5,16 @@ import heroDashboard from '@/assets/hero-dashboard.png';
 const HeroSection = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0" style={{background: 'var(--gradient-hero-soft)'}}></div>
+      {/* Background image */}
+      <div 
+        className="absolute inset-0" 
+        style={{
+          backgroundImage: 'url(/lovable-uploads/2c75a0ef-f8c0-4464-9c6f-72c60eabd14f.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
       
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">

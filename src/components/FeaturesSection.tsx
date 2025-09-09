@@ -71,24 +71,24 @@ const FeaturesSection = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div 
                 key={feature.title} 
-                className="card-elevated group animate-fade-in-up"
+                className="card-elevated group animate-fade-in-up p-6 sm:p-8"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="mb-6">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-white group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="h-6 w-6" />
+                <div className="mb-4 sm:mb-6">
+                  <div className="inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-gradient-primary text-white group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>

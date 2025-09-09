@@ -73,9 +73,9 @@ const UniqueFeatures = () => {
           </div>
 
           {/* Features Cards - 3D Stacked Layout */}
-          <div className="w-full max-w-5xl relative h-[600px]" style={{ perspective: '1000px' }}>
+          <div className="w-full max-w-3xl sm:max-w-4xl lg:max-w-5xl relative h-[400px] sm:h-[500px] lg:h-[600px]" style={{ perspective: '1000px' }}>
             {/* Click me graphic positioned relative to stacked cards */}
-            <div className="absolute -top-48 -right-8 w-36 h-26 z-50 animate-bounce">
+            <div className="absolute -top-32 right-4 sm:-top-40 sm:right-8 md:-top-48 md:-right-8 w-24 h-20 sm:w-32 sm:h-24 lg:w-36 lg:h-26 z-50 animate-bounce">
               <img
                 src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
                 alt="Click me arrow"
@@ -101,9 +101,9 @@ const UniqueFeatures = () => {
               }
               
               const zIndex = 30 - stackPosition; // Higher number = front
-              const translateY = -(stackPosition * 80);
+              const translateY = -(stackPosition * 60); // Responsive spacing handled by CSS
               const rotateX = stackPosition * -2;
-              const scale = 1 - stackPosition * 0.1;
+              const scale = 1 - stackPosition * 0.12; // Slightly more compression for mobile
               
               return (
                 <div 
@@ -127,33 +127,33 @@ const UniqueFeatures = () => {
                       </div>
                     </div>
 
-                    <div className="flex h-[calc(100%-80px)]">
+                    <div className="flex flex-col sm:flex-row h-[calc(100%-60px)] sm:h-[calc(100%-80px)]">
                       {/* Left Side - Content */}
-                      <div className="flex-1 p-8 flex flex-col justify-center">
+                      <div className="flex-1 p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
                         {/* Category Header */}
-                        <div className="flex items-center gap-3 mb-6">
-                          <div className="p-3 rounded-lg bg-muted" style={{ color: feature.color }}>
-                            <Icon className="w-6 h-6" />
+                        <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                          <div className="p-2 sm:p-3 rounded-lg bg-muted" style={{ color: feature.color }}>
+                            <Icon className="w-4 h-4 sm:w-5 lg:w-6 lg:h-5 sm:h-5 lg:h-6" />
                           </div>
-                          <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                          <span className="text-xs sm:text-sm font-medium text-muted-foreground uppercase tracking-wider">
                             {feature.category}
                           </span>
                         </div>
                         
                         {/* Main Content */}
                         <div className="max-w-lg">
-                          <h3 className="text-3xl font-bold text-foreground mb-6">
+                          <h3 className="text-lg sm:text-xl lg:text-3xl font-bold text-foreground mb-3 sm:mb-4 lg:mb-6">
                             {feature.title}
                           </h3>
-                          <p className="text-muted-foreground leading-relaxed text-lg">
+                          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
                             {feature.description}
                           </p>
                         </div>
                       </div>
 
                       {/* Right Side - Interface Preview */}
-                      <div className="flex-1 p-8 flex items-center justify-center">
-                        <div className="w-full max-w-md">
+                      <div className="flex-1 p-4 sm:p-6 lg:p-8 flex items-center justify-center">
+                        <div className="w-full max-w-xs sm:max-w-sm lg:max-w-md">
                           <div 
                             className="bg-gradient-to-b from-muted/30 to-transparent rounded-lg overflow-hidden"
                             style={{
@@ -163,8 +163,7 @@ const UniqueFeatures = () => {
                             <img
                               src={feature.image}
                               alt={`${feature.category} interface`}
-                              className="w-full h-auto object-contain"
-                              style={{ minHeight: '350px' }}
+                              className="w-full h-auto object-contain min-h-[200px] sm:min-h-[250px] lg:min-h-[350px]"
                             />
                           </div>
                         </div>

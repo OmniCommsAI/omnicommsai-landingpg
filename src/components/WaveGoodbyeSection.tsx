@@ -107,38 +107,67 @@ const WaveGoodbyeSection = () => {
 
           {/* Stats Section */}
           <div className="relative w-full max-w-7xl mx-auto">
-            {/* Decorative line */}
-            <div className="absolute inset-x-0 top-0 h-2">
+            {/* Top decorative line */}
+            <div className="absolute inset-x-0 top-0 h-[54px]">
               <img 
                 src="https://framerusercontent.com/images/PHE9EsmEfv8Zsyd0nV1rAMsyq28.svg"
                 alt="Decorative line"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover block"
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  borderRadius: 'inherit', 
+                  objectPosition: 'center', 
+                  objectFit: 'cover' 
+                }}
               />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-16 pt-8">{/* ... keep existing stats content */}
+            {/* Stats Container */}
+            <div className="flex flex-wrap justify-center gap-16 pt-16 pb-8">
               {/* Team Collaborations */}
               <div className="flex flex-col items-center gap-8 z-10">
                 <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded border border-white -rotate-2">
+                  <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(-9deg)' }}>
                     <img 
                       src="https://framerusercontent.com/images/bOZe3ThmdFaGjs87Gu7Fup6M4.png"
-                      alt="Profile 1"
-                      className="w-full h-full object-cover rounded"
+                      alt="Avatar"
+                      className="w-full h-full object-cover rounded block"
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        borderRadius: 'inherit', 
+                        objectPosition: 'center', 
+                        objectFit: 'cover' 
+                      }}
                     />
                   </div>
                   <div className="w-7 h-7 rounded border border-white">
                     <img 
                       src="https://framerusercontent.com/images/70rKUELh1Zj5uRxlcEji6neFc.png"
-                      alt="Profile 2" 
-                      className="w-full h-full object-cover rounded"
+                      alt="Avatar" 
+                      className="w-full h-full object-cover rounded block"
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        borderRadius: 'inherit', 
+                        objectPosition: 'center', 
+                        objectFit: 'fill' 
+                      }}
                     />
                   </div>
-                  <div className="w-7 h-7 rounded border border-white rotate-2">
+                  <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(9deg)' }}>
                     <img 
                       src="https://framerusercontent.com/images/czofpZZGkqkn3CC2oLdJdIIzZ6g.png"
-                      alt="Profile 3"
-                      className="w-full h-full object-cover rounded"
+                      alt="Avatar"
+                      className="w-full h-full object-cover rounded block"
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        borderRadius: 'inherit', 
+                        objectPosition: 'center', 
+                        objectFit: 'cover' 
+                      }}
                     />
                   </div>
                 </div>
@@ -150,15 +179,26 @@ const WaveGoodbyeSection = () => {
 
               {/* Tasks Completed */}
               <div className="flex flex-col items-center gap-8 z-10">
-                <div className="relative p-1.5">
-                  <img 
-                    src="https://framerusercontent.com/images/YJNYG46InTZzZfc46sZp4bmlo8.png"
-                    alt="Background"
-                    className="absolute inset-0 w-full h-full object-cover rounded-full"
-                  />
-                  <div className="relative p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] shadow-lg">
-                    <div className="p-2.5 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
-                      <CheckCircle className="w-7 h-7 text-white" />
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full">
+                    <img 
+                      src="https://framerusercontent.com/images/YJNYG46InTZzZfc46sZp4bmlo8.png"
+                      alt="Background"
+                      className="w-full h-full object-cover rounded-full block"
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        borderRadius: 'inherit', 
+                        objectPosition: 'center', 
+                        objectFit: 'cover' 
+                      }}
+                    />
+                  </div>
+                  <div className="relative p-1">
+                    <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
+                      <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
+                        <CheckCircle className="w-7 h-7 text-white" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -170,15 +210,26 @@ const WaveGoodbyeSection = () => {
 
               {/* Projects Managed */}
               <div className="flex flex-col items-center gap-8 z-10">
-                <div className="relative p-1.5">
-                  <img 
-                    src="https://framerusercontent.com/images/YJNYG46InTZzZfc46sZp4bmlo8.png"
-                    alt="Background"
-                    className="absolute inset-0 w-full h-full object-cover rounded-full"
-                  />
-                  <div className="relative p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] shadow-lg">
-                    <div className="p-2.5 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
-                      <Briefcase className="w-7 h-7 text-white" />
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full">
+                    <img 
+                      src="https://framerusercontent.com/images/YJNYG46InTZzZfc46sZp4bmlo8.png"
+                      alt="Background"
+                      className="w-full h-full object-cover rounded-full block"
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        borderRadius: 'inherit', 
+                        objectPosition: 'center', 
+                        objectFit: 'cover' 
+                      }}
+                    />
+                  </div>
+                  <div className="relative p-1">
+                    <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
+                      <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
+                        <Briefcase className="w-7 h-7 text-white" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -190,15 +241,26 @@ const WaveGoodbyeSection = () => {
 
               {/* Successful Integrations */}
               <div className="flex flex-col items-center gap-8 z-10">
-                <div className="relative p-1.5">
-                  <img 
-                    src="https://framerusercontent.com/images/YJNYG46InTZzZfc46sZp4bmlo8.png"
-                    alt="Background"
-                    className="absolute inset-0 w-full h-full object-cover rounded-full"
-                  />
-                  <div className="relative p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] shadow-lg">
-                    <div className="p-2.5 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
-                      <Zap className="w-7 h-7 text-white" />
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full">
+                    <img 
+                      src="https://framerusercontent.com/images/YJNYG46InTZzZfc46sZp4bmlo8.png"
+                      alt="Background"
+                      className="w-full h-full object-cover rounded-full block"
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        borderRadius: 'inherit', 
+                        objectPosition: 'center', 
+                        objectFit: 'cover' 
+                      }}
+                    />
+                  </div>
+                  <div className="relative p-1">
+                    <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
+                      <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
+                        <Zap className="w-7 h-7 text-white" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -210,16 +272,18 @@ const WaveGoodbyeSection = () => {
             </div>
 
             {/* Bottom decorative element */}
-            <div 
-              className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-[1200px] h-2.5 z-10"
-              style={{
-                mask: 'linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgb(0,0,0) 48.20%, rgba(0,0,0,0) 100%)'
-              }}
-            >
+            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-full max-w-[1240px] h-[10px] z-10">
               <img 
                 src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg"
                 alt="Bottom decorative"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover block"
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  borderRadius: 'inherit', 
+                  objectPosition: 'center', 
+                  objectFit: 'cover' 
+                }}
               />
             </div>
           </div>

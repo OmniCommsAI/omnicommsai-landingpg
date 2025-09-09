@@ -45,10 +45,10 @@ const WaveGoodbyeSection = () => {
       <div className="relative w-full">
         <div className="flex flex-col items-center">
           
-          {/* Wave Goodbye Container - Expanded width */}
-          <div className="relative flex items-center justify-center gap-5 w-full max-w-6xl">
-            {/* Left decorative element */}
-            <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
+          {/* Wave Goodbye Container - Responsive */}
+          <div className="relative flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-8 w-full max-w-6xl">
+            {/* Decorative elements - hidden on mobile */}
+            <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
               <img 
                 src="https://framerusercontent.com/images/8BXeBQObnslmzSi9htBC7WTLXM.svg" 
                 alt="Decorative wave"
@@ -56,8 +56,7 @@ const WaveGoodbyeSection = () => {
               />
             </div>
 
-            {/* Right decorative element */}
-            <div className="absolute left-16 -translate-y-1/2 w-32 h-32 z-10">
+            <div className="hidden lg:block absolute left-16 -translate-y-1/2 w-32 h-32 z-10">
               <img 
                 src="https://framerusercontent.com/images/QoTZyI7CkM97mFm0elr4g0yNc.svg" 
                 alt="Decorative element"
@@ -66,18 +65,18 @@ const WaveGoodbyeSection = () => {
             </div>
 
             {/* Main heading */}
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground whitespace-nowrap flex-shrink-0">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground text-center lg:text-left lg:whitespace-nowrap flex-shrink-0">
               Wave goodbye to
             </h2>
 
-            {/* Animated text container - Expanded */}
-            <div className="relative flex-1 min-w-[400px] max-w-[600px]">
+            {/* Animated text container - Responsive */}
+            <div className="relative flex-1 w-full max-w-[600px] lg:min-w-[400px]">
               {/* Dark overlay top */}
               <div className="absolute inset-x-0 top-0 h-32 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
               
-              {/* Animated text area */}
+              {/* Animated text area - Responsive */}
               <div 
-                className="relative h-80 overflow-hidden"
+                className="relative h-60 sm:h-80 overflow-hidden"
                 style={{
                   mask: 'linear-gradient(0deg, rgba(0,0,0,0) -6%, rgb(0,0,0) 48%, rgba(0,0,0,0) 100%)'
                 }}
@@ -85,7 +84,7 @@ const WaveGoodbyeSection = () => {
                 <div className="flex flex-col items-start gap-2 animate-scroll-vertical">
                   {[...waveGoodbyeItems, ...waveGoodbyeItems].map((item, index) => (
                     <div key={index} className="flex items-center gap-2 py-4 w-full">
-                      <h2 className="text-5xl md:text-6xl font-bold whitespace-nowrap">
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold whitespace-nowrap">
                         <span 
                           className="bg-gradient-to-r from-[rgb(255,46,46)] via-[rgb(238,123,22)] via-[rgb(138,67,225)] to-[rgb(213,16,252)] bg-clip-text text-transparent"
                           style={{
@@ -153,10 +152,10 @@ const WaveGoodbyeSection = () => {
               />
             </div>
 
-            {/* Stats Container */}
-            <div className="flex justify-center items-center gap-16 relative z-10">
+            {/* Stats Container - Responsive */}
+            <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-16 relative z-10">
               {/* Team Collaborations */}
-              <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="flex items-center gap-1">
                   <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(-9deg)' }}>
                     <img 
@@ -181,13 +180,13 @@ const WaveGoodbyeSection = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-foreground">300K+</div>
-                  <div className="text-muted-foreground">Team Collaborations</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-foreground">300K+</div>
+                  <div className="text-sm sm:text-base text-muted-foreground">Team Collaborations</div>
                 </div>
               </div>
 
               {/* Tasks Completed */}
-              <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
                   <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
                     <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
@@ -196,13 +195,13 @@ const WaveGoodbyeSection = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-foreground">500K+</div>
-                  <div className="text-muted-foreground">Tasks Completed</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-foreground">500K+</div>
+                  <div className="text-sm sm:text-base text-muted-foreground">Tasks Completed</div>
                 </div>
               </div>
 
               {/* Projects Managed */}
-              <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
                   <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
                     <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
@@ -211,13 +210,13 @@ const WaveGoodbyeSection = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-foreground">15M+</div>
-                  <div className="text-muted-foreground">Projects Managed</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-foreground">15M+</div>
+                  <div className="text-sm sm:text-base text-muted-foreground">Projects Managed</div>
                 </div>
               </div>
 
               {/* Successful Integrations */}
-              <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
                   <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
                     <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
@@ -226,8 +225,8 @@ const WaveGoodbyeSection = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-foreground">150K+</div>
-                  <div className="text-muted-foreground">Successful Integrations</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-foreground">150K+</div>
+                  <div className="text-sm sm:text-base text-muted-foreground">Successful Integrations</div>
                 </div>
               </div>
             </div>

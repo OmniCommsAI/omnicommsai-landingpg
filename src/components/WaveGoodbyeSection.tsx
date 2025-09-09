@@ -39,7 +39,7 @@ const WaveGoodbyeSection = () => {
             </div>
 
             {/* Right decorative element */}
-            <div className="absolute -right-16 top-1/2 -translate-y-1/2 w-32 h-32 z-10">
+            <div className="absolute left-16 -translate-y-1/2 w-32 h-32 z-10">
               <img 
                 src="https://framerusercontent.com/images/QoTZyI7CkM97mFm0elr4g0yNc.svg" 
                 alt="Decorative element"

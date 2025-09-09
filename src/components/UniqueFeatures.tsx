@@ -78,20 +78,24 @@ const UniqueFeatures = () => {
               const Icon = feature.icon;
               const isActive = activeIndex === index;
               
-              // Calculate position in stack - active card is at front (0), others stack behind
+              // Calculate stack position relative to active card
               let stackPosition;
               if (isActive) {
-                stackPosition = 0;
-              } else if (index > activeIndex) {
-                stackPosition = index - activeIndex;
+                stackPosition = 0; // Active card at front
               } else {
-                stackPosition = (features.length - activeIndex) + index;
+                // Cards after active index get positions 1, 2, etc.
+                // Cards before active index wrap to the end
+                if (index > activeIndex) {
+                  stackPosition = index - activeIndex;
+                } else {
+                  stackPosition = (features.length - activeIndex) + index;
+                }
               }
               
-              const zIndex = isActive ? 30 : 20 - stackPosition;
-              const translateY = stackPosition * 60; // All cards offset by their stack position
-              const rotateX = stackPosition * -3;
-              const scale = 1 - stackPosition * 0.02;
+              const zIndex = 30 - stackPosition; // Higher number = front
+              const translateY = stackPosition * 40;
+              const rotateX = stackPosition * -2;
+              const scale = 1 - stackPosition * 0.03;
               
               return (
                 <div 
@@ -186,7 +190,7 @@ const UniqueFeatures = () => {
           </div>
 
           {/* Decorative element */}
-          <div className="absolute top-40 right-20 w-36 h-26 z-10">
+          <div className="absolute top-20 right-32 w-36 h-26 z-40">
             <img
               src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
               alt="Click me arrow"

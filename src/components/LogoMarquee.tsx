@@ -20,6 +20,12 @@ const LogoMarquee = () => {
         
         {/* Logo marquee */}
         <div className="relative overflow-hidden">
+          {/* Left fade gradient */}
+          <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-muted/30 to-transparent pointer-events-none"></div>
+          
+          {/* Right fade gradient */}
+          <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-muted/30 to-transparent pointer-events-none"></div>
+          
           <div className="flex animate-scroll-x space-x-16">
             {/* First set of logos */}
             {logos.map((logo, index) => (

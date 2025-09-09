@@ -6,18 +6,18 @@ import noiseTexture from '@/assets/noise-texture.png';
 const HeroSection = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
-      {/* Layer 1: Main gradient background (purple to orange like Prismo) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400"></div>
+      {/* Layer 1: Subtle gradient background (very soft colors) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-200/30 via-pink-100/20 to-orange-200/30"></div>
       
-      {/* Layer 2: Secondary gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-violet-700/80 via-fuchsia-600/60 to-amber-500/70"></div>
+      {/* Layer 2: Secondary subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-violet-100/20 via-fuchsia-50/10 to-amber-100/25"></div>
       
-      {/* Layer 3: Tertiary gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-to-bl from-indigo-600/40 via-transparent to-rose-500/40"></div>
+      {/* Layer 3: White overlay for softness */}
+      <div className="absolute inset-0 bg-white/85"></div>
       
       {/* Layer 4: Noise texture overlay */}
       <div 
-        className="absolute inset-0 opacity-30 mix-blend-overlay"
+        className="absolute inset-0 opacity-20 mix-blend-overlay"
         style={{
           backgroundImage: `url(${noiseTexture})`,
           backgroundSize: '400px 400px',
@@ -25,8 +25,8 @@ const HeroSection = () => {
         }}
       ></div>
       
-      {/* Layer 5: Additional gradient overlay for color richness */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 via-pink-400/20 to-orange-400/30"></div>
+      {/* Layer 5: Additional soft gradient for subtle color hints */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-100/15 via-pink-50/10 to-orange-100/15"></div>
       
       {/* Layer 3: Vertical block slices container */}
       <div className="absolute inset-0 flex items-stretch justify-between">

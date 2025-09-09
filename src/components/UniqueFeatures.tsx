@@ -73,8 +73,8 @@ const UniqueFeatures = () => {
           </div>
 
           {/* Features Cards - 3D Stacked Layout */}
-          {/* Decorative arrow above cards */}
-          <div className="absolute -top-8 right-40 w-36 h-26 z-50">
+          {/* Decorative arrow pointing to cards */}
+          <div className="absolute top-52 -right-11 w-36 h-26 z-50">
             <img
               src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
               alt="Click me arrow"

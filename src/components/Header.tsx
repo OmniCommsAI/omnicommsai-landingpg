@@ -13,12 +13,16 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-border">
+    <header className="w-full bg-white/80 backdrop-blur-lg border-b border-border">
       <nav className="mx-auto max-w-7xl px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between py-6">
           <div className="flex items-center">
-            <a href="#" className="text-2xl font-bold text-gradient">
-              OmniComms AI
+            <a href="#" className="flex items-center">
+              <img 
+                src="/lovable-uploads/f329adfc-78a4-4196-bc19-605c8bb38ad7.png" 
+                alt="OmniComms AI Logo" 
+                className="h-10 w-auto"
+              />
             </a>
           </div>
           

@@ -24,17 +24,19 @@ const ProductOverviewSection = () => {
       const floatingElement2 = section.querySelector('.floating-element-2') as HTMLElement;
       
       if (floatingElement1) {
-        const translateY = 43 * scrollProgress;
-        const rotate = 1.4 * scrollProgress;
-        floatingElement1.style.transform = `translateY(${translateY}px) rotate(${rotate}deg)`;
-        floatingElement1.style.opacity = `${Math.min(1, scrollProgress + 0.3)}`;
+        const translateY = 120 * scrollProgress;
+        const rotate = 8 * scrollProgress;
+        const scale = 0.8 + (0.3 * scrollProgress);
+        floatingElement1.style.transform = `translateY(${translateY}px) rotate(${rotate}deg) scale(${scale})`;
+        floatingElement1.style.opacity = `${Math.min(1, scrollProgress * 1.2 + 0.2)}`;
       }
       
       if (floatingElement2) {
-        const translateY = 43 * scrollProgress;
-        const rotate = -1.4 * scrollProgress;
-        floatingElement2.style.transform = `translateY(${translateY}px) rotate(${rotate}deg)`;
-        floatingElement2.style.opacity = `${Math.min(1, scrollProgress + 0.3)}`;
+        const translateY = 100 * scrollProgress;
+        const rotate = -10 * scrollProgress;
+        const scale = 0.85 + (0.25 * scrollProgress);
+        floatingElement2.style.transform = `translateY(${translateY}px) rotate(${rotate}deg) scale(${scale})`;
+        floatingElement2.style.opacity = `${Math.min(1, scrollProgress * 1.3 + 0.1)}`;
       }
     };
 

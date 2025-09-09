@@ -23,12 +23,12 @@ const WaveGoodbyeSection = () => {
 
   return (
     <section className="relative py-24 bg-[rgb(241,240,238)] overflow-hidden">
-      {/* Main Container */}
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      {/* Main Container - Full width */}
+      <div className="relative w-full px-6 lg:px-8">
         <div className="flex flex-col items-center gap-24">
           
-          {/* Wave Goodbye Container */}
-          <div className="relative flex items-center justify-center gap-5 max-w-4xl w-full">
+          {/* Wave Goodbye Container - Expanded width */}
+          <div className="relative flex items-center justify-center gap-5 w-full max-w-6xl">
             {/* Left decorative element */}
             <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
               <img 
@@ -48,12 +48,12 @@ const WaveGoodbyeSection = () => {
             </div>
 
             {/* Main heading */}
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground whitespace-nowrap">
+            <h2 className="text-5xl md:text-6xl font-bold text-foreground whitespace-nowrap flex-shrink-0">
               Wave goodbye to
             </h2>
 
-            {/* Animated text container */}
-            <div className="relative flex-1 min-w-0">
+            {/* Animated text container - Expanded */}
+            <div className="relative flex-1 min-w-[400px] max-w-[600px]">
               {/* Dark overlay top */}
               <div className="absolute inset-x-0 top-0 h-24 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
               
@@ -66,8 +66,8 @@ const WaveGoodbyeSection = () => {
               >
                 <div className="flex flex-col items-start gap-2 animate-scroll-vertical">
                   {[...waveGoodbyeItems, ...waveGoodbyeItems].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2 py-4">
-                      <h2 className="text-5xl md:text-6xl font-bold">
+                    <div key={index} className="flex items-center gap-2 py-4 w-full">
+                      <h2 className="text-5xl md:text-6xl font-bold whitespace-nowrap">
                         <span 
                           className="bg-gradient-to-r from-[rgb(255,46,46)] via-[rgb(238,123,22)] via-[rgb(138,67,225)] to-[rgb(213,16,252)] bg-clip-text text-transparent"
                           style={{
@@ -88,7 +88,7 @@ const WaveGoodbyeSection = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="relative w-full">
+          <div className="relative w-full max-w-7xl mx-auto">
             {/* Decorative line */}
             <div className="absolute inset-x-0 top-0 h-2">
               <img 
@@ -98,7 +98,7 @@ const WaveGoodbyeSection = () => {
               />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-16 pt-8">
+            <div className="flex flex-wrap justify-center gap-16 pt-8">{/* ... keep existing stats content */}
               {/* Team Collaborations */}
               <div className="flex flex-col items-center gap-8 z-10">
                 <div className="flex items-center gap-2">

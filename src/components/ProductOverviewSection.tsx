@@ -104,28 +104,29 @@ const ProductOverviewSection = () => {
         {/* Dashboard Image Section with Floating Elements */}
         <div className="w-full max-w-5xl p-4 flex flex-col items-center gap-2.5 relative">
           
-          {/* Background Gradient */}
-          <div 
-            className="absolute -inset-8 opacity-60 rounded-3xl z-[-1]"
-            style={{
-              background: 'linear-gradient(180deg, #ff2f2f, #ef7b16 35.87832457397675%, #8a43e1 69.92196209587513%, #d511fd)',
-              borderRadius: '24px'
-            }}
-          ></div>
-          
           {/* Main Dashboard Container */}
           <div className="w-full relative z-10">
             {/* Main Dashboard Image */}
             <div className="w-full aspect-[1.6/1] relative overflow-hidden rounded-2xl">
+              {/* Background Gradient */}
+              <div 
+                className="absolute inset-0 opacity-20 rounded-2xl -m-20 z-0"
+                style={{
+                  background: 'linear-gradient(180deg, #ff2f2f, #ef7b16 35.87832457397675%, #8a43e1 69.92196209587513%, #d511fd)',
+                  borderRadius: '18px'
+                }}
+              ></div>
               {/* Gradient Border */}
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl p-1">
-                <div className="w-full h-full bg-white rounded-xl overflow-hidden relative">
-                  <img 
-                    src="/lovable-uploads/9d4cb87e-2329-4405-978a-f5e9367968d3.png" 
-                    alt="Dashboard Interface" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl p-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl p-1">
+                  <div className="w-full h-full bg-white rounded-xl overflow-hidden relative">
+                    <img 
+                      src="/lovable-uploads/9d4cb87e-2329-4405-978a-f5e9367968d3.png" 
+                      alt="Dashboard Interface" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+              </div>
               </div>
               
               {/* Floating Element 1 - Top Left */}

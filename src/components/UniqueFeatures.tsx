@@ -1,6 +1,9 @@
 import { Users, Calendar, FolderOpen } from 'lucide-react';
+import { useState } from 'react';
 
 const UniqueFeatures = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
   const features = [
     {
       icon: Users,
@@ -69,66 +72,75 @@ const UniqueFeatures = () => {
             </p>
           </div>
 
-          {/* Features Cards - Stacked Layout */}
-          <div className="w-full max-w-6xl relative">
-            <div className="space-y-6">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div 
-                    key={feature.category}
-                    className="relative transition-all duration-300"
-                    style={{ opacity: feature.opacity }}
-                  >
-                    <div className="bg-white rounded-xl shadow-lg border-2 border-white overflow-hidden">
-                      <div className="flex">
-                        {/* Left Side - Content */}
-                        <div className="flex-1 p-8">
-                          {/* Category Header */}
-                          <div className="flex items-center gap-3 mb-6">
-                            <div className="p-2 rounded-lg" style={{ color: feature.color }}>
-                              <Icon className="w-6 h-6" />
-                            </div>
-                            <span className="text-sm font-medium text-muted-foreground">
-                              {feature.category}
-                            </span>
+          {/* Features Cards - 3D Stacked Layout */}
+          <div className="w-full max-w-5xl relative h-[600px]" style={{ perspective: '1000px' }}>
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              const isActive = activeIndex === index;
+              const zIndex = isActive ? 30 : 20 - index;
+              const translateY = isActive ? 0 : index * 40;
+              const rotateX = isActive ? 0 : index * -5;
+              const scale = isActive ? 1 : 0.95 - index * 0.05;
+              
+              return (
+                <div 
+                  key={feature.category}
+                  className="absolute inset-0 cursor-pointer transition-all duration-500 ease-out transform-gpu"
+                  style={{ 
+                    zIndex,
+                    transform: `translateY(${translateY}px) rotateX(${rotateX}deg) scale(${scale})`,
+                    transformStyle: 'preserve-3d'
+                  }}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <div className="bg-white rounded-xl shadow-2xl border-2 border-white overflow-hidden h-full">
+                    <div className="flex h-full">
+                      {/* Left Side - Content */}
+                      <div className="flex-1 p-8 flex flex-col justify-center">
+                        {/* Category Header */}
+                        <div className="flex items-center gap-3 mb-6">
+                          <div className="p-3 rounded-lg bg-muted" style={{ color: feature.color }}>
+                            <Icon className="w-6 h-6" />
                           </div>
-                          
-                          {/* Main Content */}
-                          <div className="max-w-lg">
-                            <h3 className="text-3xl font-bold text-foreground mb-4">
-                              {feature.title}
-                            </h3>
-                            <p className="text-muted-foreground leading-relaxed text-lg">
-                              {feature.description}
-                            </p>
-                          </div>
+                          <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                            {feature.category}
+                          </span>
                         </div>
+                        
+                        {/* Main Content */}
+                        <div className="max-w-lg">
+                          <h3 className="text-3xl font-bold text-foreground mb-6">
+                            {feature.title}
+                          </h3>
+                          <p className="text-muted-foreground leading-relaxed text-lg">
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
 
-                        {/* Right Side - Interface Preview */}
-                        <div className="flex-1 p-8 flex items-center justify-center">
-                          <div className="w-full max-w-lg">
-                            <div 
-                              className="bg-gradient-to-b from-muted/50 to-transparent rounded-lg overflow-hidden"
-                              style={{
-                                mask: 'linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 49%)'
-                              }}
-                            >
-                              <img
-                                src={feature.image}
-                                alt={`${feature.category} interface`}
-                                className="w-full h-auto object-contain"
-                                style={{ minHeight: '300px' }}
-                              />
-                            </div>
+                      {/* Right Side - Interface Preview */}
+                      <div className="flex-1 p-8 flex items-center justify-center">
+                        <div className="w-full max-w-md">
+                          <div 
+                            className="bg-gradient-to-b from-muted/30 to-transparent rounded-lg overflow-hidden"
+                            style={{
+                              mask: 'linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 60%)'
+                            }}
+                          >
+                            <img
+                              src={feature.image}
+                              alt={`${feature.category} interface`}
+                              className="w-full h-auto object-contain"
+                              style={{ minHeight: '350px' }}
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Decorative line */}

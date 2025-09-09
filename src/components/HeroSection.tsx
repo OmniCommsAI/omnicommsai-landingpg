@@ -94,12 +94,19 @@ const HeroSection = () => {
           {/* Dashboard Preview with enhanced Prismo styling */}
           <div className="mt-16 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
             <div className="relative">
-              {/* Multi-colored glow effect around dashboard */}
-              <div className="absolute -inset-8 bg-gradient-to-r from-primary/30 via-accent/30 via-secondary/30 to-warning/30 rounded-3xl blur-3xl animate-pulse"></div>
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/40 to-accent/40 rounded-3xl blur-2xl"></div>
+              {/* Colorful gradient border (matching Prismo CSS) */}
+              <div 
+                className="absolute inset-0 rounded-3xl opacity-50 z-10"
+                style={{
+                  background: 'linear-gradient(179deg, #ff2f2f, #ef7b16 35.87832457397675%, #8a43e1 69.92196209587513%, #d511fd)',
+                  padding: '4px'
+                }}
+              >
+                <div className="w-full h-full bg-white rounded-3xl"></div>
+              </div>
               
               {/* Dashboard container */}
-              <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-white/20 bg-white/5 backdrop-blur-sm">
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-white/20 bg-white/5 backdrop-blur-sm z-20">
                 <img
                   src={heroDashboard}
                   alt="OmniComms AI Dashboard"

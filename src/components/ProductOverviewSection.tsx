@@ -1,5 +1,6 @@
 import { Folder, UserPlus, Clock, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import gradientLineSvg from '@/assets/gradient-line.svg';
 
 const ProductOverviewSection = () => {
   const features = [
@@ -114,7 +115,12 @@ const ProductOverviewSection = () => {
             <div className="flex items-center gap-3.5 w-full max-w-4xl">
               {/* Left line section */}
               <div className="flex-1 h-1.5 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zinc-700 to-zinc-500"></div>
+                <img 
+                  src={gradientLineSvg} 
+                  alt="" 
+                  className="block w-full h-full object-cover object-right"
+                  style={{ objectPosition: 'right center' }}
+                />
               </div>
               
               {/* Text Container */}
@@ -127,7 +133,12 @@ const ProductOverviewSection = () => {
               
               {/* Right line section (rotated) */}
               <div className="flex-1 h-1.5 relative overflow-hidden transform rotate-180">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zinc-700 to-zinc-500"></div>
+                <img 
+                  src={gradientLineSvg} 
+                  alt="" 
+                  className="block w-full h-full object-cover object-right"
+                  style={{ objectPosition: 'right center' }}
+                />
               </div>
             </div>
 

@@ -37,7 +37,7 @@ const ProductOverviewSection = () => {
   ];
 
   return (
-    <section className="w-full bg-background py-24 px-10 flex flex-col items-center gap-5">
+    <section className="w-full bg-black py-24 px-10 flex flex-col items-center gap-5">
       <div className="w-full max-w-7xl flex flex-col items-center gap-20">
         {/* Header Section */}
         <div className="w-full max-w-4xl px-0 md:px-32 flex flex-col items-center gap-2.5">

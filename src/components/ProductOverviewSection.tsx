@@ -1,8 +1,48 @@
 import { Folder, UserPlus, Clock, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import gradientLineSvg from '@/assets/gradient-line.svg';
+import { useEffect, useRef } from 'react';
 
 const ProductOverviewSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+      
+      const section = sectionRef.current;
+      const rect = section.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Calculate scroll progress (0 to 1) when section is in view
+      const scrollProgress = Math.max(0, Math.min(1, 
+        1 - (rect.top / (windowHeight * 0.8))
+      ));
+      
+      // Apply transforms to floating elements
+      const floatingElement1 = section.querySelector('.floating-element-1') as HTMLElement;
+      const floatingElement2 = section.querySelector('.floating-element-2') as HTMLElement;
+      
+      if (floatingElement1) {
+        const translateY = 43 * scrollProgress;
+        const rotate = 1.4 * scrollProgress;
+        floatingElement1.style.transform = `translateY(${translateY}px) rotate(${rotate}deg)`;
+        floatingElement1.style.opacity = `${Math.min(1, scrollProgress + 0.3)}`;
+      }
+      
+      if (floatingElement2) {
+        const translateY = 43 * scrollProgress;
+        const rotate = -1.4 * scrollProgress;
+        floatingElement2.style.transform = `translateY(${translateY}px) rotate(${rotate}deg)`;
+        floatingElement2.style.opacity = `${Math.min(1, scrollProgress + 0.3)}`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const features = [
     {
       icon: Folder,
@@ -35,7 +75,7 @@ const ProductOverviewSection = () => {
   ];
 
   return (
-    <section className="w-full bg-black py-24 px-10 flex flex-col items-center gap-5">
+    <section ref={sectionRef} className="w-full bg-black py-24 px-10 flex flex-col items-center gap-5">
       <div className="w-full max-w-7xl flex flex-col items-center gap-20">
         {/* Header Section */}
         <div className="w-full max-w-4xl px-0 md:px-32 flex flex-col items-center gap-2.5">
@@ -61,23 +101,51 @@ const ProductOverviewSection = () => {
           </div>
         </div>
 
-        {/* Dashboard Image Section */}
+        {/* Dashboard Image Section with Floating Elements */}
         <div className="w-full max-w-5xl p-4 flex flex-col items-center gap-2.5 relative">
           {/* Main Dashboard Container */}
           <div className="w-full relative">
-            {/* Gradient Border */}
-            <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl p-1">
-              <div className="w-full h-full bg-white rounded-xl overflow-hidden relative">
-                {/* Use the uploaded image */}
-                <img 
-                  src="/lovable-uploads/9d4cb87e-2329-4405-978a-f5e9367968d3.png" 
-                  alt="Dashboard Interface" 
-                  className="w-full h-full object-cover"
-                />
+            {/* Main Dashboard Image */}
+            <div className="w-full aspect-[1.6/1] relative overflow-hidden rounded-2xl">
+              {/* Gradient Border */}
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-orange-500 via-purple-500 to-pink-500 rounded-2xl p-1">
+                <div className="w-full h-full bg-white rounded-xl overflow-hidden relative">
+                  <img 
+                    src="/lovable-uploads/9d4cb87e-2329-4405-978a-f5e9367968d3.png" 
+                    alt="Dashboard Interface" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
+              
+              {/* Floating Element 1 - Top Left */}
+              <div 
+                className="absolute top-4 left-4 w-16 h-20 bg-white rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-1"
+                style={{ willChange: 'transform' }}
+              >
+                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-white rounded opacity-80"></div>
+                </div>
+              </div>
+              
+              {/* Floating Element 2 - Top Right */}
+              <div 
+                className="absolute top-6 right-6 w-20 h-12 bg-white rounded-lg shadow-lg transform transition-transform duration-1000 ease-out floating-element-2"
+                style={{ willChange: 'transform' }}
+              >
+                <div className="w-full h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                  <div className="flex gap-1">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Gradient Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none"></div>
             </div>
-            {/* Spacer for aspect ratio */}
-            <div className="w-full aspect-[1.6/1] opacity-0"></div>
           </div>
 
           {/* Features Grid */}

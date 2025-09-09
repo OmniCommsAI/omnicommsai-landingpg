@@ -109,7 +109,7 @@ const WaveGoodbyeSection = () => {
           <div className="relative w-full max-w-[1240px] mx-auto">
             {/* Top decorative line - positioned to intersect with stats */}
             <div 
-              className="w-full mb-8 mt-32"
+              className="absolute w-full"
               style={{
                 aspectRatio: '23.846153846153847 / 1',
                 bottom: '139px',
@@ -117,7 +117,6 @@ const WaveGoodbyeSection = () => {
                 height: 'var(--framer-aspect-ratio-supported, 47px)',
                 left: 0,
                 overflow: 'hidden',
-                position: 'absolute',
                 right: 0,
                 zIndex: 1
               }}
@@ -140,8 +139,8 @@ const WaveGoodbyeSection = () => {
               </div>
             </div>
 
-            {/* Decorative line behind stats - positioned absolutely */}
-            <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 z-0" style={{height: '10px'}}>
+            {/* Decorative line behind stats - positioned to overlay with top shadow */}
+            <div className="absolute w-full" style={{bottom: '139px', height: '10px', zIndex: 2}}>
               <img 
                 decoding="auto" 
                 width="1240" 

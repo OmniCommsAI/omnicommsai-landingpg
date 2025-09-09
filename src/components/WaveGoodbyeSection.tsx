@@ -115,7 +115,7 @@ const WaveGoodbyeSection = () => {
                   width="1240" 
                   height="54"
                   sizes="min(100vw - 80px, 1240px)"
-                  src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10"
+                  src="https://framerusercontent.com/images/PHE9EsmEfv8Zsyd0nV1rAMsyq28.svg"
                   alt=""
                   className="block w-full h-full object-cover"
                   style={{ 

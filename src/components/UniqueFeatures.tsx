@@ -37,7 +37,7 @@ const UniqueFeatures = () => {
   return (
     <section className="relative py-24 overflow-hidden" style={{ backgroundColor: '#F1F0EE' }}>
       {/* Background decorative elements */}
-      <div className="absolute -right-32 -bottom-60 w-[575px] h-[575px] z-10 opacity-30">
+      <div className="absolute -right-48 -bottom-60 w-[575px] h-[575px] z-10 opacity-30">
         <div 
           className="w-full h-full bg-gradient-to-br from-primary/20 to-primary/10 rounded-full blur-3xl"
           style={{

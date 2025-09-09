@@ -1,29 +1,52 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroDashboard from '@/assets/hero-dashboard.png';
-import prismBgLeft from '@/assets/prism-bg-left.png';
-import prismBgRight from '@/assets/prism-bg-right.png';
+import noiseTexture from '@/assets/noise-texture.png';
 
 const HeroSection = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
-      {/* Prismo-style colorful prism backgrounds */}
+      {/* Layer 1: Noise texture background */}
+      <div 
+        className="absolute inset-0 opacity-40 mix-blend-overlay"
+        style={{
+          backgroundImage: `url(${noiseTexture})`,
+          backgroundSize: '400px 400px',
+          backgroundRepeat: 'repeat'
+        }}
+      ></div>
+      
+      {/* Layer 2: Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/30 to-secondary/25"></div>
+      
+      {/* Layer 3: Vertical block slices container */}
+      <div className="absolute inset-0 flex items-stretch justify-between">
+        {/* Generate 24 vertical blocks like the original */}
+        {Array.from({ length: 24 }, (_, i) => (
+          <div
+            key={i}
+            className="flex-1 border-l border-r border-white/5 relative"
+            style={{
+              background: i % 3 === 0 
+                ? 'linear-gradient(180deg, hsl(var(--primary) / 0.05) 0%, transparent 50%, hsl(var(--accent) / 0.05) 100%)'
+                : i % 3 === 1
+                ? 'linear-gradient(180deg, hsl(var(--accent) / 0.03) 0%, transparent 50%, hsl(var(--secondary) / 0.03) 100%)'
+                : 'linear-gradient(180deg, hsl(var(--secondary) / 0.02) 0%, transparent 50%, hsl(var(--primary) / 0.02) 100%)',
+            }}
+          >
+            {/* Add subtle animated elements */}
+            {i % 4 === 0 && (
+              <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-1 h-8 bg-gradient-to-b from-primary/20 to-transparent animate-pulse" style={{animationDelay: `${i * 0.2}s`}}></div>
+            )}
+          </div>
+        ))}
+      </div>
+      
+      {/* Layer 4: Additional prismatic effects */}
       <div className="absolute inset-0">
-        {/* Left prism gradient */}
-        <div className="prism-bg-left animate-prism-glow" style={{
-          background: 'linear-gradient(135deg, hsl(270 91% 65% / 0.7) 0%, hsl(320 89% 70% / 0.6) 30%, hsl(200 100% 70% / 0.5) 70%, transparent 100%)'
-        }}></div>
-        
-        {/* Right prism gradient */}
-        <div className="prism-bg-right animate-prism-glow" style={{
-          background: 'linear-gradient(225deg, hsl(35 91% 65% / 0.7) 0%, hsl(340 87% 65% / 0.6) 30%, hsl(280 100% 85% / 0.5) 70%, transparent 100%)',
-          animationDelay: '2s'
-        }}></div>
-        
-        {/* Additional colorful accent elements */}
-        <div className="absolute top-20 left-1/4 w-32 h-32 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-1/4 w-40 h-40 bg-gradient-to-br from-accent/30 to-secondary/30 rounded-full blur-3xl animate-float" style={{animationDelay: '3s'}}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-secondary/30 to-warning/30 rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-20 left-1/4 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-1/4 w-40 h-40 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-full blur-3xl animate-float" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-secondary/20 to-warning/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s'}}></div>
       </div>
       
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 z-10">

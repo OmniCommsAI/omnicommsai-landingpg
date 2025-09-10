@@ -176,8 +176,7 @@
   }
   
   .icon-gradient-inner-large {
-    @apply rounded-3xl h-full w-full overflow-hidden;
-    background: linear-gradient(180deg, #4c4c4c 0%, rgb(17, 17, 17) 100%);
+    @apply rounded-3xl h-full w-full overflow-hidden flex items-center justify-center;
   }
 
   /* Animations */

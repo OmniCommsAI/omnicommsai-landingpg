@@ -86,54 +86,54 @@ const ContactSection = () => {
           <div className="relative">
             {/* Gradient Border */}
             <div
-              className="absolute -inset-0.5 rounded-2xl"
+              className="absolute inset-0 rounded-2xl p-0.5"
               style={{
                 background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
               }}
-            />
-            
-            {/* Form Container */}
-            <div className="relative card-elevated">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Send us your query</h3>
-              
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            >
+              {/* Form Container */}
+              <div className="card-elevated h-full rounded-2xl">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Send us your query</h3>
+                
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Name *
+                      </label>
+                      <Input placeholder="Your full name" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Email *
+                      </label>
+                      <Input placeholder="your.email@company.com" type="email" />
+                    </div>
+                  </div>
+
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Name *
+                      Subject *
                     </label>
-                    <Input placeholder="Your full name" />
+                    <Input placeholder="How can we help you?" />
                   </div>
+
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Email *
+                      Message *
                     </label>
-                    <Input placeholder="your.email@company.com" type="email" />
+                    <Textarea 
+                      placeholder="Tell us more about your requirements..."
+                      rows={6}
+                    />
                   </div>
-                </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Subject *
-                  </label>
-                  <Input placeholder="How can we help you?" />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Message *
-                  </label>
-                  <Textarea 
-                    placeholder="Tell us more about your requirements..."
-                    rows={6}
-                  />
-                </div>
-
-                <Button className="btn-hero w-full group">
-                  <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  Send Your Message
-                </Button>
-              </form>
+                  <Button className="btn-hero w-full group">
+                    <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    Send Your Message
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         </div>

@@ -256,14 +256,14 @@ const WaveGoodbyeSection = () => {
               {/* Successful Integrations */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="absolute -inset-8 rounded-full pointer-events-none z-0">
+                  <div className="absolute -inset-3 rounded-full pointer-events-none z-0">
                     <img 
                       decoding="auto" 
                       width="265" 
                       height="264" 
                       src={statsBackground} 
                       alt="" 
-                      className="block w-full h-full object-cover object-center rounded-full opacity-20" 
+                      className="block w-full h-full object-cover object-center rounded-full opacity-80" 
                     />
                   </div>
                   <div 

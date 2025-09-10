@@ -39,7 +39,7 @@ const Header = () => {
           </div>
 
           <div className="ml-10 hidden space-x-4 lg:flex">
-            <button className="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-lg font-medium transition-colors text-foreground">
+            <button className="border border-foreground/20 hover:border-foreground/40 bg-transparent hover:bg-foreground/5 px-6 py-2 rounded-full font-medium transition-all duration-200 text-foreground">
               Sign in
             </button>
             <Button className="bg-black text-white font-semibold px-5 py-3 rounded-2xl text-base hover:bg-gray-800 transition-all duration-300">
@@ -82,7 +82,7 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-border/20">
-                <button className="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-lg font-medium transition-colors text-foreground">
+                <button className="border border-foreground/20 hover:border-foreground/40 bg-transparent hover:bg-foreground/5 px-6 py-2 rounded-full font-medium transition-all duration-200 text-foreground">
                   Sign in
                 </button>
                 <Button className="bg-black text-white font-semibold px-5 py-3 rounded-2xl text-base hover:bg-gray-800 transition-all duration-300 justify-start">

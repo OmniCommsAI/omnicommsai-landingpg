@@ -42,7 +42,7 @@ const Header = () => {
             <Button variant="ghost" className="text-muted-foreground">
               Sign in
             </Button>
-            <Button className="btn-hero">
+            <Button className="bg-black text-white font-semibold px-5 py-3 rounded-2xl text-base hover:bg-gray-800 transition-all duration-300">
               Get Started
             </Button>
           </div>
@@ -85,7 +85,7 @@ const Header = () => {
                 <Button variant="ghost" className="text-foreground justify-start hover:bg-muted/50">
                   Sign in
                 </Button>
-                <Button className="btn-hero justify-start">
+                <Button className="bg-black text-white font-semibold px-5 py-3 rounded-2xl text-base hover:bg-gray-800 transition-all duration-300 justify-start">
                   Get Started
                 </Button>
               </div>

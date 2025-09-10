@@ -131,7 +131,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="relative group transition-all duration-300 hover:-translate-y-2">
+          <div className="relative group transition-all duration-300 hover:lg:-translate-y-2">
             {/* Gradient Border */}
             <div
               className="absolute inset-0 rounded-3xl p-0.5 group-hover:shadow-[0_20px_25px_-5px_hsl(240_5.9%_10%_/_0.1),_0_10px_10px_-5px_hsl(240_5.9%_10%_/_0.04)]"

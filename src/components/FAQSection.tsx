@@ -71,7 +71,7 @@ const FAQSection = () => {
   const rightFAQs = faqData.filter(faq => faq.category === "right");
 
   return (
-    <section className="py-16 px-4" id="faq">
+    <section className="py-16 px-4 relative z-10" id="faq">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

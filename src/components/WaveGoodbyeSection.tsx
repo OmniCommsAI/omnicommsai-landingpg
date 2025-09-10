@@ -65,7 +65,7 @@ const WaveGoodbyeSection = () => {
                 />
               </div>
   
-              <div className="hidden lg:block relative w-32 h-32 z-10" style="right: -400px; top: 60px;">
+              <div className="hidden lg:block relative w-32 h-32 z-10" style={{ right: '-400px', top: '60px' }}>
                 <img 
                   src={waveGoodbyeIcon2} 
                   alt="Decorative element"

@@ -7,6 +7,7 @@ import wavePattern from '@/assets/wave-pattern.svg';
 import userAvatar1 from '@/assets/user-avatar1.png';
 import userAvatar2 from '@/assets/user-avatar2.png';
 import userAvatar3 from '@/assets/user-avatar3.png';
+import statsBackground from '@/assets/stats-background.png';
 
 const WaveGoodbyeSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -195,6 +196,17 @@ const WaveGoodbyeSection = () => {
               {/* Tasks Completed */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
+                  <div className="absolute inset-0 rounded-full" style={{ borderRadius: 'inherit' }}>
+                    <img 
+                      decoding="auto" 
+                      width="265" 
+                      height="264" 
+                      src={statsBackground} 
+                      alt="" 
+                      className="block w-full h-full object-cover object-center" 
+                      style={{ borderRadius: 'inherit' }} 
+                    />
+                  </div>
                   <div 
                     className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min"
                     style={{
@@ -215,6 +227,17 @@ const WaveGoodbyeSection = () => {
               {/* Projects Managed */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
+                  <div className="absolute inset-0 rounded-full" style={{ borderRadius: 'inherit' }}>
+                    <img 
+                      decoding="auto" 
+                      width="265" 
+                      height="264" 
+                      src={statsBackground} 
+                      alt="" 
+                      className="block w-full h-full object-cover object-center" 
+                      style={{ borderRadius: 'inherit' }} 
+                    />
+                  </div>
                   <div 
                     className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min"
                     style={{
@@ -235,6 +258,17 @@ const WaveGoodbyeSection = () => {
               {/* Successful Integrations */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
+                  <div className="absolute inset-0 rounded-full" style={{ borderRadius: 'inherit' }}>
+                    <img 
+                      decoding="auto" 
+                      width="265" 
+                      height="264" 
+                      src={statsBackground} 
+                      alt="" 
+                      className="block w-full h-full object-cover object-center" 
+                      style={{ borderRadius: 'inherit' }} 
+                    />
+                  </div>
                   <div 
                     className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min"
                     style={{

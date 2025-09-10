@@ -31,7 +31,7 @@ const WaveGoodbyeSection = () => {
 
   return (
     <section 
-      className="relative overflow-visible flex flex-col items-center justify-center flex-none flex-nowrap w-full h-min py-12 px-4 sm:py-16 sm:px-8 lg:py-24 lg:px-10"
+      className="relative overflow-visible flex flex-col items-center justify-center flex-none flex-nowrap w-full h-min"
       style={{
         alignContent: 'center',
         alignItems: 'center',
@@ -40,10 +40,11 @@ const WaveGoodbyeSection = () => {
         flex: 'none',
         flexDirection: 'column',
         flexWrap: 'nowrap',
-        gap: '80px',
+        gap: '150px',
         height: 'min-content',
         justifyContent: 'center',
         overflow: 'visible',
+        padding: '100px 40px',
         position: 'relative',
         width: '100%'
       }}
@@ -53,9 +54,9 @@ const WaveGoodbyeSection = () => {
         <div className="flex flex-col items-center">
           
           {/* Wave Goodbye Container - Responsive */}
-          <div className="relative flex flex-col items-center justify-center gap-2 sm:gap-5 lg:flex-row lg:gap-8 w-full max-w-6xl">
-            {/* Decorative elements - visible on all screen sizes */}
-            <div className="absolute -left-2 lg:-left-4 top-1/2 -translate-y-1/2 w-4 h-4 lg:w-6 lg:h-6 z-10">
+          <div className="relative flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-8 w-full max-w-6xl">
+            {/* Decorative elements - hidden on mobile */}
+            <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
               <img 
                 src={waveGoodbyeIcon1} 
                 alt="Decorative wave"
@@ -63,7 +64,7 @@ const WaveGoodbyeSection = () => {
               />
             </div>
 
-            <div className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2 w-16 h-16 lg:w-32 lg:h-32 z-10">
+            <div className="hidden lg:block absolute left-16 -translate-y-1/2 w-32 h-32 z-10">
               <img 
                 src={waveGoodbyeIcon2} 
                 alt="Decorative element"
@@ -71,27 +72,27 @@ const WaveGoodbyeSection = () => {
               />
             </div>
 
-            {/* Main heading - improved mobile scaling */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground text-center lg:text-left flex-shrink-0 whitespace-nowrap">
+            {/* Main heading */}
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground text-center lg:text-left lg:whitespace-nowrap flex-shrink-0">
               Wave goodbye to
             </h2>
 
             {/* Animated text container - Responsive */}
             <div className="relative flex-1 w-full max-w-[600px] lg:min-w-[400px]">
-              {/* Dark overlay top - reverted to working version */}
-              <div className="absolute inset-x-0 top-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-b from-black/60 to-transparent z-10"></div>
+              {/* Dark overlay top */}
+              <div className="absolute inset-x-0 top-0 h-32 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
               
               {/* Animated text area - Responsive */}
               <div 
-                className="relative h-32 sm:h-48 md:h-60 lg:h-80 overflow-hidden"
+                className="relative h-60 sm:h-80 overflow-hidden"
                 style={{
                   mask: 'linear-gradient(0deg, rgba(0,0,0,0) -6%, rgb(0,0,0) 48%, rgba(0,0,0,0) 100%)'
                 }}
               >
                 <div className="flex flex-col items-start gap-2 animate-scroll-vertical">
                   {[...waveGoodbyeItems, ...waveGoodbyeItems].map((item, index) => (
-                    <div key={index} className="flex items-center gap-2 py-2 sm:py-4 w-full">
-                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold whitespace-nowrap">
+                    <div key={index} className="flex items-center gap-2 py-4 w-full">
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold whitespace-nowrap">
                         <span 
                           className="bg-gradient-to-r from-[rgb(255,46,46)] via-[rgb(238,123,22)] via-[rgb(138,67,225)] to-[rgb(213,16,252)] bg-clip-text text-transparent"
                           style={{
@@ -106,53 +107,79 @@ const WaveGoodbyeSection = () => {
                 </div>
               </div>
               
-              {/* Dark overlay bottom - reverted to working version */}
-              <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
-            </div>
-          </div>
-
-          {/* Top decorative arrow - positioned above stats */}
-          <div className="relative w-full max-w-[1240px] mx-auto mt-8 sm:mt-12 lg:mt-16">
-            <div className="absolute w-full h-8 sm:h-10 lg:h-12 -top-4 sm:-top-6 lg:-top-8 z-10">
-              <img 
-                src={waveGoodbyeUserIcon}
-                alt="Decorative arrow"
-                className="block w-full h-full object-contain"
-              />
+              {/* Dark overlay bottom */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
             </div>
           </div>
 
           {/* Stats Section */}
-          <div className="relative w-full max-w-[1240px] mx-auto">
-            {/* Decorative line behind stats */}
-            <div className="absolute w-full h-2 sm:h-3 lg:h-4 top-0 z-2">
+          <div className="relative w-full max-w-[1240px] mx-auto mt-36">
+            {/* Top decorative line - positioned to intersect with stats */}
+            <div 
+              className="absolute w-full"
+              style={{
+                aspectRatio: '23.846153846153847 / 1',
+                bottom: '143px',
+                flex: 'none',
+                height: 'var(--framer-aspect-ratio-supported, 47px)',
+                left: 0,
+                overflow: 'hidden',
+                right: 0,
+                zIndex: 1
+              }}
+            >
+              <div className="absolute inset-0">
+                <img 
+                  decoding="auto"
+                  width="1240" 
+                  height="54"
+                  sizes="min(100vw - 80px, 1240px)"
+                  src={waveGoodbyeUserIcon}
+                  alt=""
+                  className="block w-full h-full object-cover"
+                  style={{ 
+                    borderRadius: 'inherit', 
+                    objectPosition: 'center', 
+                    objectFit: 'cover' 
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Decorative line behind stats - positioned to overlay with top shadow */}
+            <div className="absolute w-full" style={{bottom: '139px', height: '10px', zIndex: 2}}>
               <img 
+                decoding="auto" 
+                width="1240" 
+                height="10" 
+                sizes="min(100vw - 80px, 1240px)" 
+                srcSet={`${wavePattern} 512w, ${wavePattern} 1024w, ${wavePattern} 1240w`} 
                 src={wavePattern}
-                alt="Wave pattern" 
+                alt="" 
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Stats Container - Responsive */}
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-evenly items-center gap-8 sm:gap-12 md:gap-16 lg:gap-32 relative z-10 pt-8 sm:pt-12">
+            <div className="flex flex-wrap justify-evenly items-center gap-32 sm:gap-12 md:gap-16 relative z-10">
               {/* Team Collaborations */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="flex items-center gap-1">
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded border border-white" style={{ transform: 'rotate(-9deg)' }}>
+                  <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(-9deg)' }}>
                     <img 
                       src={userAvatar1}
                       alt="Avatar"
                       className="w-full h-full object-cover rounded"
                     />
                   </div>
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded border border-white">
+                  <div className="w-7 h-7 rounded border border-white">
                     <img 
                       src={userAvatar2}
                       alt="Avatar" 
                       className="w-full h-full object-cover rounded"
                     />
                   </div>
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded border border-white" style={{ transform: 'rotate(9deg)' }}>
+                  <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(9deg)' }}>
                     <img 
                       src={userAvatar3}
                       alt="Avatar"
@@ -161,8 +188,8 @@ const WaveGoodbyeSection = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">300K+</div>
-                  <div className="text-xs sm:text-sm lg:text-base text-muted-foreground">Team Collaborations</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-foreground">300K+</div>
+                  <div className="text-sm sm:text-base text-muted-foreground">Team Collaborations</div>
                 </div>
               </div>
 
@@ -171,6 +198,9 @@ const WaveGoodbyeSection = () => {
                 <div className="relative">
                   <div className="absolute -inset-1 rounded-full pointer-events-none z-0">
                     <img 
+                      decoding="auto" 
+                      width="265" 
+                      height="264" 
                       src={statsBackground} 
                       alt="" 
                       className="block w-full h-full object-cover object-center rounded-full opacity-80" 
@@ -182,14 +212,14 @@ const WaveGoodbyeSection = () => {
                       boxShadow: 'rgba(0, 0, 0, 0.12) 0px 6px 12px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 6px 11px 0px'
                     }}
                   >
-                    <div className="p-2 sm:p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
-                      <CheckCircle className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+                    <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
+                      <CheckCircle className="w-7 h-7 text-white" />
                     </div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">500K+</div>
-                  <div className="text-xs sm:text-sm lg:text-base text-muted-foreground">Tasks Completed</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-foreground">500K+</div>
+                  <div className="text-sm sm:text-base text-muted-foreground">Tasks Completed</div>
                 </div>
               </div>
 
@@ -198,6 +228,9 @@ const WaveGoodbyeSection = () => {
                 <div className="relative">
                   <div className="absolute -inset-1 rounded-full pointer-events-none z-0">
                     <img 
+                      decoding="auto" 
+                      width="265" 
+                      height="264" 
                       src={statsBackground} 
                       alt="" 
                       className="block w-full h-full object-cover object-center rounded-full opacity-80" 
@@ -209,14 +242,14 @@ const WaveGoodbyeSection = () => {
                       boxShadow: 'rgba(0, 0, 0, 0.12) 0px 6px 12px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 6px 11px 0px'
                     }}
                   >
-                    <div className="p-2 sm:p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
-                      <Briefcase className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+                    <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
+                      <Briefcase className="w-7 h-7 text-white" />
                     </div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">15M+</div>
-                  <div className="text-xs sm:text-sm lg:text-base text-muted-foreground">Projects Managed</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-foreground">15M+</div>
+                  <div className="text-sm sm:text-base text-muted-foreground">Projects Managed</div>
                 </div>
               </div>
 
@@ -225,6 +258,9 @@ const WaveGoodbyeSection = () => {
                 <div className="relative">
                   <div className="absolute -inset-1 rounded-full pointer-events-none z-0">
                     <img 
+                      decoding="auto" 
+                      width="265" 
+                      height="264" 
                       src={statsBackground} 
                       alt="" 
                       className="block w-full h-full object-cover object-center rounded-full opacity-80" 
@@ -236,25 +272,39 @@ const WaveGoodbyeSection = () => {
                       boxShadow: 'rgba(0, 0, 0, 0.12) 0px 6px 12px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 6px 11px 0px'
                     }}
                   >
-                    <div className="p-2 sm:p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
-                      <Zap className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+                    <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
+                      <Zap className="w-7 h-7 text-white" />
                     </div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">150K+</div>
-                  <div className="text-xs sm:text-sm lg:text-base text-muted-foreground">Successful Integrations</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-foreground">150K+</div>
+                  <div className="text-sm sm:text-base text-muted-foreground">Successful Integrations</div>
                 </div>
               </div>
             </div>
 
-            {/* Bottom decorative element - improved mobile responsiveness */}
-            <div className="relative w-full max-w-[1200px] h-2 sm:h-3 lg:h-4 mx-auto mt-4 sm:mt-6 lg:mt-8">
-              <img 
-                src={wavePattern}
-                alt="Wave pattern"
-                className="w-full h-full object-cover"
-              />
+            {/* Bottom decorative element */}
+            <div className="relative w-[1200px] h-[10px] mx-auto mt-8">
+              <div className="absolute inset-0" style={{ borderRadius: 'inherit' }}>
+                <img 
+                  decoding="auto"
+                  width="1240" 
+                  height="10"
+                  sizes="1200px"
+                  srcSet={`${wavePattern} 512w, ${wavePattern} 1024w, ${wavePattern} 1240w`}
+                  src={wavePattern}
+                  alt=""
+                  style={{ 
+                    display: 'block',
+                    width: '100%', 
+                    height: '100%', 
+                    borderRadius: 'inherit', 
+                    objectPosition: 'center', 
+                    objectFit: 'cover' 
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>

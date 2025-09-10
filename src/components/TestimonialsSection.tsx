@@ -95,9 +95,11 @@ const TestimonialsSection = () => {
               
               {/* Author */}
               <div className="flex items-center">
-                <div className="h-12 w-12 rounded-full bg-gradient-primary overflow-hidden mr-4">
-                  <div className="w-full h-full bg-muted/50 flex items-center justify-center text-white font-semibold">
-                    {testimonial.author.split(' ').map(n => n[0]).join('')}
+                <div className="icon-gradient-container h-12 w-12 mr-4">
+                  <div className="icon-gradient-border-circle">
+                    <div className="icon-gradient-inner-circle text-white font-semibold">
+                      {testimonial.author.split(' ').map(n => n[0]).join('')}
+                    </div>
                   </div>
                 </div>
                 <div>

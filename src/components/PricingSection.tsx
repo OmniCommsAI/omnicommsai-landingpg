@@ -1,5 +1,6 @@
-import { Check, Folder, Crown, Building, ToggleLeft } from 'lucide-react';
+import { Check, Folder, Crown, Building } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { CustomToggle } from '@/components/ui/custom-toggle';
 import { useState, useEffect, useRef } from 'react';
 
 const PricingSection = () => {
@@ -104,34 +105,13 @@ const PricingSection = () => {
           </p>
           
           {/* Billing Toggle */}
-          <div className="inline-flex items-center bg-white rounded-full p-1 mb-8 shadow-sm animate-fade-in hover:shadow-md transition-all duration-300" style={{ animationDelay: '0.6s' }}>
-            <button 
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                !isYearly 
-                  ? 'bg-foreground text-background shadow-sm' 
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-              onClick={() => setIsYearly(false)}
-            >
-              Billed Monthly
-            </button>
-            <div className="relative mx-2">
-              <ToggleLeft 
-                className={`h-6 w-6 text-foreground transition-transform duration-500 hover:scale-110 ${
-                  isYearly ? 'rotate-180' : ''
-                }`}
-              />
-            </div>
-            <button 
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                isYearly 
-                  ? 'bg-foreground text-background shadow-sm' 
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-              onClick={() => setIsYearly(true)}
-            >
-              Billed yearly
-            </button>
+          <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <CustomToggle
+              isToggled={isYearly}
+              onToggle={() => setIsYearly(!isYearly)}
+              leftLabel="Billed Monthly"
+              rightLabel="Billed yearly"
+            />
           </div>
         </div>
 

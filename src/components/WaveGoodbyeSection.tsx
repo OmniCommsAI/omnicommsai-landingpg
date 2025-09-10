@@ -55,7 +55,7 @@ const WaveGoodbyeSection = () => {
           
           {/* Wave Goodbye Container - Responsive */}
           <div className="relative flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-8 w-full max-w-6xl">
-            {/* Decorative elements - hidden on mobile */}
+            {/* Decorative elements */}
             <div className="w-auto">
               <div className="lg:block relative w-6 h-6 z-10" style={{ left: '-26px', top: '150px' }}>
                 <img 

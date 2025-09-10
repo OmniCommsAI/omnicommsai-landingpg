@@ -145,7 +145,7 @@
   
   /* Icon container with gradient border */
   .icon-gradient-container {
-    @apply relative;
+    @apply relative block;
   }
   
   .icon-gradient-border {

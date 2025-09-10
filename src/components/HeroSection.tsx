@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 // Using uploaded dashboard screenshot
 import heroPattern from '@/assets/hero-pattern.png';
 const HeroSection = () => {
-  return <section className="relative pt-32 pb-20 overflow-hidden">
+  return <section className="relative pt-32 pb-20 overflow-visible">
       {/* Complex gradient background */}
       <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden">
         {/* Left abstract shapes */}
@@ -62,10 +62,6 @@ const HeroSection = () => {
         backgroundRepeat: 'repeat'
       }}></div>
 
-        {/* Mask */}
-        <div className="absolute inset-0" style={{
-        mask: 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(0,0,0) 37%)'
-      }}></div>
       </div>
       
       <div className="relative mx-auto max-w-7xl mt-200 px-6 lg:px-8">

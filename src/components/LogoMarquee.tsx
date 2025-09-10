@@ -13,7 +13,7 @@ const LogoMarquee = () => {
   ];
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-12 bg-gradient-to-b from-[rgb(244,242,241)] via-[rgb(250,248,247)] to-background">
       {/* Main Container */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Sub Container with text and decorative lines */}

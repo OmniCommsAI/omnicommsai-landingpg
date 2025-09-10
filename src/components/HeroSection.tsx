@@ -115,7 +115,7 @@ const HeroSection = () => {
           
           {/* Dashboard Preview */}
           <div className="mt-16 animate-fade-in-up" style={{
-          animationDelay: '0.4s'
+          animationDelay: '0.9s'
         }}>
             <div className="relative">
               {/* Gradient Border Container */}

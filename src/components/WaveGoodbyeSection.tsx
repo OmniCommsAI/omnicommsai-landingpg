@@ -195,7 +195,12 @@ const WaveGoodbyeSection = () => {
               {/* Tasks Completed */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
+                  <div 
+                    className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min"
+                    style={{
+                      boxShadow: 'rgba(0, 0, 0, 0.12) 0px 6px 12px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 6px 11px 0px'
+                    }}
+                  >
                     <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
                       <CheckCircle className="w-7 h-7 text-white" />
                     </div>
@@ -210,7 +215,12 @@ const WaveGoodbyeSection = () => {
               {/* Projects Managed */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
+                  <div 
+                    className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min"
+                    style={{
+                      boxShadow: 'rgba(0, 0, 0, 0.12) 0px 6px 12px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 6px 11px 0px'
+                    }}
+                  >
                     <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
                       <Briefcase className="w-7 h-7 text-white" />
                     </div>
@@ -225,7 +235,12 @@ const WaveGoodbyeSection = () => {
               {/* Successful Integrations */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)]">
+                  <div 
+                    className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min"
+                    style={{
+                      boxShadow: 'rgba(0, 0, 0, 0.12) 0px 6px 12px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 6px 11px 0px'
+                    }}
+                  >
                     <div className="p-3 rounded-full bg-gradient-to-b from-[rgb(76,76,76)] to-[rgb(17,17,17)]">
                       <Zap className="w-7 h-7 text-white" />
                     </div>

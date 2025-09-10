@@ -94,7 +94,7 @@ const WaveGoodbyeSection = () => {
                 <div className="flex flex-col items-start gap-2 animate-scroll-vertical">
                   {[...waveGoodbyeItems, ...waveGoodbyeItems].map((item, index) => (
                     <div key={index} className="flex items-center gap-2 py-4 w-full">
-                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold whitespace-nowrap">
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold whitespace-nowrap">
                         <span 
                           className="bg-gradient-to-r from-[rgb(255,46,46)] via-[rgb(238,123,22)] via-[rgb(138,67,225)] to-[rgb(213,16,252)] bg-clip-text text-transparent"
                           style={{

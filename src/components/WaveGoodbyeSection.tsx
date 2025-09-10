@@ -78,8 +78,8 @@ const WaveGoodbyeSection = () => {
 
             {/* Animated text container - Responsive */}
             <div className="relative flex-1 w-full max-w-[600px] lg:min-w-[400px]">
-              {/* Dark overlay top - improved for mobile */}
-              <div className="absolute inset-x-0 top-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-b from-black/60 to-transparent z-10"></div>
+              {/* Dark overlay top - subtle gray gradient */}
+              <div className="absolute inset-x-0 top-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-b from-gray-500/30 to-transparent z-10"></div>
               
               {/* Animated text area - Responsive */}
               <div 
@@ -106,25 +106,25 @@ const WaveGoodbyeSection = () => {
                 </div>
               </div>
               
-              {/* Dark overlay bottom - improved for mobile */}
-              <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              {/* Dark overlay bottom - subtle gray gradient */}
+              <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-t from-gray-500/30 to-transparent z-10"></div>
             </div>
           </div>
 
-          {/* Stats Section */}
-          <div className="relative w-full max-w-[1240px] mx-auto mt-16 sm:mt-24 lg:mt-36">
-            {/* Top decorative line - improved mobile visibility */}
-            <div 
-              className="absolute w-full h-8 sm:h-10 lg:h-12 -top-4 sm:-top-6 lg:-top-8 z-1"
-            >
+          {/* Top decorative arrow - positioned above stats */}
+          <div className="relative w-full max-w-[1240px] mx-auto mt-8 sm:mt-12 lg:mt-16">
+            <div className="absolute w-full h-8 sm:h-10 lg:h-12 -top-4 sm:-top-6 lg:-top-8 z-10">
               <img 
                 src={waveGoodbyeUserIcon}
                 alt="Decorative arrow"
                 className="block w-full h-full object-contain"
               />
             </div>
+          </div>
 
-            {/* Decorative line behind stats - improved mobile positioning */}
+          {/* Stats Section */}
+          <div className="relative w-full max-w-[1240px] mx-auto">
+            {/* Decorative line behind stats */}
             <div className="absolute w-full h-2 sm:h-3 lg:h-4 top-0 z-2">
               <img 
                 src={wavePattern}

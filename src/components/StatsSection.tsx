@@ -49,8 +49,12 @@ const StatsSection = () => {
                 className="text-center bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 text-white mb-6 mx-auto">
-                  <Icon className="h-8 w-8" />
+                <div className="icon-gradient-container h-16 w-16 mb-6 mx-auto">
+                  <div className="icon-gradient-border">
+                    <div className="icon-gradient-inner">
+                      <Icon className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">
                   {stat.number}

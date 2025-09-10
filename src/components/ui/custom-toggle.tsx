@@ -29,8 +29,16 @@ const CustomToggle = React.forwardRef<HTMLDivElement, CustomToggleProps>(
           className="relative cursor-pointer"
           onClick={onToggle}
         >
+          {/* Gradient Border */}
+          <div
+            className="absolute -inset-0.5 rounded-full"
+            style={{
+              background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
+            }}
+          />
+          
           {/* Toggle Background */}
-          <div className="w-12 h-6 bg-black rounded-full relative">
+          <div className="relative w-12 h-6 bg-black rounded-full">
             {/* Toggle Circle */}
             <div
               className={cn(

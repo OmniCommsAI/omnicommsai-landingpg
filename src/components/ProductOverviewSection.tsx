@@ -1,6 +1,8 @@
 import { Folder, UserPlus, Clock, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import gradientLineSvg from '@/assets/gradient-line.svg';
+import productOverviewMain from '@/assets/product-overview-main.png';
+import productOverviewOverlay from '@/assets/product-overview-overlay.svg';
 import { useEffect, useRef } from 'react';
 
 const ProductOverviewSection = () => {
@@ -131,7 +133,7 @@ const ProductOverviewSection = () => {
               >
                 <div style={{ position: 'absolute', borderRadius: 'inherit', top: 0, right: 0, bottom: 0, left: -175 }}>
                   <img 
-                    src="https://framerusercontent.com/images/59dXbAMOkWcJevijvnmRv2OiOAE.png?width=981&height=1063" 
+                    src={productOverviewMain} 
                     alt="Floating dashboard element" 
                     style={{ display: 'block', width: '445px', height: '265px', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
                   />
@@ -145,7 +147,7 @@ const ProductOverviewSection = () => {
               >
                 <div style={{ position: 'absolute', borderRadius: 'inherit', top: 0, right: -275, bottom: 0, left: 0 }}>
                   <img 
-                    src="https://framerusercontent.com/images/KMqtOmQCKJGhfsNjBtXQWEEAoVE.svg?width=290&height=131" 
+                    src={productOverviewOverlay} 
                     alt="Floating dashboard element" 
                     style={{ display: 'block', width: '290px', height: '145px', borderRadius: 'inherit', objectPosition: 'center', objectFit: 'cover' }}
                   />

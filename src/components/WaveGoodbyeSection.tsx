@@ -1,5 +1,12 @@
 import { useState, useEffect } from 'react';
 import { CheckCircle, Briefcase, Zap } from 'lucide-react';
+import waveGoodbyeIcon1 from '@/assets/wave-goodbye-icon1.svg';
+import waveGoodbyeIcon2 from '@/assets/wave-goodbye-icon2.svg';
+import waveGoodbyeUserIcon from '@/assets/wave-goodbye-user-icon.svg';
+import wavePattern from '@/assets/wave-pattern.svg';
+import userAvatar1 from '@/assets/user-avatar1.png';
+import userAvatar2 from '@/assets/user-avatar2.png';
+import userAvatar3 from '@/assets/user-avatar3.png';
 
 const WaveGoodbyeSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,7 +57,7 @@ const WaveGoodbyeSection = () => {
             {/* Decorative elements - hidden on mobile */}
             <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
               <img 
-                src="https://framerusercontent.com/images/8BXeBQObnslmzSi9htBC7WTLXM.svg" 
+                src={waveGoodbyeIcon1} 
                 alt="Decorative wave"
                 className="w-full h-full object-contain"
               />
@@ -58,7 +65,7 @@ const WaveGoodbyeSection = () => {
 
             <div className="hidden lg:block absolute left-16 -translate-y-1/2 w-32 h-32 z-10">
               <img 
-                src="https://framerusercontent.com/images/QoTZyI7CkM97mFm0elr4g0yNc.svg" 
+                src={waveGoodbyeIcon2} 
                 alt="Decorative element"
                 className="w-full h-full object-contain"
               />
@@ -126,7 +133,7 @@ const WaveGoodbyeSection = () => {
                   width="1240" 
                   height="54"
                   sizes="min(100vw - 80px, 1240px)"
-                  src="https://framerusercontent.com/images/PHE9EsmEfv8Zsyd0nV1rAMsyq28.svg"
+                  src={waveGoodbyeUserIcon}
                   alt=""
                   className="block w-full h-full object-cover"
                   style={{ 
@@ -145,8 +152,8 @@ const WaveGoodbyeSection = () => {
                 width="1240" 
                 height="10" 
                 sizes="min(100vw - 80px, 1240px)" 
-                srcSet="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=512&width=1240&height=10 512w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=1024&width=1240&height=10 1024w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10 1240w" 
-                src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10" 
+                srcSet={`${wavePattern} 512w, ${wavePattern} 1024w, ${wavePattern} 1240w`} 
+                src={wavePattern}
                 alt="" 
                 className="w-full h-full object-cover"
               />
@@ -159,21 +166,21 @@ const WaveGoodbyeSection = () => {
                 <div className="flex items-center gap-1">
                   <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(-9deg)' }}>
                     <img 
-                      src="https://framerusercontent.com/images/bOZe3ThmdFaGjs87Gu7Fup6M4.png"
+                      src={userAvatar1}
                       alt="Avatar"
                       className="w-full h-full object-cover rounded"
                     />
                   </div>
                   <div className="w-7 h-7 rounded border border-white">
                     <img 
-                      src="https://framerusercontent.com/images/70rKUELh1Zj5uRxlcEji6neFc.png"
+                      src={userAvatar2}
                       alt="Avatar" 
                       className="w-full h-full object-cover rounded"
                     />
                   </div>
                   <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(9deg)' }}>
                     <img 
-                      src="https://framerusercontent.com/images/czofpZZGkqkn3CC2oLdJdIIzZ6g.png"
+                      src={userAvatar3}
                       alt="Avatar"
                       className="w-full h-full object-cover rounded"
                     />
@@ -239,8 +246,8 @@ const WaveGoodbyeSection = () => {
                   width="1240" 
                   height="10"
                   sizes="1200px"
-                  srcSet="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=512&width=1240&height=10 512w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?scale-down-to=1024&width=1240&height=10 1024w,https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10 1240w"
-                  src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg?width=1240&height=10"
+                  srcSet={`${wavePattern} 512w, ${wavePattern} 1024w, ${wavePattern} 1240w`}
+                  src={wavePattern}
                   alt=""
                   style={{ 
                     display: 'block',

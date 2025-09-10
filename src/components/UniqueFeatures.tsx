@@ -1,5 +1,11 @@
 import { Users, Calendar, FolderOpen } from 'lucide-react';
 import { useState } from 'react';
+import featureCustomDomains from '@/assets/feature-custom-domains.svg';
+import featureTeamCollaboration from '@/assets/feature-team-collaboration.svg';
+import featureAdvancedAnalytics from '@/assets/feature-advanced-analytics.svg';
+import uniqueFeaturesDecoration from '@/assets/unique-features-decoration.svg';
+import wavePattern from '@/assets/wave-pattern.svg';
+import uniqueFeaturesAvatar from '@/assets/unique-features-avatar.svg';
 
 const UniqueFeatures = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -12,7 +18,7 @@ const UniqueFeatures = () => {
       category: 'Meetings and Collaboration',
       title: 'Seamless Collaboration for Effective Meetings',
       description: 'Easily schedule and manage meetings, collaborate in real-time, and keep everyone aligned for successful team interactions and faster decision-making.',
-      image: 'https://framerusercontent.com/images/iwdYvqussSgtyd4vJilHFOVHXA.svg',
+      image: featureCustomDomains,
       opacity: 1
     },
     {
@@ -21,7 +27,7 @@ const UniqueFeatures = () => {
       category: 'Planning and Tracking',
       title: 'Efficient Planning and Real-Time Tracking',
       description: 'Plan tasks, set priorities, and track progress with ease to ensure projects stay on track and deadlines are met with minimal effort.',
-      image: 'https://framerusercontent.com/images/za0PKa2XhNMBz68vOXCVFAMSvQw.svg',
+      image: featureTeamCollaboration,
       opacity: 0.7
     },
     {
@@ -30,7 +36,7 @@ const UniqueFeatures = () => {
       category: 'Events and Document Sharing',
       title: 'Organize Events and Share Documents',
       description: 'Effortlessly manage events, share important documents, and collaborate with your team to ensure everything is in one place and easily accessible.',
-      image: 'https://framerusercontent.com/images/fZzxmzkfza5uO1Pv0lCA7KqDY.svg',
+      image: featureAdvancedAnalytics,
       opacity: 0.5
     }
   ];
@@ -78,7 +84,7 @@ const UniqueFeatures = () => {
             {/* Click me graphic positioned relative to stacked cards */}
             <div className="absolute -top-32 right-8 sm:-top-40 sm:right-16 md:-top-32 md:right-32 lg:-right-8 w-36 h-26 lg:w-36 lg:h-26 z-50 animate-bounce">
               <img
-                src="https://framerusercontent.com/images/CalKafEvMdoE9okD8p55II6rzek.svg"
+                src={uniqueFeaturesDecoration}
                 alt="Click me arrow"
                 className="w-full h-full object-cover transform rotate-12"
               />
@@ -188,7 +194,7 @@ const UniqueFeatures = () => {
           {/* Decorative line */}
           <div className="w-full h-2.5 relative z-20">
             <img 
-              src="https://framerusercontent.com/images/iDrlOYszhHrSmrgaFKo5G5kRV8.svg"
+              src={wavePattern}
               alt="Decorative line"
               className="w-full h-full object-cover"
             />
@@ -199,7 +205,7 @@ const UniqueFeatures = () => {
             <div className="flex flex-col lg:flex-row items-center gap-12 max-w-4xl mx-auto">
               <div className="w-48 h-48 flex-shrink-0">
                 <img
-                  src="https://framerusercontent.com/images/6LqMtTrytJZ09tRazNHOI13tQQ.svg"
+                  src={uniqueFeaturesAvatar}
                   alt="Testimonial avatar"
                   className="w-full h-full object-contain"
                 />

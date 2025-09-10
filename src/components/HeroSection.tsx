@@ -1,6 +1,7 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroDashboard from '@/assets/hero-dashboard.png';
+import heroPattern from '@/assets/hero-pattern.png';
 
 const HeroSection = () => {
   return (
@@ -63,7 +64,7 @@ const HeroSection = () => {
         <div 
           className="absolute inset-0 opacity-50 sm:opacity-75 mix-blend-overlay"
           style={{
-            backgroundImage: 'url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png")',
+            backgroundImage: `url("${heroPattern}")`,
             backgroundSize: '64px sm:128px',
             backgroundRepeat: 'repeat'
           }}

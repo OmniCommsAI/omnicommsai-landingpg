@@ -1,14 +1,16 @@
 import companyLogos from '@/assets/company-logos.png';
+import logoTechCorp from '@/assets/logo-techcorp.svg';
+import logoInnovateCo from '@/assets/logo-innovateco.svg';
 
 const LogoMarquee = () => {
   // Mock logos for demonstration
   const logos = [
-    { name: 'TechCorp', url: 'https://framerusercontent.com/images/5nYj2i6tU9yLEAOJRESakSDvp0g.svg?width=102&height=24' },
-    { name: 'InnovateCo', url: 'https://framerusercontent.com/images/0EIEmxtogiwTpTo7lEjARtFLa8.svg?width=96&height=24' },
-    { name: 'FutureSoft', url: 'https://framerusercontent.com/images/5nYj2i6tU9yLEAOJRESakSDvp0g.svg?width=102&height=24' },
-    { name: 'NextGen', url: 'https://framerusercontent.com/images/5nYj2i6tU9yLEAOJRESakSDvp0g.svg?width=102&height=24' },
-    { name: 'CloudTech', url: 'https://framerusercontent.com/images/5nYj2i6tU9yLEAOJRESakSDvp0g.svg?width=102&height=24' },
-    { name: 'DataFlow', url: 'https://framerusercontent.com/images/5nYj2i6tU9yLEAOJRESakSDvp0g.svg?width=102&height=24' },
+    { name: 'TechCorp', url: logoTechCorp },
+    { name: 'InnovateCo', url: logoInnovateCo },
+    { name: 'FutureSoft', url: logoTechCorp },
+    { name: 'NextGen', url: logoTechCorp },
+    { name: 'CloudTech', url: logoTechCorp },
+    { name: 'DataFlow', url: logoTechCorp },
   ];
 
   return (

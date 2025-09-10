@@ -119,7 +119,7 @@ const WaveGoodbyeSection = () => {
               className="absolute w-full"
               style={{
                 aspectRatio: '23.846153846153847 / 1',
-                bottom: '137px',
+                bottom: '143px',
                 flex: 'none',
                 height: 'var(--framer-aspect-ratio-supported, 47px)',
                 left: 0,

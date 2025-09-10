@@ -39,7 +39,7 @@ const Header = () => {
           </div>
 
           <div className="ml-10 hidden space-x-4 lg:flex">
-            <button className="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-lg font-medium transition-colors text-white">
+            <button className="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-lg font-medium transition-colors text-foreground">
               Sign in
             </button>
             <Button className="bg-black text-white font-semibold px-5 py-3 rounded-2xl text-base hover:bg-gray-800 transition-all duration-300">

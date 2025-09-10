@@ -71,8 +71,19 @@ const AboutSection = () => {
                   className="bg-muted/50 rounded-2xl p-6 hover:bg-muted/70 transition-colors animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="h-12 w-12 bg-gradient-primary rounded-xl flex items-center justify-center text-white mb-4">
-                    <Icon className="h-6 w-6" />
+                  <div className="relative h-12 w-12 mb-4">
+                    {/* Gradient Border */}
+                    <div
+                      className="absolute inset-0 rounded-xl p-0.5"
+                      style={{
+                        background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
+                      }}
+                    >
+                      {/* Icon Container */}
+                      <div className="bg-black rounded-xl h-full flex items-center justify-center">
+                        <Icon className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">
                     {value.title}

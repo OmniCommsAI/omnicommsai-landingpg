@@ -81,8 +81,19 @@ const FeaturesSection = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="mb-4 sm:mb-6">
-                  <div className="inline-flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-gradient-primary text-white group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <div className="relative inline-flex h-10 w-10 sm:h-12 sm:w-12">
+                    {/* Gradient Border */}
+                    <div
+                      className="absolute inset-0 rounded-xl p-0.5"
+                      style={{
+                        background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
+                      }}
+                    >
+                      {/* Icon Container */}
+                      <div className="bg-black rounded-xl h-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 sm:mb-3">

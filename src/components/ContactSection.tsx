@@ -20,10 +20,21 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="flex items-start">
-              <div className="h-12 w-12 bg-gradient-primary rounded-xl flex items-center justify-center text-white mr-4 mt-1">
-                <Mail className="h-6 w-6" />
-              </div>
+              <div className="flex items-start">
+                <div className="relative h-12 w-12 mr-4 mt-1">
+                  {/* Gradient Border */}
+                  <div
+                    className="absolute inset-0 rounded-xl p-0.5"
+                    style={{
+                      background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
+                    }}
+                  >
+                    {/* Icon Container */}
+                    <div className="bg-black rounded-xl h-full flex items-center justify-center">
+                      <Mail className="h-6 w-6 text-white" />
+                    </div>
+                  </div>
+                </div>
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">Email Us</h3>
                 <p className="text-muted-foreground">hello@omnicomms.ai</p>
@@ -34,8 +45,19 @@ const ContactSection = () => {
             </div>
 
             <div className="flex items-start">
-              <div className="h-12 w-12 bg-gradient-primary rounded-xl flex items-center justify-center text-white mr-4 mt-1">
-                <Phone className="h-6 w-6" />
+              <div className="relative h-12 w-12 mr-4 mt-1">
+                {/* Gradient Border */}
+                <div
+                  className="absolute inset-0 rounded-xl p-0.5"
+                  style={{
+                    background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
+                  }}
+                >
+                  {/* Icon Container */}
+                  <div className="bg-black rounded-xl h-full flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-white" />
+                  </div>
+                </div>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">Call Us</h3>
@@ -47,8 +69,19 @@ const ContactSection = () => {
             </div>
 
             <div className="flex items-start">
-              <div className="h-12 w-12 bg-gradient-primary rounded-xl flex items-center justify-center text-white mr-4 mt-1">
-                <MapPin className="h-6 w-6" />
+              <div className="relative h-12 w-12 mr-4 mt-1">
+                {/* Gradient Border */}
+                <div
+                  className="absolute inset-0 rounded-xl p-0.5"
+                  style={{
+                    background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
+                  }}
+                >
+                  {/* Icon Container */}
+                  <div className="bg-black rounded-xl h-full flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-white" />
+                  </div>
+                </div>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">Office</h3>

@@ -82,7 +82,7 @@ const WaveGoodbyeSection = () => {
             {/* Animated text container - Responsive */}
             <div className="relative flex-1 w-full max-w-[600px] lg:min-w-[400px]">
               {/* Dark overlay top */}
-              <div className="absolute inset-x-0 top-0 h-32 sm:h-24 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
+              <div className="absolute inset-x-0 top-0 lg:h-32 sm:h-24 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
               
               {/* Animated text area - Responsive */}
               <div 
@@ -110,7 +110,7 @@ const WaveGoodbyeSection = () => {
               </div>
               
               {/* Dark overlay bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-32 sm:h-24 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
+              <div className="absolute inset-x-0 bottom-0 lg:h-32 sm:h-24 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
             </div>
           </div>
 

@@ -82,10 +82,10 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-border/20">
-                <button className="border border-foreground/20 hover:border-foreground/40 bg-transparent hover:bg-foreground/5 px-6 py-2 rounded-1xl font-medium transition-all duration-200 text-foreground">
+                <button className="border border-foreground/20 hover:border-foreground/40 bg-transparent hover:bg-foreground/5 px-6 py-2 rounded-2xl font-medium transition-all duration-200 text-foreground">
                   Sign in
                 </button>
-                <Button className="bg-black text-white font-semibold px-5 py-3 rounded-1xl text-base hover:bg-gray-800 transition-all duration-300 justify-start">
+                <Button className="bg-black text-white font-semibold px-5 py-3 rounded-2xl text-base hover:bg-gray-800 transition-all duration-300 justify-start">
                   Get Started
                 </Button>
               </div>

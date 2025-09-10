@@ -196,19 +196,18 @@ const WaveGoodbyeSection = () => {
               {/* Tasks Completed */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="absolute inset-0 rounded-full" style={{ borderRadius: 'inherit' }}>
+                  <div className="absolute -inset-8 rounded-full pointer-events-none z-0">
                     <img 
                       decoding="auto" 
                       width="265" 
                       height="264" 
                       src={statsBackground} 
                       alt="" 
-                      className="block w-full h-full object-cover object-center" 
-                      style={{ borderRadius: 'inherit' }} 
+                      className="block w-full h-full object-cover object-center rounded-full opacity-20" 
                     />
                   </div>
                   <div 
-                    className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min"
+                    className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min z-10"
                     style={{
                       boxShadow: 'rgba(0, 0, 0, 0.12) 0px 6px 12px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 6px 11px 0px'
                     }}
@@ -227,19 +226,18 @@ const WaveGoodbyeSection = () => {
               {/* Projects Managed */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="absolute inset-0 rounded-full" style={{ borderRadius: 'inherit' }}>
+                  <div className="absolute -inset-8 rounded-full pointer-events-none z-0">
                     <img 
                       decoding="auto" 
                       width="265" 
                       height="264" 
                       src={statsBackground} 
                       alt="" 
-                      className="block w-full h-full object-cover object-center" 
-                      style={{ borderRadius: 'inherit' }} 
+                      className="block w-full h-full object-cover object-center rounded-full opacity-20" 
                     />
                   </div>
                   <div 
-                    className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min"
+                    className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min z-10"
                     style={{
                       boxShadow: 'rgba(0, 0, 0, 0.12) 0px 6px 12px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 6px 11px 0px'
                     }}
@@ -258,19 +256,18 @@ const WaveGoodbyeSection = () => {
               {/* Successful Integrations */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="absolute inset-0 rounded-full" style={{ borderRadius: 'inherit' }}>
+                  <div className="absolute -inset-8 rounded-full pointer-events-none z-0">
                     <img 
                       decoding="auto" 
                       width="265" 
                       height="264" 
                       src={statsBackground} 
                       alt="" 
-                      className="block w-full h-full object-cover object-center" 
-                      style={{ borderRadius: 'inherit' }} 
+                      className="block w-full h-full object-cover object-center rounded-full opacity-20" 
                     />
                   </div>
                   <div 
-                    className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min"
+                    className="p-0.5 rounded-full bg-gradient-to-r from-[rgb(255,47,47)] via-[rgb(239,123,22)] via-[rgb(138,67,225)] to-[rgb(213,17,253)] place-content-center items-center flex flex-none flex-row gap-0 h-min overflow-visible relative w-min z-10"
                     style={{
                       boxShadow: 'rgba(0, 0, 0, 0.12) 0px 6px 12px 0px, rgba(0, 0, 0, 0.12) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 6px 11px 0px'
                     }}

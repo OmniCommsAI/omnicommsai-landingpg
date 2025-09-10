@@ -56,35 +56,37 @@ const WaveGoodbyeSection = () => {
           {/* Wave Goodbye Container - Responsive */}
           <div className="relative flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-8 w-full max-w-6xl">
             {/* Decorative elements - hidden on mobile */}
-            <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
-              <img 
-                src={waveGoodbyeIcon1} 
-                alt="Decorative wave"
-                className="w-full h-full object-contain"
-              />
+            <div className="w-auto">
+              <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
+                <img 
+                  src={waveGoodbyeIcon1} 
+                  alt="Decorative wave"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+  
+              <div className="hidden lg:block absolute left-16 -translate-y-1/2 w-32 h-32 z-10">
+                <img 
+                  src={waveGoodbyeIcon2} 
+                  alt="Decorative element"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+  
+              {/* Main heading */}
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground text-center lg:text-left lg:whitespace-nowrap flex-shrink-0">
+                Wave goodbye to
+              </h2>
             </div>
-
-            <div className="hidden lg:block absolute left-16 -translate-y-1/2 w-32 h-32 z-10">
-              <img 
-                src={waveGoodbyeIcon2} 
-                alt="Decorative element"
-                className="w-full h-full object-contain"
-              />
-            </div>
-
-            {/* Main heading */}
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground text-center lg:text-left lg:whitespace-nowrap flex-shrink-0">
-              Wave goodbye to
-            </h2>
 
             {/* Animated text container - Responsive */}
             <div className="relative flex-1 w-full max-w-[600px] lg:min-w-[400px]">
               {/* Dark overlay top */}
-              <div className="absolute inset-x-0 top-0 h-32 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
+              <div className="absolute inset-x-0 top-0 h-32 sm:h-16 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
               
               {/* Animated text area - Responsive */}
               <div 
-                className="relative h-60 sm:h-80 overflow-hidden"
+                className="relative h-60 sm:h-60 overflow-hidden"
                 style={{
                   mask: 'linear-gradient(0deg, rgba(0,0,0,0) -6%, rgb(0,0,0) 48%, rgba(0,0,0,0) 100%)'
                 }}
@@ -108,7 +110,7 @@ const WaveGoodbyeSection = () => {
               </div>
               
               {/* Dark overlay bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
+              <div className="absolute inset-x-0 bottom-0 h-32 sm:h-24 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
             </div>
           </div>
 

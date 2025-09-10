@@ -91,7 +91,7 @@ const WaveGoodbyeSection = () => {
                   mask: 'linear-gradient(0deg, rgba(0,0,0,0) -6%, rgb(0,0,0) 48%, rgba(0,0,0,0) 100%)'
                 }}
               >
-                <div className="flex flex-col items-start gap-2 animate-scroll-vertical-jump">
+                <div className="flex flex-col items-start gap-2 animate-scroll-vertical">
                   {[...waveGoodbyeItems, ...waveGoodbyeItems].map((item, index) => (
                     <div key={index} className="flex items-center gap-2 py-4 w-full">
                       <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold whitespace-nowrap">

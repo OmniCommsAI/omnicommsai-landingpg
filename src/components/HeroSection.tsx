@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 // Using uploaded dashboard screenshot
 import heroPattern from '@/assets/hero-pattern.png';
 const HeroSection = () => {
-  return <section className="relative pt-32 pb-20 overflow-visible">
+  return <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Complex gradient background */}
       <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden">
         {/* Left abstract shapes */}
@@ -62,6 +62,10 @@ const HeroSection = () => {
         backgroundRepeat: 'repeat'
       }}></div>
 
+        {/* Mask */}
+        <div className="absolute inset-0" style={{
+        mask: 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(0,0,0) 37%)'
+      }}></div>
       </div>
       
       <div className="relative mx-auto max-w-7xl mt-200 px-6 lg:px-8">
@@ -113,15 +117,10 @@ const HeroSection = () => {
           <div className="mt-16 animate-fade-in-up" style={{
           animationDelay: '0.4s'
         }}>
-            <div className="relative icon-gradient-container">
-              <div className="icon-gradient-border-large">
-                <div className="icon-gradient-inner-large">
-                  <img 
-                    src="/lovable-uploads/bbd270a6-888f-4f13-937e-3c142b7bdb31.png" 
-                    alt="OmniComms AI Dashboard" 
-                    className="w-full h-auto transform hover:scale-105 transition-transform duration-700" 
-                  />
-                </div>
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent-dark/20 rounded-3xl blur-2xl animate-pulse"></div>
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <img src="/lovable-uploads/bbd270a6-888f-4f13-937e-3c142b7bdb31.png" alt="OmniComms AI Dashboard" className="w-full h-auto transform hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </div>

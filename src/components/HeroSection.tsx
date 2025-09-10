@@ -118,9 +118,17 @@ const HeroSection = () => {
           animationDelay: '0.4s'
         }}>
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent-dark/20 rounded-3xl blur-2xl animate-pulse"></div>
-              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                <img src="/lovable-uploads/bbd270a6-888f-4f13-937e-3c142b7bdb31.png" alt="OmniComms AI Dashboard" className="w-full h-auto transform hover:scale-105 transition-transform duration-700" />
+              {/* Gradient Border Container */}
+              <div
+                className="rounded-3xl p-0.5"
+                style={{
+                  background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
+                }}
+              >
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent-dark/20 rounded-3xl blur-2xl animate-pulse"></div>
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                  <img src="/lovable-uploads/bbd270a6-888f-4f13-937e-3c142b7bdb31.png" alt="OmniComms AI Dashboard" className="w-full h-auto transform hover:scale-105 transition-transform duration-700" />
+                </div>
               </div>
             </div>
           </div>

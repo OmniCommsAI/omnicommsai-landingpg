@@ -80,7 +80,12 @@ const AboutSection = () => {
                       }}
                     >
                       {/* Icon Container */}
-                      <div className="bg-black rounded-xl h-full flex items-center justify-center">
+                      <div 
+                        className="rounded-xl h-full flex items-center justify-center"
+                        style={{
+                          background: 'linear-gradient(180deg, #4c4c4c 0%, rgb(17, 17, 17) 100%)'
+                        }}
+                      >
                         <Icon className="h-6 w-6 text-white" />
                       </div>
                     </div>

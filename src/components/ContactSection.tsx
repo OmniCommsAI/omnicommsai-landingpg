@@ -30,7 +30,12 @@ const ContactSection = () => {
                     }}
                   >
                     {/* Icon Container */}
-                    <div className="bg-black rounded-xl h-full flex items-center justify-center">
+                    <div 
+                      className="rounded-xl h-full flex items-center justify-center"
+                      style={{
+                        background: 'linear-gradient(180deg, #4c4c4c 0%, rgb(17, 17, 17) 100%)'
+                      }}
+                    >
                       <Mail className="h-6 w-6 text-white" />
                     </div>
                   </div>
@@ -54,7 +59,12 @@ const ContactSection = () => {
                   }}
                 >
                   {/* Icon Container */}
-                  <div className="bg-black rounded-xl h-full flex items-center justify-center">
+                  <div 
+                    className="rounded-xl h-full flex items-center justify-center"
+                    style={{
+                      background: 'linear-gradient(180deg, #4c4c4c 0%, rgb(17, 17, 17) 100%)'
+                    }}
+                  >
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                 </div>
@@ -78,7 +88,12 @@ const ContactSection = () => {
                   }}
                 >
                   {/* Icon Container */}
-                  <div className="bg-black rounded-xl h-full flex items-center justify-center">
+                  <div 
+                    className="rounded-xl h-full flex items-center justify-center"
+                    style={{
+                      background: 'linear-gradient(180deg, #4c4c4c 0%, rgb(17, 17, 17) 100%)'
+                    }}
+                  >
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                 </div>

@@ -90,7 +90,12 @@ const FeaturesSection = () => {
                       }}
                     >
                       {/* Icon Container */}
-                      <div className="bg-black rounded-xl h-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div 
+                        className="rounded-xl h-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                        style={{
+                          background: 'linear-gradient(180deg, #4c4c4c 0%, rgb(17, 17, 17) 100%)'
+                        }}
+                      >
                         <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                       </div>
                     </div>

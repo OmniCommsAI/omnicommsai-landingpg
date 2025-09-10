@@ -78,8 +78,8 @@ const WaveGoodbyeSection = () => {
 
             {/* Animated text container - Responsive */}
             <div className="relative flex-1 w-full max-w-[600px] lg:min-w-[400px]">
-              {/* Dark overlay top - subtle gray gradient */}
-              <div className="absolute inset-x-0 top-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-b from-gray-500/30 to-transparent z-10"></div>
+              {/* Dark overlay top - reverted to working version */}
+              <div className="absolute inset-x-0 top-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-b from-black/60 to-transparent z-10"></div>
               
               {/* Animated text area - Responsive */}
               <div 
@@ -106,8 +106,8 @@ const WaveGoodbyeSection = () => {
                 </div>
               </div>
               
-              {/* Dark overlay bottom - subtle gray gradient */}
-              <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-t from-gray-500/30 to-transparent z-10"></div>
+              {/* Dark overlay bottom - reverted to working version */}
+              <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 lg:h-32 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
             </div>
           </div>
 

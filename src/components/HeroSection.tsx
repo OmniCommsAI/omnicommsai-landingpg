@@ -5,7 +5,7 @@ import heroPattern from '@/assets/hero-pattern.png';
 const HeroSection = () => {
   return <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Complex gradient background */}
-      <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden animate-fade-in-gradual" style={{ animationDelay: '2s' }}>
+      <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden animate-fade-in-gradual" style={{ animationDelay: '1s' }}>
         {/* Left abstract shapes */}
         <div className="absolute top-0 left-[-60px] sm:left-[-120px] w-[200px] sm:w-[300px] lg:w-[378px] h-[300px] sm:h-[450px] lg:h-[571px] blur-[1px] sm:blur-[2px] animate-fade-in-gradual" style={{ animationDelay: '2.3s' }}>
           <div className="relative w-[220px] sm:w-[320px] lg:w-[420px] h-[300px] sm:h-[450px] lg:h-[571px] left-[-20px] sm:left-[-42px]">

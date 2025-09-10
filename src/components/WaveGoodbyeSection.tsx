@@ -74,7 +74,7 @@ const WaveGoodbyeSection = () => {
               </div>
   
               {/* Main heading */}
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground text-center lg:text-left lg:whitespace-nowrap flex-shrink-0">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground text-center lg:text-left lg:whitespace-nowrap flex-shrink-0">
                 Wave goodbye to
               </h2>
             </div>
@@ -163,9 +163,9 @@ const WaveGoodbyeSection = () => {
             </div>
 
             {/* Stats Container - Responsive */}
-            <div className="flex flex-wrap justify-evenly items-center gap-32 sm:gap-12 md:gap-16 relative z-10">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-evenly items-center gap-8 sm:gap-12 md:gap-16 relative z-10">
               {/* Team Collaborations */}
-              <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
+              <div className="flex flex-col items-center gap-4">
                 <div className="flex items-center gap-1">
                   <div className="w-7 h-7 rounded border border-white" style={{ transform: 'rotate(-9deg)' }}>
                     <img 
@@ -196,7 +196,7 @@ const WaveGoodbyeSection = () => {
               </div>
 
               {/* Tasks Completed */}
-              <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
+              <div className="flex flex-col items-center gap-4">
                 <div className="relative">
                   <div className="absolute -inset-1 rounded-full pointer-events-none z-0">
                     <img 
@@ -226,7 +226,7 @@ const WaveGoodbyeSection = () => {
               </div>
 
               {/* Projects Managed */}
-              <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
+              <div className="flex flex-col items-center gap-4">
                 <div className="relative">
                   <div className="absolute -inset-1 rounded-full pointer-events-none z-0">
                     <img 
@@ -256,7 +256,7 @@ const WaveGoodbyeSection = () => {
               </div>
 
               {/* Successful Integrations */}
-              <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
+              <div className="flex flex-col items-center gap-4">
                 <div className="relative">
                   <div className="absolute -inset-1 rounded-full pointer-events-none z-0">
                     <img 

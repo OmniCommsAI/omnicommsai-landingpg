@@ -5,7 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 bg-muted/30 relative z-0">
+    <section id="contact" className="py-24 bg-muted/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -131,10 +131,10 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="relative group transition-all duration-300 hover:lg:-translate-y-2">
+          <div className="relative">
             {/* Gradient Border */}
             <div
-              className="absolute inset-0 rounded-3xl p-0.5 group-hover:shadow-[0_20px_25px_-5px_hsl(240_5.9%_10%_/_0.1),_0_10px_10px_-5px_hsl(240_5.9%_10%_/_0.04)]"
+              className="absolute inset-0 rounded-3xl p-0.5"
               style={{
                 background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
               }}

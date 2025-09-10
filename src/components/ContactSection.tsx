@@ -140,7 +140,7 @@ const ContactSection = () => {
               }}
             >
               {/* Form Container */}
-              <div className="bg-card rounded-3xl p-8 h-full">
+              <div className="bg-card rounded-3xl p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-6">Send us your query</h3>
                 
                 <form className="space-y-6">

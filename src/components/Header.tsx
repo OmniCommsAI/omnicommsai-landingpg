@@ -39,9 +39,9 @@ const Header = () => {
           </div>
 
           <div className="ml-10 hidden space-x-4 lg:flex">
-            <Button variant="ghost" className="text-muted-foreground">
+            <button className="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-lg font-medium transition-colors text-white">
               Sign in
-            </Button>
+            </button>
             <Button className="bg-black text-white font-semibold px-5 py-3 rounded-2xl text-base hover:bg-gray-800 transition-all duration-300">
               Get Started
             </Button>
@@ -82,9 +82,9 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-border/20">
-                <Button variant="ghost" className="text-foreground justify-start hover:bg-muted/50">
+                <button className="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-lg font-medium transition-colors text-foreground">
                   Sign in
-                </Button>
+                </button>
                 <Button className="bg-black text-white font-semibold px-5 py-3 rounded-2xl text-base hover:bg-gray-800 transition-all duration-300 justify-start">
                   Get Started
                 </Button>

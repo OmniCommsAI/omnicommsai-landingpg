@@ -5,9 +5,9 @@ import heroPattern from '@/assets/hero-pattern.png';
 const HeroSection = () => {
   return <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Complex gradient background */}
-      <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden animate-fade-in">
+      <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden animate-fade-in-gradual" style={{ animationDelay: '2s' }}>
         {/* Left abstract shapes */}
-        <div className="absolute top-0 left-[-60px] sm:left-[-120px] w-[200px] sm:w-[300px] lg:w-[378px] h-[300px] sm:h-[450px] lg:h-[571px] blur-[1px] sm:blur-[2px] animate-fade-in" style={{ animationDelay: '0.1s' }}>
+        <div className="absolute top-0 left-[-60px] sm:left-[-120px] w-[200px] sm:w-[300px] lg:w-[378px] h-[300px] sm:h-[450px] lg:h-[571px] blur-[1px] sm:blur-[2px] animate-fade-in-gradual" style={{ animationDelay: '2.3s' }}>
           <div className="relative w-[220px] sm:w-[320px] lg:w-[420px] h-[300px] sm:h-[450px] lg:h-[571px] left-[-20px] sm:left-[-42px]">
             {/* Blurred circles - first layer */}
             <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[100px] sm:top-[155px] lg:top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
@@ -24,7 +24,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right abstract shapes */}
-        <div className="absolute top-0 right-[-60px] sm:right-[-120px] w-[200px] sm:w-[300px] lg:w-[378px] h-[300px] sm:h-[450px] lg:h-[571px] blur-[1px] sm:blur-[2px] rotate-180 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <div className="absolute top-0 right-[-60px] sm:right-[-120px] w-[200px] sm:w-[300px] lg:w-[378px] h-[300px] sm:h-[450px] lg:h-[571px] blur-[1px] sm:blur-[2px] rotate-180 animate-fade-in-gradual" style={{ animationDelay: '2.6s' }}>
           <div className="relative w-[220px] sm:w-[320px] lg:w-[420px] h-[300px] sm:h-[450px] lg:h-[571px] left-[-20px] sm:left-[-42px]">
             {/* Blurred circles - first layer */}
             <div className="absolute w-[100px] sm:w-[150px] lg:w-[207px] h-[100px] sm:h-[150px] lg:h-[207px] top-[100px] sm:top-[155px] lg:top-[207px] left-0 rounded-full bg-[rgb(138,67,225)] blur-[100px] sm:blur-[150px] lg:blur-[200px]"></div>
@@ -43,30 +43,30 @@ const HeroSection = () => {
         </div>
 
         {/* Top gradient */}
-        <div className="absolute inset-x-0 top-0 h-[200px] sm:h-[300px] lg:h-[414px] bg-gradient-to-b from-[rgb(242,240,238)] to-transparent animate-fade-in" style={{ animationDelay: '0.3s' }}></div>
+        <div className="absolute inset-x-0 top-0 h-[200px] sm:h-[300px] lg:h-[414px] bg-gradient-to-b from-[rgb(242,240,238)] to-transparent animate-fade-in-gradual" style={{ animationDelay: '2.9s' }}></div>
 
         {/* Vertical grid lines - hidden on mobile for better performance */}
-        <div className="absolute inset-0 hidden sm:flex animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <div className="absolute inset-0 hidden sm:flex animate-fade-in-gradual" style={{ animationDelay: '3.2s' }}>
           {Array.from({
           length: 24
         }).map((_, i) => <div key={i} className="flex-1 h-full backdrop-blur-[25px] bg-gradient-to-r from-[rgba(242,240,238,0.2)] to-transparent border-r border-white/10"></div>)}
         </div>
 
         {/* Bottom gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[rgb(242,240,238)] to-transparent animate-fade-in" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgb(242,240,238)] to-transparent animate-fade-in-gradual" style={{ animationDelay: '3.5s' }}></div>
 
         {/* Noise overlay - reduced on mobile */}
-        <div className="absolute inset-0 opacity-50 sm:opacity-75 mix-blend-overlay animate-fade-in" style={{
+        <div className="absolute inset-0 opacity-50 sm:opacity-75 mix-blend-overlay animate-fade-in-gradual" style={{
         backgroundImage: `url("${heroPattern}")`,
         backgroundSize: '64px sm:128px',
         backgroundRepeat: 'repeat',
-        animationDelay: '0.6s'
+        animationDelay: '3.8s'
       }}></div>
 
         {/* Mask */}
-        <div className="absolute inset-0 animate-fade-in" style={{
+        <div className="absolute inset-0 animate-fade-in-gradual" style={{
         mask: 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(0,0,0) 37%)',
-        animationDelay: '0.7s'
+        animationDelay: '4.1s'
       }}></div>
       </div>
       

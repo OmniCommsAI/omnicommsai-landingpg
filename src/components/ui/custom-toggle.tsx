@@ -38,12 +38,15 @@ const CustomToggle = React.forwardRef<HTMLDivElement, CustomToggleProps>(
           />
           
           {/* Toggle Background */}
-          <div className="relative w-12 h-6 bg-black rounded-full">
+          <div className={cn(
+            "relative w-12 h-6 rounded-full transition-colors duration-300",
+            isToggled ? "bg-white" : "bg-black"
+          )}>
             {/* Toggle Circle */}
             <div
               className={cn(
-                "absolute top-0.5 w-5 h-5 bg-white rounded-full transition-all duration-300 ease-out",
-                isToggled ? "translate-x-6" : "translate-x-0.5"
+                "absolute top-0.5 w-5 h-5 rounded-full transition-all duration-300 ease-out",
+                isToggled ? "translate-x-6 bg-black" : "translate-x-0.5 bg-white"
               )}
             />
           </div>

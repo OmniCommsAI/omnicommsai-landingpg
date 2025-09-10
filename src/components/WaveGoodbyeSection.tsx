@@ -119,7 +119,7 @@ const WaveGoodbyeSection = () => {
               className="absolute w-full"
               style={{
                 aspectRatio: '23.846153846153847 / 1',
-                bottom: '139px',
+                bottom: '137px',
                 flex: 'none',
                 height: 'var(--framer-aspect-ratio-supported, 47px)',
                 left: 0,
@@ -196,7 +196,7 @@ const WaveGoodbyeSection = () => {
               {/* Tasks Completed */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="absolute -inset-2 rounded-full pointer-events-none z-0">
+                  <div className="absolute -inset-1 rounded-full pointer-events-none z-0">
                     <img 
                       decoding="auto" 
                       width="265" 
@@ -226,7 +226,7 @@ const WaveGoodbyeSection = () => {
               {/* Projects Managed */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="absolute -inset-2 rounded-full pointer-events-none z-0">
+                  <div className="absolute -inset-1 rounded-full pointer-events-none z-0">
                     <img 
                       decoding="auto" 
                       width="265" 
@@ -256,7 +256,7 @@ const WaveGoodbyeSection = () => {
               {/* Successful Integrations */}
               <div className="flex flex-col items-center gap-4 w-full sm:w-auto">
                 <div className="relative">
-                  <div className="absolute -inset-2 rounded-full pointer-events-none z-0">
+                  <div className="absolute -inset-1 rounded-full pointer-events-none z-0">
                     <img 
                       decoding="auto" 
                       width="265" 

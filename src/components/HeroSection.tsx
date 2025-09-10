@@ -117,13 +117,17 @@ const HeroSection = () => {
           <div className="mt-16 animate-fade-in-up" style={{
           animationDelay: '0.4s'
         }}>
-              <div className="relative icon-gradient-container">
-                <div className="icon-gradient-border-large">
-                  <div className="icon-gradient-inner-large">
-                    <img src="/lovable-uploads/bbd270a6-888f-4f13-937e-3c142b7bdb31.png" alt="OmniComms AI Dashboard" className="w-full h-auto transform hover:scale-105 transition-transform duration-700" />
-                  </div>
+            <div className="relative icon-gradient-container">
+              <div className="icon-gradient-border-large">
+                <div className="icon-gradient-inner-large">
+                  <img 
+                    src="/lovable-uploads/bbd270a6-888f-4f13-937e-3c142b7bdb31.png" 
+                    alt="OmniComms AI Dashboard" 
+                    className="w-full h-auto transform hover:scale-105 transition-transform duration-700" 
+                  />
                 </div>
               </div>
+            </div>
           </div>
           
           {/* Stats */}

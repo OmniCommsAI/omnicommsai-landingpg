@@ -176,7 +176,7 @@
   }
   
   .icon-gradient-inner-large {
-    @apply rounded-3xl h-full w-full overflow-hidden flex items-center justify-center;
+    @apply rounded-3xl h-full w-full;
   }
 
   /* Animations */

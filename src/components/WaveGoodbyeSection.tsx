@@ -55,9 +55,9 @@ const WaveGoodbyeSection = () => {
           
           {/* Wave Goodbye Container - Responsive */}
           <div className="relative flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-8 w-full max-w-6xl">
-            {/* Decorative elements */}
-            <div className="w-auto">
-              <div className="lg:block relative w-6 h-6 z-10" style={{ left: '-26px', top: '150px' }}>
+            {/* Decorative elements and heading container */}
+            <div className="relative w-auto flex items-center h-60 lg:h-auto">
+              <div className="lg:block absolute w-6 h-6 z-10" style={{ left: '-26px', top: '150px' }}>
                 <img 
                   src={waveGoodbyeIcon1} 
                   alt="Decorative wave"
@@ -65,7 +65,7 @@ const WaveGoodbyeSection = () => {
                 />
               </div>
   
-              <div className="lg:block relative w-32 h-32 z-10" style={{ right: '-400px', top: '60px' }}>
+              <div className="lg:block absolute w-32 h-32 z-10" style={{ right: '-400px', top: '60px' }}>
                 <img 
                   src={waveGoodbyeIcon2} 
                   alt="Decorative element"
@@ -73,7 +73,7 @@ const WaveGoodbyeSection = () => {
                 />
               </div>
   
-              {/* Main heading */}
+              {/* Main heading - vertically centered */}
               <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground text-center lg:text-left lg:whitespace-nowrap flex-shrink-0">
                 Wave goodbye to
               </h2>

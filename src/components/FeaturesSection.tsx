@@ -84,7 +84,7 @@ const FeaturesSection = () => {
                   <div className="relative inline-flex h-10 w-10 sm:h-12 sm:w-12">
                     {/* Gradient Border */}
                     <div
-                      className="absolute inset-0 rounded-xl p-px"
+                      className="absolute inset-0 rounded-xl p-0.5"
                       style={{
                         background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
                       }}

@@ -24,7 +24,7 @@ const ContactSection = () => {
                 <div className="relative h-12 w-12 mr-4 mt-1">
                   {/* Gradient Border */}
                   <div
-                    className="absolute inset-0 rounded-xl p-px"
+                    className="absolute inset-0 rounded-xl p-0.5"
                     style={{
                       background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
                     }}
@@ -48,7 +48,7 @@ const ContactSection = () => {
               <div className="relative h-12 w-12 mr-4 mt-1">
                 {/* Gradient Border */}
                 <div
-                  className="absolute inset-0 rounded-xl p-px"
+                  className="absolute inset-0 rounded-xl p-0.5"
                   style={{
                     background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
                   }}
@@ -72,7 +72,7 @@ const ContactSection = () => {
               <div className="relative h-12 w-12 mr-4 mt-1">
                 {/* Gradient Border */}
                 <div
-                  className="absolute inset-0 rounded-xl p-px"
+                  className="absolute inset-0 rounded-xl p-0.5"
                   style={{
                     background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
                   }}

@@ -83,16 +83,16 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="relative group transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_25px_-5px_hsl(240_5.9%_10%_/_0.1),_0_10px_10px_-5px_hsl(240_5.9%_10%_/_0.04)]">
+          <div className="relative group transition-all duration-300 hover:-translate-y-2">
             {/* Gradient Border */}
             <div
-              className="absolute inset-0 rounded-3xl p-0.5"
+              className="absolute inset-0 rounded-3xl p-0.5 group-hover:shadow-[0_20px_25px_-5px_hsl(240_5.9%_10%_/_0.1),_0_10px_10px_-5px_hsl(240_5.9%_10%_/_0.04)]"
               style={{
                 background: 'linear-gradient(90deg, rgb(255, 47, 47) 0%, rgb(239, 123, 22) 35.8783%, rgb(138, 67, 225) 69.922%, rgb(213, 17, 253) 100%)'
               }}
             >
               {/* Form Container */}
-              <div className="bg-card rounded-3xl p-8 h-full shadow-[0_4px_6px_-1px_hsl(240_5.9%_10%_/_0.1),_0_2px_4px_-1px_hsl(240_5.9%_10%_/_0.06)]">
+              <div className="bg-card rounded-3xl p-8 h-full">
                 <h3 className="text-2xl font-bold text-foreground mb-6">Send us your query</h3>
                 
                 <form className="space-y-6">

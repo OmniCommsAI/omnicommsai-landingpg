@@ -112,9 +112,9 @@
 @layer components {
   /* Hero button variants */
   .btn-hero {
-    @apply bg-black text-white font-semibold px-8 py-4 rounded-2xl;
-    @apply hover:bg-black/90;
-    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+    @apply bg-black text-white font-semibold px-6 py-5 rounded-2xl text-lg;
+    @apply hover:bg-gray-800;
+    @apply transition-all duration-300;
   }
   
   .btn-outline-hero {

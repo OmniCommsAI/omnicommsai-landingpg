@@ -2,10 +2,8 @@ import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroDashboard from '@/assets/hero-dashboard.png';
 import heroPattern from '@/assets/hero-pattern.png';
-
 const HeroSection = () => {
-  return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
+  return <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Complex gradient background */}
       <div className="absolute inset-0 bg-[rgb(244,242,241)] overflow-hidden">
         {/* Left abstract shapes */}
@@ -49,34 +47,25 @@ const HeroSection = () => {
 
         {/* Vertical grid lines - hidden on mobile for better performance */}
         <div className="absolute inset-0 hidden sm:flex">
-          {Array.from({ length: 24 }).map((_, i) => (
-            <div 
-              key={i}
-              className="flex-1 h-full backdrop-blur-[25px] bg-gradient-to-r from-[rgba(242,240,238,0.2)] to-transparent border-r border-white/10"
-            ></div>
-          ))}
+          {Array.from({
+          length: 24
+        }).map((_, i) => <div key={i} className="flex-1 h-full backdrop-blur-[25px] bg-gradient-to-r from-[rgba(242,240,238,0.2)] to-transparent border-r border-white/10"></div>)}
         </div>
 
         {/* Bottom gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[rgb(242,240,238)] to-transparent"></div>
 
         {/* Noise overlay - reduced on mobile */}
-        <div 
-          className="absolute inset-0 opacity-50 sm:opacity-75 mix-blend-overlay"
-          style={{
-            backgroundImage: `url("${heroPattern}")`,
-            backgroundSize: '64px sm:128px',
-            backgroundRepeat: 'repeat'
-          }}
-        ></div>
+        <div className="absolute inset-0 opacity-50 sm:opacity-75 mix-blend-overlay" style={{
+        backgroundImage: `url("${heroPattern}")`,
+        backgroundSize: '64px sm:128px',
+        backgroundRepeat: 'repeat'
+      }}></div>
 
         {/* Mask */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            mask: 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(0,0,0) 37%)'
-          }}
-        ></div>
+        <div className="absolute inset-0" style={{
+        mask: 'linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(0,0,0) 37%)'
+      }}></div>
       </div>
       
       <div className="relative mx-auto max-w-7xl mt-200 px-6 lg:px-8">
@@ -85,12 +74,9 @@ const HeroSection = () => {
           <div className="inline-flex flex-col items-center text-center animate-fade-in-up">
             <div className="flex flex-col">
               <p className="text-4xl font-bold mb-2">
-                <span 
-                  className="bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage: 'linear-gradient(90deg, rgb(255, 46, 46) 0%, rgb(238, 123, 22) 36.2773%, rgb(138, 67, 225) 69.7515%, rgb(213, 16, 252) 100%)'
-                  }}
-                >
+                <span className="bg-clip-text text-transparent" style={{
+                backgroundImage: 'linear-gradient(90deg, rgb(255, 46, 46) 0%, rgb(238, 123, 22) 36.2773%, rgb(138, 67, 225) 69.7515%, rgb(213, 16, 252) 100%)'
+              }}>
                   200K+
                 </span>
               </p>
@@ -99,7 +85,9 @@ const HeroSection = () => {
           </div>
           
           {/* Main heading */}
-          <h1 className="mt-8 text-5xl font-bold tracking-tight text-foreground sm:text-7xl animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <h1 className="mt-8 text-5xl font-bold tracking-tight text-foreground sm:text-7xl animate-fade-in-up" style={{
+          animationDelay: '0.1s'
+        }}>
             AI-Powered{' '}
             <span className="text-gradient">
               Omnichannel
@@ -108,38 +96,39 @@ const HeroSection = () => {
           </h1>
           
           {/* Subtitle */}
-          <p className="mt-8 text-xl leading-8 text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <p className="mt-8 text-xl leading-8 text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{
+          animationDelay: '0.2s'
+        }}>
             Revolutionize your customer communications with OmniComms AI. Seamlessly manage conversations across all channels with intelligent automation and real-time insights.
           </p>
           
           {/* CTA Buttons */}
-          <div className="mt-10 flex items-center justify-center gap-x-6 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+          <div className="mt-10 flex items-center justify-center gap-x-6 animate-fade-in-up" style={{
+          animationDelay: '0.3s'
+        }}>
             <Button className="btn-hero group">
               Start Free Trial
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="outline" className="btn-outline-hero group">
-              <Play className="mr-2 h-4 w-4" />
-              Watch Demo
-            </Button>
+            
           </div>
           
           {/* Dashboard Preview */}
-          <div className="mt-16 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          <div className="mt-16 animate-fade-in-up" style={{
+          animationDelay: '0.4s'
+        }}>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent-dark/20 rounded-3xl blur-2xl animate-pulse"></div>
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                <img
-                  src={heroDashboard}
-                  alt="OmniComms AI Dashboard"
-                  className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
-                />
+                <img src={heroDashboard} alt="OmniComms AI Dashboard" className="w-full h-auto transform hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </div>
           
           {/* Stats */}
-          <div className="mt-20 grid grid-cols-2 gap-8 md:grid-cols-4 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+          <div className="mt-20 grid grid-cols-2 gap-8 md:grid-cols-4 animate-fade-in-up" style={{
+          animationDelay: '0.5s'
+        }}>
             <div className="text-center">
               <div className="text-3xl font-bold text-gradient">500K+</div>
               <div className="text-sm text-muted-foreground">Messages Processed</div>
@@ -159,8 +148,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;

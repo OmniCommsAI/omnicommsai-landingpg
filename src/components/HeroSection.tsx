@@ -1,6 +1,6 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroDashboard from '@/assets/hero-dashboard.png';
+// Using uploaded dashboard screenshot
 import heroPattern from '@/assets/hero-pattern.png';
 const HeroSection = () => {
   return <section className="relative pt-32 pb-20 overflow-hidden">
@@ -120,7 +120,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent-dark/20 rounded-3xl blur-2xl animate-pulse"></div>
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                <img src={heroDashboard} alt="OmniComms AI Dashboard" className="w-full h-auto transform hover:scale-105 transition-transform duration-700" />
+                <img src="/lovable-uploads/bbd270a6-888f-4f13-937e-3c142b7bdb31.png" alt="OmniComms AI Dashboard" className="w-full h-auto transform hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </div>

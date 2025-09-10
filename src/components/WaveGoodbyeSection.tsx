@@ -57,7 +57,7 @@ const WaveGoodbyeSection = () => {
           <div className="relative flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-8 w-full max-w-6xl">
             {/* Decorative elements - hidden on mobile */}
             <div className="w-auto">
-              <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
+              <div className="hidden lg:block relative -left-4 top-1/2 -translate-y-1/2 w-6 h-6 z-10">
                 <img 
                   src={waveGoodbyeIcon1} 
                   alt="Decorative wave"
@@ -65,7 +65,7 @@ const WaveGoodbyeSection = () => {
                 />
               </div>
   
-              <div className="hidden lg:block absolute left-16 -translate-y-1/2 w-32 h-32 z-10">
+              <div className="hidden lg:block relative w-32 h-32 z-10" style="right: -400px; top: 60px;">
                 <img 
                   src={waveGoodbyeIcon2} 
                   alt="Decorative element"
@@ -82,7 +82,7 @@ const WaveGoodbyeSection = () => {
             {/* Animated text container - Responsive */}
             <div className="relative flex-1 w-full max-w-[600px] lg:min-w-[400px]">
               {/* Dark overlay top */}
-              <div className="absolute inset-x-0 top-0 h-32 sm:h-16 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
+              <div className="absolute inset-x-0 top-0 h-32 sm:h-24 bg-[rgb(30,30,30)] mix-blend-saturation z-10"></div>
               
               {/* Animated text area - Responsive */}
               <div 

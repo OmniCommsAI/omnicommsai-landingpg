@@ -40,7 +40,7 @@ const LogoMarquee = () => {
               maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)'
             }}
           >
-            <div className="flex animate-scroll-horizontal gap-12 items-center">
+            <div className="flex animate-scroll-x gap-12 items-center">
               {/* First set of logos */}
               {logos.map((logo, index) => (
                 <div key={index} className="flex-shrink-0">

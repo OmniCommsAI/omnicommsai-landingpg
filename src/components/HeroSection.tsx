@@ -79,7 +79,7 @@ const HeroSection = () => {
                 <span className="bg-clip-text text-transparent" style={{
                 backgroundImage: 'linear-gradient(90deg, rgb(255, 46, 46) 0%, rgb(238, 123, 22) 36.2773%, rgb(138, 67, 225) 69.7515%, rgb(213, 16, 252) 100%)'
               }}>
-                  200K+
+                  400K+
                 </span>
               </p>
               <p className="text-sm text-foreground">Projects Managed Daily with Prismo</p>

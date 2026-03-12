@@ -61,7 +61,11 @@ find . -maxdepth 1 ! -name '.' ! -name '.git' ! -name 'dist' -exec rm -rf {} +
 echo "Copying build files to root..."
 cp -R dist/* .
 
-# Step 5: Stage, commit, and push
+# Step 5: Remove dist folder (files are now at root)
+echo "Removing dist/ folder..."
+rm -rf dist
+
+# Step 6: Stage, commit, and push
 echo "Staging changes..."
 git add -A
 
@@ -75,7 +79,7 @@ else
   git push -u origin $DEPLOY_BRANCH
 fi
 
-# Step 6: Switch back to source branch
+# Step 7: Switch back to source branch
 echo "Switching back to $SOURCE_BRANCH branch..."
 git checkout $SOURCE_BRANCH
 

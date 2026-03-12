@@ -47,6 +47,8 @@ ls -la dist/
 if git show-ref --quiet refs/heads/$DEPLOY_BRANCH; then
   echo "Switching to existing $DEPLOY_BRANCH branch..."
   git checkout $DEPLOY_BRANCH
+  echo "Pulling latest from remote..."
+  git pull origin $DEPLOY_BRANCH
 else
   echo "Creating new orphan branch $DEPLOY_BRANCH..."
   git checkout --orphan $DEPLOY_BRANCH

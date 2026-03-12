@@ -8,7 +8,7 @@ function App() {
   const [phone, setPhone] = useState('')
   const [role, setRole] = useState('')
   const [willingToPay, setWillingToPay] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(() => localStorage.getItem('omnicomms_waitlist_submitted') === 'true')
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({})
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
 
@@ -37,11 +37,42 @@ function App() {
     }
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email) return
-    /* TODO: Connect to your backend/Supabase/Mailchimp/etc */
-    setSubmitted(true)
+    if (!email || submitting) return
+    setSubmitting(true)
+    try {
+      let ip = ''
+      try {
+        const ipRes = await fetch('https://api.ipify.org?format=json')
+        const ipData = await ipRes.json()
+        ip = ipData.ip
+      } catch { /* proceed without IP */ }
+
+      await fetch(
+        'https://hybridmindset.com/wp-json/autonami/v1/webhook/?bwfan_autonami_webhook_id=1&bwfan_autonami_webhook_key=d108e68aea503a0f62a5d3e846c260c5',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            role,
+            willing_to_pay: willingToPay,
+            ip_address: ip,
+          }),
+        }
+      )
+      localStorage.setItem('omnicomms_waitlist_submitted', 'true')
+      setSubmitted(true)
+    } catch {
+      alert('Something went wrong. Please try again.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const registerRef = (id: string) => (el: HTMLElement | null) => {
@@ -523,8 +554,8 @@ function App() {
                   />
                   <span>Yes, I'm willing to pay for this</span>
                 </label>
-                <button type="submit" className="form-submit glow-btn">
-                  Request Early Access
+                <button type="submit" className="form-submit glow-btn" disabled={submitting}>
+                  {submitting ? 'Submitting...' : 'Request Early Access'}
                 </button>
               </form>
               <p className="waitlist-fine">

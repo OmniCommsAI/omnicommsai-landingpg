@@ -261,15 +261,16 @@ function App() {
               tech skills to make it more efficient. Instead, I discovered a regulated
               relationship based industry. You get one client, work on serving them for
               a while, then you have to run back to your pipeline to figure out which
-              next client is ready. I spent 5 years living this chaos — not researching
-              it, not interviewing people about it — living it. Now I'm building the
-              solution I and many other professionals desperately need now!"
+              next client is ready. I spent years living this chaos until I learned the
+              business and realized I needed to scale my capacity through automation.
+              This is difficult to do in a people based business. This is not a problem
+              that I researched, I didn't interview people about it — I'm living it."
             </p>
             <div className="founder-info">
               <div className="founder-detail">
                 <span className="founder-name">Lavon Woods</span>
                 <span className="founder-title">Founder & CEO, OmniComms AI</span>
-                <span className="founder-title">Licensed Mortgage Broker &bull; 20-Year Software Engineer</span>
+                <span className="founder-title">Licensed Mortgage Broker &bull; 25+-Year Software Engineer</span>
               </div>
             </div>
           </div>

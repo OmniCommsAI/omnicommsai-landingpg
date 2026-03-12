@@ -1,0 +1,43 @@
+# OmniComms AI
+
+> Your AI Employees. Your voice is the new interface.
+
+OmniComms AI is an autonomous, multi-modal conversational AI platform built for regulated professionals — loan officers, mortgage brokers, realtors, insurance agents, and financial advisors — whose income depends on relationships and whose license depends on documentation.
+
+## What It Does
+
+OmniComms AI acts as your AI Employee. You give it voice instructions — while driving, between meetings — and it executes: calls, texts, emails, follow-ups, scheduling, and document delivery across every communication channel with full context and a complete audit trail.
+
+- Voice-first interface: give instructions by speaking naturally
+- Omnichannel: phone, SMS, email, WhatsApp, LinkedIn, Instagram, Facebook, X, TikTok, Telegram, YouTube, Reddit
+- Persistent memory: every conversation, every channel, every client — for years
+- Human-in-the-loop: mission-critical actions require real-time approval via push notification
+- Full audit trail: every interaction logged immutably for compliance
+
+## Security
+
+- Zero Trust Master Key Architecture (Enterprise tier, planned)
+- End-to-end encryption and immutable audit logging from day one
+- Data encrypted at rest using keys only the customer controls (OpenBao vault infrastructure)
+- Server cannot decrypt or access customer data without their master key
+
+## Who Built This
+
+Founded by Lavon Woods — a licensed mortgage broker and 25+-year software engineer who left his engineering career in 2019 to help his father's mortgage business. OmniComms AI was born from firsthand experience in a regulated, relationship-driven industry where high-touch doesn't scale.
+
+## Patent
+
+Patent pending: "System and Method for Autonomous Multi-Modal Conversational AI Agent Operation Enabling Multi-Day Workflows Without Persistent Connections" — Filed November 16, 2025.
+
+## Status
+
+Currently in development. Founding beta opening soon. Accepting early access requests for 50 founding members at 50% off for life.
+
+## Contact
+
+- Website: https://landing.omnicomms.ai
+- Investor inquiries: invest@omnicomms.ai
+- LinkedIn: https://www.linkedin.com/in/lavonwoods/
+- X / Twitter: https://x.com/lavonwoods
+
+(c) 2026 OmniCommsAI Inc. All rights reserved.

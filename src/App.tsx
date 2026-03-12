@@ -9,7 +9,14 @@ function App() {
   const [role, setRole] = useState('')
   const [willingToPay, setWillingToPay] = useState(false)
   const [submitted, setSubmitted] = useState(() => localStorage.getItem('omnicomms_waitlist_submitted') === 'true')
+  const [referralEmails, setReferralEmails] = useState([''])
+  const [referralSent, setReferralSent] = useState(false)
+  const [sendingReferrals, setSendingReferrals] = useState(false)
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({})
+
+  const urlParams = useRef(new URLSearchParams(window.location.search))
+  const refParam = urlParams.current.get('ref') || ''
+  const inviteParam = urlParams.current.get('invite') || ''
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
 
   useEffect(() => {
@@ -51,28 +58,82 @@ function App() {
         ip = ipData.ip
       } catch { /* proceed without IP */ }
 
+      const nameParts = name.trim().split(/\s+/)
+      const firstName = nameParts[0] || ''
+      const lastName = nameParts.slice(1).join(' ') || ''
+
+      const formData = new URLSearchParams()
+      formData.append('first_name', firstName)
+      formData.append('last_name', lastName)
+      formData.append('email', email)
+      const digits = phone.replace(/\D/g, '')
+      const e164Phone = digits ? `+${digits.length === 10 ? '1' : ''}${digits}` : ''
+      formData.append('phone', e164Phone)
+      formData.append('role', role)
+      formData.append('willing_to_pay', willingToPay ? 'yes' : 'no')
+      formData.append('ip_address', ip)
+      formData.append('ref', refParam)
+      formData.append('invite', inviteParam)
+
       await fetch(
         'https://hybridmindset.com/wp-json/autonami/v1/webhook/?bwfan_autonami_webhook_id=1&bwfan_autonami_webhook_key=d108e68aea503a0f62a5d3e846c260c5',
         {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name,
-            email,
-            phone,
-            role,
-            willing_to_pay: willingToPay,
-            ip_address: ip,
-          }),
+          mode: 'no-cors',
+          body: formData,
         }
       )
       localStorage.setItem('omnicomms_waitlist_submitted', 'true')
+      localStorage.setItem('omnicomms_waitlist_email', email)
+      localStorage.setItem('omnicomms_waitlist_name', name)
       setSubmitted(true)
     } catch {
       alert('Something went wrong. Please try again.')
     } finally {
       setSubmitting(false)
     }
+  }
+
+  const handleReferralSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    const validEmails = referralEmails.filter((em) => em.trim())
+    if (!validEmails.length || sendingReferrals) return
+    setSendingReferrals(true)
+    try {
+      const refData = new URLSearchParams()
+      refData.append('referred_by_email', localStorage.getItem('omnicomms_waitlist_email') || email)
+      refData.append('referred_by_name', localStorage.getItem('omnicomms_waitlist_name') || name)
+      validEmails.forEach((em, i) => refData.append(`referral_email_${i + 1}`, em))
+      refData.append('referral_count', String(validEmails.length))
+
+      await fetch(
+        'https://hybridmindset.com/wp-json/autonami/v1/webhook/?bwfan_autonami_webhook_id=2&bwfan_autonami_webhook_key=b33cf856c1bb4676c21b60f366a932c3',
+        {
+          method: 'POST',
+          mode: 'no-cors',
+          body: refData,
+        }
+      )
+      setReferralSent(true)
+    } catch {
+      alert('Something went wrong. Please try again.')
+    } finally {
+      setSendingReferrals(false)
+    }
+  }
+
+  const addReferralRow = () => {
+    if (referralEmails.length >= 3) return
+    setReferralEmails([...referralEmails, ''])
+  }
+  const removeReferralRow = (i: number) => {
+    if (referralEmails.length <= 1) return
+    setReferralEmails(referralEmails.filter((_, idx) => idx !== i))
+  }
+  const updateReferralEmail = (i: number, val: string) => {
+    const updated = [...referralEmails]
+    updated[i] = val
+    setReferralEmails(updated)
   }
 
   const registerRef = (id: string) => (el: HTMLElement | null) => {
@@ -373,7 +434,7 @@ function App() {
               <p>Trained on your voice, your process, your personality. Every call, text, email redacted for sensitive information, used as context for your AI.</p>
             </div>
           </div>
-          <p className="diff-summary">They built a demo. We're building infrastructure good enough for regulated professionals.</p>
+          <p className="diff-summary">Demos are cool. We're building real world infrastructure good enough for regulated professionals.</p>
         </div>
       </section>
 
@@ -486,7 +547,7 @@ function App() {
           <img src="/logo-stacked.png" alt="OmniComms AI" className="waitlist-logo" />
           <h2 className="waitlist-headline">
             {submitted
-              ? "You're in."
+              ? "We will be in touch."
               : "Come on this journey with us, Artificial General Intelligence is here!"
             }
           </h2>
@@ -495,6 +556,42 @@ function App() {
               <p className="waitlist-success-text">
                 We'll be in touch soon. Founding members get 50% off — for life.
               </p>
+              {referralSent ? (
+                <p className="referral-thanks">Referrals sent! You'll earn credits at launch for each person who joins.</p>
+              ) : (
+                <div className="referral-section">
+                  <p className="referral-intro">
+                    Know someone who'd benefit? Share the link with friends and earn referral credits at launch.
+                  </p>
+                  <form className="referral-form" onSubmit={handleReferralSubmit}>
+                    {referralEmails.map((re, i) => (
+                      <div className="referral-row" key={i}>
+                        <input
+                          type="email"
+                          placeholder="Friend's email"
+                          value={re}
+                          onChange={(e) => updateReferralEmail(i, e.target.value)}
+                          required
+                          className="form-input"
+                        />
+                        {referralEmails.length > 1 && (
+                          <button type="button" className="referral-remove-btn" onClick={() => removeReferralRow(i)} title="Remove">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                    {referralEmails.length < 3 && (
+                      <button type="button" className="referral-add-btn" onClick={addReferralRow}>
+                        + Add another
+                      </button>
+                    )}
+                    <button type="submit" className="form-submit glow-btn" disabled={sendingReferrals}>
+                      {sendingReferrals ? 'Sending...' : 'Send Referrals'}
+                    </button>
+                  </form>
+                </div>
+              )}
             </div>
           ) : (
             <>

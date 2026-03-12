@@ -762,6 +762,75 @@
   font-weight: 300;
 }
 
+.referral-section {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.referral-intro {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.referral-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.referral-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.referral-row .form-input {
+  flex: 1;
+}
+
+.referral-remove-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.referral-remove-btn:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.referral-add-btn {
+  background: none;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.referral-add-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--text-primary);
+}
+
+.referral-thanks {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #4ade80;
+  font-weight: 400;
+}
+
 /* ========================
    FOOTER
    ======================== */

@@ -158,7 +158,7 @@ function App() {
           </p>
           <p className="section-body section-body-accent">
             Not because you don't care.<br />
-            Because high-touch doesn't scale.
+            Because high-touch doesn't scale, until NOW...
           </p>
           <p className="section-body section-body-accent">
             OmniComms AI is your leverage.

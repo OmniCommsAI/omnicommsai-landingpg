@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Hecativas';
+  src: url('/fonts/Hecativas-Regular.otf') format('opentype'),
+       url('/fonts/Hecativas-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hecativas';
+  src: url('/fonts/Hecativas-Bold.otf') format('opentype'),
+       url('/fonts/Hecativas-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Brand gradient stops from logo */
   --orange: #E8622C;

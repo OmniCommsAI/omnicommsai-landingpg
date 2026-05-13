@@ -158,13 +158,16 @@ function App() {
       {/* ===== HERO ===== */}
       <header className="hero">
         <div className="hero-inner">
-          <div className="hero-badge">Founding Beta — Now Accepting Early Access Requests</div>
           <h1 className="hero-headline">
-            Your AI Employees.<br />
-            <span className="hero-gradient-text">Your voice<br />is the new interface.</span>
+            <span className="hero-headline-row">
+              <span className="hero-headline-line">Unified Business</span>{' '}
+              <span className="hero-headline-line">Context for</span>
+            </span>
+            <span className="hero-gradient-text">AI&nbsp;Employee Execution</span>
           </h1>
+          <p className="hero-tagline">We help you scale You!</p>
           <p className="hero-sub">
-            Tell it what to do — out loud, while you're driving, between meetings.
+            Your voice becomes the new interactive user interface.
             It hears you, sees your pipeline/tasks, and acts. Calls, texts, follows up,
             schedules — like a real team member. With a full audit trail on every interaction.
           </p>
@@ -399,7 +402,7 @@ function App() {
             </div>
             <div className="diff-item diff-item-us">
               <div className="diff-label diff-label-us">OmniComms AI</div>
-              <p>Calls, texts, emails — one AI that remembers every interaction across every channel.</p>
+              <p>Calls, texts, emails — one AI that remembers every interaction across every channel. Do Not Call compliance built in.</p>
             </div>
             <div className="diff-item">
               <div className="diff-label">Everyone else</div>

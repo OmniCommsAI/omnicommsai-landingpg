@@ -1,12 +1,10 @@
 # OmniComms AI
 
-> Your AI Employees. Your voice is the new interface.
+> The first unified voice-first AI solution for autonomous AI Employees.
 
-OmniComms AI is an autonomous, multi-modal conversational AI platform built for regulated professionals — loan officers, mortgage brokers, realtors, insurance agents, and financial advisors — whose income depends on relationships and whose license depends on documentation.
+OmniComms AI is the first unified voice-first AI solution for autonomous AI Employees. It provides unified business context for autonomous AI Employee execution — built for regulated professionals (loan officers, mortgage brokers, realtors, insurance agents, financial advisors) whose income depends on relationships and whose license depends on documentation. Tagline: "We help you scale You!"
 
-## What It Does
-
-OmniComms AI acts as your AI Employee. You give it voice instructions — while driving, between meetings — and it executes: calls, texts, emails, follow-ups, scheduling, and document delivery across every communication channel with full context and a complete audit trail.
+## Capabilities
 
 - Voice-first interface: give instructions by speaking naturally
 - Omnichannel: phone, SMS, email, WhatsApp, LinkedIn, Instagram, Facebook, X, TikTok, Telegram, YouTube, Reddit
@@ -14,30 +12,119 @@ OmniComms AI acts as your AI Employee. You give it voice instructions — while 
 - Human-in-the-loop: mission-critical actions require real-time approval via push notification
 - Full audit trail: every interaction logged immutably for compliance
 
-## Security
+## AG-UI Integration — The Communications Layer for AI Agents
 
-- Zero Trust Master Key Architecture (Enterprise tier, planned)
-- End-to-end encryption and immutable audit logging from day one
-- Data encrypted at rest using keys only the customer controls (OpenBao vault infrastructure)
-- Server cannot decrypt or access customer data without their master key
+OmniComms AI is integrating with AG-UI, the open agent-to-UI protocol (originated by CopilotKit, adopted by Microsoft Agent Framework, Google ADK, AWS Bedrock, LangGraph, CrewAI, Pydantic AI, and others). Our goal: become the universal communications layer for every AI Agent on the internet — so any AI Agent built on any framework can reach a real human across phone, SMS, WhatsApp, email, or social DM with a single click.
 
-## Who Built This
+- No server setup. No hosting required. No telephony stack to assemble.
+- Bring your own agent: developers keep their own agent code, models, prompts, and orchestration — and extend it by wiring OmniComms AI in as the communication bridge/highway that pushes those interactions out into the real world (calls, texts, social messaging, email).
+- Any AG-UI-compliant agent can plug into OmniComms AI and instantly gain real-world communication channels.
+- Conversely, third-party AG-UI clients (CopilotKit dashboards, Microsoft Agent Framework UIs, custom apps) can run an OmniComms AI Employee through their own interface as a hosted agent.
+- Roadmap: outbound bridge (third-party agents dispatch via our provider stack), inbound routing (incoming channel messages forwarded to a registered third-party agent), A2A discovery (Google Agent-to-Agent), and an MCP server exposing platform capabilities as tools any LLM can call.
+- Outcome: every AG-UI developer ecosystem becomes a distribution channel for AI Employees — and every AI Agent on the internet gains a turnkey path to real human interaction.
 
-Founded by Lavon Woods — a licensed mortgage broker and 25+-year software engineer who left his engineering career in 2019 to help his father's mortgage business. OmniComms AI was born from firsthand experience in a regulated, relationship-driven industry where high-touch doesn't scale.
+## Company
 
-## Patent
-
-Patent pending: "System and Method for Autonomous Multi-Modal Conversational AI Agent Operation Enabling Multi-Day Workflows Without Persistent Connections" — Filed November 16, 2025.
-
-## Status
-
-Currently in development. Founding beta opening soon. Accepting early access requests for 50 founding members at 50% off for life.
-
-## Contact
-
+- Legal name: OmniCommsAI Inc.
+- Positioning: The first unified voice-first AI solution for autonomous AI Employees.
+- Business address: 30 N Gould St Ste R, Sheridan, WY 82801, USA
+- NAICS code: 511210 (Software Publishers) — primary for SaaS distribution
+- NAICS code: 541511 (Custom Computer Programming Services) — secondary for custom development
 - Website: https://landing.omnicomms.ai
 - Investor inquiries: invest@omnicomms.ai
-- LinkedIn: https://www.linkedin.com/in/lavonwoods/
-- X / Twitter: https://x.com/lavonwoods
+- Founder LinkedIn: https://www.linkedin.com/in/lavonwoods/
+- Founder X / Twitter: https://x.com/lavonwoods
+- Founder Threads: https://www.threads.net/@ldubbceo
+
+## Hero
+
+- Headline: Unified Business Context for AI Employee Execution
+- Tagline: We help you scale You!
+- Sub: Your voice becomes the new interactive user interface. It hears you, sees your pipeline/tasks, and acts. Calls, texts, follows up, schedules — like a real team member. With a full audit trail on every interaction.
+- Primary CTA: Request Early Access
+- Status note: Currently in development. Founding beta opening soon.
+- Channels banner: One AI. Every channel. Total context. (Phone & SMS, Twilio, Telnyx, Email, WhatsApp, LinkedIn, Instagram, Facebook, X / Twitter, TikTok, Telegram, YouTube, Reddit)
+
+## Section: The Problem
+
+- Headline: Every year, more professionals go independent.
+- Body: Becoming "Solopreneurs." Some by choice. Some because the market decided for them.
+- Body: Day one, the same two problems hit: How do I get leads? And when they come — how do I personally nurture hundreds of relationships by myself?
+- Body: You can give 5 maybe 10 people your full attention. You cannot give 500.
+- Accent: Not because you don't care. Because high-touch doesn't scale, until NOW.
+- Accent: OmniComms AI is your leverage.
+
+## Section: How It Works
+
+- Headline: Stop managing software. Start delegating.
+- Body: When you hire a human employee, you give them a phone line, standard operating procedures, restricted access to company systems, and a workspace device. Your AI Employee is no different.
+- Accent: Give it the same things — and it can hear, see what you see, and execute tasks.
+- 01 — Tell it what to do: Give instructions with your voice — while you're driving, walking into a showing, or between calls. No typing required. Just talk.
+- 02 — It sees everything: Your pipeline, your calendar, your conversations across every channel. Full context — not a blank prompt window.
+- 03 — It acts on its own: Follows up with leads. Responds to texts. Sends documents. Schedules meetings. Takes real action — not just suggestions.
+- 04 — It remembers forever: Every conversation, every channel, every client — for years. Context is never lost. And every interaction has a full audit trail.
+
+## Section: Who This Is For
+
+- Headline: If your income depends on relationships and your license depends on documentation — we built this for you.
+- Verticals: Loan Officers, Mortgage Brokers, Realtors, Insurance Agents, Financial Advisors
+- Body: Any regulated professional where a missed follow-up means lost revenue — and a missing audit trail means lost license.
+
+## Section: Founder
+
+- Lavon Woods — Founder & CEO, OmniComms AI. Licensed Mortgage Broker. 25+-year software engineer.
+- Quote: "In 2019, I left a 20-year software engineering career to help my father in his mortgage business after he lost his sight. I thought I'd apply my tech skills to make it more efficient. Instead, I discovered a regulated relationship-based industry. You get one client, work on serving them for a while, then you have to run back to your pipeline to figure out which next client is ready. I spent years living this chaos until I learned the business and realized I needed to scale my capacity through automation. This is difficult to do in a people-based business. This is not a problem that I researched, I didn't interview people about it — I'm living it."
+
+## Section: Why This Is Different
+
+- Headline: Built compliant-first. Not bolted on later.
+- Comparison rows (Everyone else vs OmniComms AI):
+  - Build the demo first. Figure out compliance later. Maybe. → Security architecture and audit infrastructure from line one of code. The demo came second.
+  - Voice-only or chat-only. No memory across channels. → Calls, texts, emails — one AI that remembers every interaction across every channel. Do Not Call compliance built in.
+  - Built by engineers who don't know your pain points nor how your industry works. → Built by a licensed broker who uses this on his own deals. His license is on the line.
+  - Session context dies when the call ends. Next interaction starts from zero. → Context carries across calls, texts, and emails — for years. Your AI never forgets a client.
+  - Fully autonomous. No guardrails. Hope for the best. → Human-in-the-loop. Mission-critical actions require your approval in real time.
+  - Generic AI voice. Sounds like every other bot on the market. → Trained on your voice, your process, your personality. Every call, text, email redacted for sensitive information, used as context for your AI.
+- Summary: Demos are cool. We're building real-world infrastructure good enough for regulated professionals.
+
+## Section: Enterprise Security — Coming Soon
+
+- Headline: Your Keys. Your Data. Zero Trust Architecture.
+- Body: Our platform is being built on a Zero Trust Master Key Architecture. Think of it like crypto — you hold the keys, not us.
+- Encrypted at Rest: All data encrypted using keys that only you control. Powered by OpenBao vault infrastructure.
+- Your Keys Required: The server cannot decrypt or access your data without your master key. We literally cannot see your information.
+- Full Audit Trail: Every interaction logged immutably. Complete chain of custody for compliance officers and regulators.
+- Note: Zero Trust Master Key Architecture is planned for our Enterprise tier. All tiers include end-to-end encryption and immutable audit logging from day one.
+
+## Section: Human In The Loop
+
+- Headline: Your AI doesn't go rogue. You stay in control.
+- Body: When your AI Employee hits a decision that matters — sending a contract, making a commitment, scheduling something irreversible — it doesn't just act.
+- Accent: It asks you first. In real time via push notification and text.
+- Flow: (1) AI identifies a mission-critical action → (2) You get a real-time prompt with full context → (3) Approve, deny, or modify — then it continues.
+- Sub: Other AI tools are fully autonomous with no guardrails. For regulated professionals, that's not a feature — it's a liability.
+
+## Section: Waitlist / Founding Beta
+
+- Headline: Come on this journey with us — Artificial General Intelligence is here!
+- Sub: We're inviting 50 professionals into our founding beta. You won't just use the product — you'll shape it. Founding members lock in 50% off for life.
+- CTA: Request Early Access
+- Form fields: Name, Email, Phone (optional), Role (Loan Officer, Mortgage Broker, Realtor, Insurance Agent, Financial Advisor, Business Owner, Service Provider, Other), willingness-to-pay confirmation.
+- Privacy: No spam. No selling your data. Just an invite when it's your turn.
+
+## Section: Patent
+
+- Status: Patent Pending — filed November 16, 2025.
+- Title: System and Method for Autonomous Multi-Modal Conversational AI Agent Operation Enabling Multi-Day Workflows Without Persistent Connections.
+- Abstract: A system and method for autonomous multi-modal conversational AI agent operation enabling agents to conduct multi-day customer workflows without persistent connections or human intervention. The system provides event-driven agent activation enabling workflows spanning arbitrary time periods; cross-platform conversational continuity enabling agent access to complete conversation history regardless of communication platform; AI-triggered modality escalation enabling autonomous transition from asynchronous to synchronous communication with context preservation; resource-efficient scalability through separation of conversational state and compute processes; and runtime capability composition enabling agent behavior modification without code deployment.
+- Field of invention: The present invention relates to autonomous conversational artificial intelligence systems for conducting complete customer workflows across multiple communication modalities and platforms without human intervention.
+
+## Section: Footer / Legal
+
+- Investor inquiries: invest@omnicomms.ai
+- Privacy: https://app.omnicomms.ai/privacy
+- Terms: https://app.omnicomms.ai/terms
+- Refund Policy: https://app.omnicomms.ai/refund-policy
+- Data Retention: https://app.omnicomms.ai/data-retention
 
 (c) 2026 OmniCommsAI Inc. All rights reserved.

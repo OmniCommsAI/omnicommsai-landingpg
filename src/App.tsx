@@ -719,6 +719,15 @@ function App() {
               </a>
             </div>
             <a href="mailto:invest@omnicomms.ai?subject=Investment%20Inquiry%20-%20OmniCommsAI" className="footer-investor-link">Investor Inquiries</a>
+            <div className="footer-legal">
+              <a href="https://app.omnicomms.ai/privacy" target="_blank" rel="noopener noreferrer" className="footer-legal-link">Privacy</a>
+              <span className="footer-legal-divider">&bull;</span>
+              <a href="https://app.omnicomms.ai/terms" target="_blank" rel="noopener noreferrer" className="footer-legal-link">Terms</a>
+              <span className="footer-legal-divider">&bull;</span>
+              <a href="https://app.omnicomms.ai/refund-policy" target="_blank" rel="noopener noreferrer" className="footer-legal-link">Refund Policy</a>
+              <span className="footer-legal-divider">&bull;</span>
+              <a href="https://app.omnicomms.ai/data-retention" target="_blank" rel="noopener noreferrer" className="footer-legal-link">Data Retention</a>
+            </div>
             <p className="footer-text">&copy; {new Date().getFullYear()} OmniCommsAI Inc. All rights reserved.</p>
           </div>
         </div>

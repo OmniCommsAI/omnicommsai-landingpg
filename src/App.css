@@ -894,6 +894,30 @@
   border-color: var(--border-accent);
 }
 
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-legal-link {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  transition: color 0.3s ease;
+}
+
+.footer-legal-link:hover {
+  color: var(--text-primary);
+}
+
+.footer-legal-divider {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  opacity: 0.5;
+}
+
 .footer-text {
   font-size: 0.8rem;
   color: var(--text-tertiary);

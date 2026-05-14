@@ -161,21 +161,24 @@ function App() {
           <h1 className="hero-headline">
             <span className="hero-headline-row">
               <span className="hero-headline-line">Unified Business</span>{' '}
-              <span className="hero-headline-line">Context for</span>
+              <span className="hero-headline-line">Communications for</span>
             </span>
             <span className="hero-gradient-text">AI&nbsp;Employee Execution</span>
           </h1>
           <p className="hero-tagline">We help you scale You!</p>
           <p className="hero-sub">
-            Your voice becomes the new interactive user interface.
-            It hears you, sees your pipeline/tasks, and acts. Calls, texts, follows up,
-            schedules — like a real team member. With a full audit trail on every interaction.
+            Use your voice to interact with your AI employees (a.k.a. agents). Give any AI agent
+            (via AG-UI/MCP) the ability to hear you, see your camera, understand your tasks, and
+            take action. OmniCommsAI gives your agent the ability to make calls, send texts or
+            emails, to follow up or initiate tasks like a real human team member. We also provide
+            a full audit trail on every interaction, and private AI model access to Claude and
+            OpenAI for regulated industries.
           </p>
           <a href="#waitlist" className="hero-cta glow-btn">
             Request Early Access
             <span className="cta-arrow">&darr;</span>
           </a>
-          <p className="hero-beta-note">Currently in development. Founding beta opening soon.</p>
+          <p className="hero-beta-note">Currently in development. Click to request access.</p>
         </div>
         <div className="hero-visualizer">
           <AudioWaveVisualizer height={90} />

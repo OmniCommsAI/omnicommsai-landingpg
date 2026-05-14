@@ -165,7 +165,7 @@ function App() {
             </span>
             <span className="hero-gradient-text">AI&nbsp;Employee Execution</span>
           </h1>
-          <p className="hero-tagline">We help you scale You!</p>
+          {/* <p className="hero-tagline">We help you scale You!</p> */}
           <p className="hero-sub">
             Use your voice to interact with your AI employees (a.k.a. agents). Give any AI agent
             (via AG-UI/MCP) the ability to hear you, see your camera, understand your tasks, and

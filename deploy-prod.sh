@@ -59,9 +59,9 @@ fi
 echo "Cleaning old deployment files..."
 find . -maxdepth 1 ! -name '.' ! -name '.git' ! -name 'dist' -exec rm -rf {} +
 
-# Step 4: Copy dist contents to root
+# Step 4: Copy dist contents to root (including dotfile dirs like .well-known)
 echo "Copying build files to root..."
-cp -R dist/* .
+cp -R dist/. .
 
 # Step 5: Remove dist folder (files are now at root)
 echo "Removing dist/ folder..."

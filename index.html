@@ -17,13 +17,33 @@
     <meta name="twitter:title" content="OmniCommsAI: Compliant AI communications for licensed professionals" />
     <!-- Compiled redesign stylesheet (Tailwind preflight + utilities + @font-face). Served from public/. -->
     <link rel="stylesheet" href="/assets/css/theme.css" />
-    <script type="module" crossorigin src="/assets/index-BbwERV8a.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Cptw7pks.css">
+    <script type="module" crossorigin src="/assets/index-B5aImV2y.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BPVNZlz4.css">
   </head>
   <body
     class="bg-ploy-background-primary text-ploy-text-primary leading-[1.6] overflow-x-hidden m-0 antialiased"
     style="font-family: Outfit, -apple-system, sans-serif;"
   >
     <div id="root"></div>
+    <!-- OmniCommsAI call widget — loaded lazily (on idle, after the main page +
+         React have mounted) so the launcher injects once the hero-visibility
+         CSS/JS is ready and never flashes bottom-right on first paint. -->
+    <script>
+      (function () {
+        function loadWidget() {
+          var s = document.createElement("script");
+          s.src = "https://api.omnicomms.ai/ai-widget/ai-widget-v1.js";
+          s.async = true;
+          s.setAttribute("data-pk", "pk_live_eo2dR_9Ylz4-XwGBb0Ll0Fz5hl3GeoOwdGo2YYP91JM");
+          s.setAttribute("data-position", "br");
+          document.body.appendChild(s);
+        }
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(loadWidget, { timeout: 2500 });
+        } else {
+          window.addEventListener("load", function () { setTimeout(loadWidget, 300); });
+        }
+      })();
+    </script>
   </body>
 </html>

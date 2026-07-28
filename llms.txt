@@ -32,6 +32,8 @@ OmniComms AI is integrating with AG-UI, the open agent-to-UI protocol (originate
 - NAICS code: 541511 (Custom Computer Programming Services) — secondary for custom development
 - Website: https://landing.omnicomms.ai
 - Investor inquiries: invest@omnicomms.ai
+- Company LinkedIn: https://www.linkedin.com/company/omnicommsai
+- Company X / Twitter: https://x.com/omnicommsai
 - Founder LinkedIn: https://www.linkedin.com/in/lavonwoods/
 - Founder X / Twitter: https://x.com/lavonwoods
 - Founder Threads: https://www.threads.net/@ldubbceo
@@ -119,12 +121,47 @@ OmniComms AI is integrating with AG-UI, the open agent-to-UI protocol (originate
 - Abstract: A system and method for autonomous multi-modal conversational AI agent operation enabling agents to conduct multi-day customer workflows without persistent connections or human intervention. The system provides event-driven agent activation enabling workflows spanning arbitrary time periods; cross-platform conversational continuity enabling agent access to complete conversation history regardless of communication platform; AI-triggered modality escalation enabling autonomous transition from asynchronous to synchronous communication with context preservation; resource-efficient scalability through separation of conversational state and compute processes; and runtime capability composition enabling agent behavior modification without code deployment.
 - Field of invention: The present invention relates to autonomous conversational artificial intelligence systems for conducting complete customer workflows across multiple communication modalities and platforms without human intervention.
 
+## Site Map / Routes
+
+The site is a single-page app served from https://omnicomms.ai/. Every route below is reachable two ways and both render the same page: the clean URL (e.g. https://omnicomms.ai/terms) is a real static file returning 200 with full content, and the hash form (https://omnicomms.ai/#/terms) is the in-app route used for internal navigation. Prefer the clean URL when fetching. Machine-readable list: https://omnicomms.ai/sitemap.xml
+
+- Home: https://omnicomms.ai/
+- Webinar registration (lead magnet, SMS web opt-in form): https://omnicomms.ai/webinar
+- Pricing: https://omnicomms.ai/pricing
+- Blog: https://omnicomms.ai/blog
+- Terms of Service (incl. Section 19, SMS Text Messaging Program): https://omnicomms.ai/terms
+- Privacy Policy (incl. Section 14, SMS / Text Messaging): https://omnicomms.ai/privacy
+- Refund Policy: https://omnicomms.ai/refund-policy
+- Data Retention: https://omnicomms.ai/data-retention
+
+## SMS Text Messaging Program (A2P 10DLC)
+
+- Program: OmniCommsAI Inc. sends account-related notifications and requested marketing messages to customers and prospects who have opted in. Messages include webinar reminders and join links, password and account-setting changes, billing notices, service maintenance alerts, and marketing material requested at registration.
+- Sending numbers: Messages may be sent from any number in the pool OmniCommsAI operates for this program; the sending number may vary. These numbers do not accept inbound voice calls.
+- Opt-in method 1 (web form): Enter a mobile number and actively check the consent checkbox (never pre-selected) at https://omnicomms.ai/#/webinar or app.omnicomms.ai.
+- Opt-in method 2 (QR code): Scan the QR code on OmniCommsAI marketing materials, which opens the same web form at https://omnicomms.ai/#/webinar.
+- Opt-in method 3 (keyword): Text an opt-in keyword to the number shown on the campaign or marketing material, then reply Y to confirm.
+- Opt-in keywords: AI, START, YES, UNSTOP
+- Verification auto-reply (sent after the keyword): "OmniCommsAI: Reply Y to confirm you want webinar reminders, product updates & account alerts. Up to 6 msgs/mo. Msg&data rates may apply. Reply HELP for help, STOP to cancel. Terms: omnicomms.ai/terms Privacy: omnicomms.ai/privacy"
+- Opt-in confirmation message (sent after Y): "OmniCommsAI: You are now opted-in to account & marketing alerts. Up to 6 msgs/mo. Msg&data rates may apply. For help, reply HELP. To opt-out, reply STOP."
+- Opt-out keywords: STOP, UNSUBSCRIBE, CANCEL, END, QUIT
+- Help keywords: HELP, INFO
+- Consent is not a condition of purchase.
+- Message frequency: Message frequency varies, up to 6 messages per month.
+- Rates: Message and data rates may apply depending on your mobile phone service plan.
+- Help: Reply HELP for help, or email support@omnicomms.ai.
+- Opt out: Reply STOP to cancel at any time.
+- Delivery: Carriers are not liable for delayed or undelivered messages.
+- Mobile information sharing: No mobile information will be sold, rented, or shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties, excluding aggregators and providers of the text message services.
+- SMS Terms: https://omnicomms.ai/#/terms (Section 19)
+- SMS Privacy disclosure: https://omnicomms.ai/#/privacy (Section 14)
+
 ## Section: Footer / Legal
 
 - Investor inquiries: invest@omnicomms.ai
-- Privacy: https://app.omnicomms.ai/privacy
-- Terms: https://app.omnicomms.ai/terms
-- Refund Policy: https://app.omnicomms.ai/refund-policy
-- Data Retention: https://app.omnicomms.ai/data-retention
+- Privacy: https://omnicomms.ai/#/privacy
+- Terms: https://omnicomms.ai/#/terms
+- Refund Policy: https://omnicomms.ai/refund-policy
+- Data Retention: https://omnicomms.ai/data-retention
 
 (c) 2026 OmniCommsAI Inc. All rights reserved.

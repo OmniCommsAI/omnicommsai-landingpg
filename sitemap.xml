@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OmniCommsAI site map.
+
+  Every route is reachable two ways and both render the same page:
+    - https://omnicomms.ai/terms   — a real static file (dist/terms/index.html,
+      emitted by scripts/prerender.mjs) that returns 200 with the full rendered
+      content to any server-side fetch.
+    - https://omnicomms.ai/#/terms — the in-app hash route, used for internal
+      navigation. Landing on the clean URL rewrites to this form in the browser.
+
+  The clean URLs are listed here because a "#" fragment is never sent to the
+  server, so hash forms are indistinguishable from "/" to a crawler. These are
+  also the addresses the pages declare as <link rel="canonical">.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://omnicomms.ai/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Lead magnet / published web + QR opt-in for A2P 10DLC campaign review -->
+  <url>
+    <loc>https://omnicomms.ai/webinar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://omnicomms.ai/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://omnicomms.ai/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal / policy pages referenced in SMS campaign registration -->
+  <url>
+    <loc>https://omnicomms.ai/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://omnicomms.ai/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://omnicomms.ai/refund-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://omnicomms.ai/data-retention</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

@@ -1,0 +1,9 @@
+# https://omnicomms.ai/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://omnicomms.ai/sitemap.xml
+
+# Plain-text content inventory for LLM/AI crawlers, including the full route
+# list and the SMS program disclosures.
+# https://omnicomms.ai/llms.txt

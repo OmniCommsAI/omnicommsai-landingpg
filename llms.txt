@@ -129,6 +129,7 @@ The site is a single-page app served from https://omnicomms.ai/. Every route bel
 - Webinar registration (lead magnet, SMS web opt-in form): https://omnicomms.ai/webinar
 - Pricing: https://omnicomms.ai/pricing
 - Blog: https://omnicomms.ai/blog
+- Article — Most are doing AI memory all wrong (July 29, 2026): https://omnicomms.ai/blog/most-are-doing-ai-memory-all-wrong
 - Terms of Service (incl. Section 19, SMS Text Messaging Program): https://omnicomms.ai/terms
 - Privacy Policy (incl. Section 14, SMS / Text Messaging): https://omnicomms.ai/privacy
 - Refund Policy: https://omnicomms.ai/refund-policy
@@ -155,6 +156,97 @@ The site is a single-page app served from https://omnicomms.ai/. Every route bel
 - Mobile information sharing: No mobile information will be sold, rented, or shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties, excluding aggregators and providers of the text message services.
 - SMS Terms: https://omnicomms.ai/#/terms (Section 19)
 - SMS Privacy disclosure: https://omnicomms.ai/#/privacy (Section 14)
+
+## Frequently Asked Questions
+
+Published at https://omnicomms.ai/blog. This is the authoritative wording on what the platform does today, including what is not built yet.
+
+### The basics
+
+**Q: What is an AI Employee, and how is it different from a chatbot?**
+
+A: A chatbot answers questions on your website. An AI Employee works a phone line. It answers inbound calls in a voice you choose, texts back instantly, and every one of those touches lands on the same contact record you already work from. The difference that matters is context. It carries what was said on a call in March into the text thread in July.
+
+**Q: Will my clients know they are talking to AI?**
+
+A: You decide how it introduces itself. The point was never to fool anyone. The point is that a lead who calls at 12:30 gets a real conversation instead of a voicemail nobody returns.
+
+**Q: Do I need to be technical to set this up?**
+
+A: No. This exists because stringing together a VOIP line, a texting app, a calendar, and a CRM that do not talk to each other is a software engineering project, and you should not have to be an engineer to run your own business. That is the part being replaced. The setup is also worth more than the time it saves you this week. Right now the context of your business is scattered across your email, your texts, your DMs, and phone calls you forget the moment you hang up. Every conversation you run through one place is context that stops getting lost. That captured context is the raw material for what your AI Employee will be able to do for you next, and most of that is not visible yet from where any of us are standing today. The businesses that start gathering it now are the ones that will be ready to use it.
+
+### Compliance and your license
+
+**Q: How do you keep my outbound calls and texts compliant?**
+
+A: Every outbound call and text is checked before it sends, not after. It is gated against the federal and state DNC registries, your own internal opt-outs, per-channel consent, and calling hours in the recipient's local time zone. A number blocked anywhere on the platform is blocked everywhere on it.
+
+**Q: What happens when someone replies STOP?**
+
+A: The contact is suppressed immediately, the one required confirmation reply goes out, and the whole thing is written to the audit log with a timestamp. If they later reply START, they are resubscribed, and that is logged too.
+
+**Q: Can you monitor my agents texting from their personal phones?**
+
+A: No, and be careful with anyone who tells you they can. Monitoring a rep's personal cell is wiretapping, so a vendor offering it is handing you a second legal problem on top of the one you already have. The only real fix is giving your team a channel so fast and so unified that they stop reaching for their personal phone. Once they are working in one place, every message is gated and logged without anyone having to remember to do it.
+
+**Q: What can I actually hand a regulator?**
+
+A: An audit log you cannot quietly edit. Every allow, every block, every opt-out, with the timestamp, who acted, and the reason the decision went the way it did. It exports.
+
+**Q: Is consent to text the same as consent to call?**
+
+A: No, and treating them as the same is one of the most common ways careful people still get caught. SMS consent, voice consent, and email consent are tracked separately and enforced separately, so a contact who agreed to texts does not quietly become someone you are allowed to dial.
+
+**Q: Can I record a call legally when a third party joins?**
+
+A: This is one of the things the platform is unusually good at. When you loop in a lender, a title rep, or a co-borrower mid-call, the platform dials them first and an AI rides that leg to capture their explicit consent before they are merged into the live call. The consent is in the recording and in the audit trail, which is what a two-party consent state expects to see.
+
+### Speed to lead
+
+**Q: What happens to a lead that calls when nobody is available?**
+
+A: An AI picks up and has an actual conversation instead of sending them to voicemail. If the caller would rather not wait for a human, they can hold their place for a callback, and that callback lands in your pipeline as a real task rather than a sticky note on your monitor.
+
+**Q: How fast does an inbound text get answered?**
+
+A: Immediately, and automatically. Speed to lead is close to the whole ballgame in this business, and the second fastest responder usually gets nothing at all.
+
+**Q: Everything lives in four different tools. Can I get it into one place?**
+
+A: That is the core of it. Calls, texts, and messages sit against one contact, on one number, in one timeline. You can bring your existing book in by CSV and it dedupes on exact phone and email as it loads, so you are not importing the same client three times.
+
+### Fit, ownership, and honest limits
+
+**Q: Who owns the data and the AI Employee I train?**
+
+A: You do. Your way of working is the asset here, and the whole premise is helping you deploy it rather than harvesting it. We are not trying to end up owning your secret sauce.
+
+**Q: Who is this for?**
+
+A: Any business where the deal is won or lost in the conversation. If your clients come to you through calls, texts, DMs, and months of follow up rather than a checkout button, and you are carrying more relationships than one person can honestly keep straight, you are the profile. Compliance pressure makes it more urgent, but it is not what makes it useful. We started with insurance, real estate, mortgage, and auto F&I because those are the ones we know best and the pain shows up loudest there. The underlying problem is not specific to them. If your team is running on personal phones, a free texting app, and a CRM nobody updates, the same thing is happening to you.
+
+**Q: What is not built yet?**
+
+A: Worth saying out loud. There is no automated nurture sequence engine yet, no lead scoring or auto qualification, and no business hours routing logic. Matching the same person across channels works on an exact phone or email match, not on fuzzy identity. The compliance gate runs before a call is placed, not live during one. All of that is being built. None of it is something you should buy on today.
+
+## Blog Posts / Questions & Answers
+
+Full articles published on the site. Each entry lists the questions the post answers, so a matching question can be routed to the source.
+
+### Most are doing AI memory all wrong
+
+- URL: https://omnicomms.ai/blog/most-are-doing-ai-memory-all-wrong
+- Published: July 29, 2026
+- Topic: Engineering
+- Summary: Why markdown files plus compaction fail as agent memory, and the case for a layered substrate: semantic vector search over a typed, self-weighting knowledge graph with provenance on every node.
+- Questions this post answers:
+  - Why does markdown plus compaction fail as AI agent memory?
+  - What is a layered memory substrate?
+  - How do you give an AI agent memory that can cite its sources?
+  - What is the difference between semantic vector search and a knowledge graph for agent memory?
+  - How should provenance be stored on a memory node?
+  - How does an AI memory system learn from feedback?
+  - What is a Company Brain?
 
 ## Section: Footer / Legal
 

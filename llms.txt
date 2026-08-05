@@ -126,24 +126,32 @@ OmniComms AI is integrating with AG-UI, the open agent-to-UI protocol (originate
 
 The site is a single-page app served from https://omnicomms.ai/. Every route is reachable two ways and both render the same page: the clean URL (e.g. https://omnicomms.ai/terms) is a real static file returning 200 with full content, and the hash form (https://omnicomms.ai/#/terms) is the in-app route used for internal navigation. Prefer the clean URL when fetching. The link sections at the end of this file list every route; a machine-readable list is at https://omnicomms.ai/sitemap.xml
 
-**SMS Text Messaging Program (A2P 10DLC)**
+**SMS Text Messaging Programs (A2P 10DLC)**
 
-- Program: OmniCommsAI Inc. sends account-related notifications and requested marketing messages to customers and prospects who have opted in. Messages include webinar reminders and join links, password and account-setting changes, billing notices, service maintenance alerts, and marketing material requested at registration.
-- Sending numbers: Messages may be sent from any number in the pool OmniCommsAI operates for this program; the sending number may vary. These numbers do not accept inbound voice calls.
-- Opt-in method 1 (web form): Enter a mobile number and actively check the consent checkbox (never pre-selected) at https://omnicomms.ai/#/webinar or app.omnicomms.ai.
-- Opt-in method 2 (QR code): Scan the QR code on OmniCommsAI marketing materials, which opens the same web form at https://omnicomms.ai/#/webinar.
-- Opt-in method 3 (keyword): Text an opt-in keyword to the number shown on the campaign or marketing material, then reply Y to confirm.
-- Opt-in keywords: AI, START, YES, UNSTOP
-- Verification auto-reply (sent after the keyword): "OmniCommsAI: Reply Y to confirm you want webinar reminders, product updates & account alerts. Up to 6 msgs/mo. Msg&data rates may apply. Reply HELP for help, STOP to cancel. Terms: omnicomms.ai/terms Privacy: omnicomms.ai/privacy"
-- Opt-in confirmation message (sent after Y): "OmniCommsAI: You are now opted-in to account & marketing alerts. Up to 6 msgs/mo. Msg&data rates may apply. For help, reply HELP. To opt-out, reply STOP."
-- Opt-out keywords: STOP, UNSUBSCRIBE, CANCEL, END, QUIT
-- Help keywords: HELP, INFO
-- Consent is not a condition of purchase.
-- Message frequency: Message frequency varies, up to 6 messages per month.
+OmniCommsAI Inc. operates two separate text messaging programs, registered as two separate A2P 10DLC campaigns, each with its own consent. Joining one does not join the other, and opting out of one does not opt out of the other.
+
+- Program 1, Account Alerts (transactional): password and security changes, account setting changes, billing and payment notices, subscription and renewal reminders, and scheduled maintenance or service disruption alerts. Sent to customers who opted in when creating an account or in their notification settings.
+- Program 1 opt-in: Enter a mobile number and actively check the account alerts consent checkbox (never pre-selected, separate from the marketing checkbox) during signup at app.omnicomms.ai, or later in notification settings. No keyword enrollment for this program.
+- Program 1 opt-in confirmation: "OmniCommsAI: You are now opted in to account alerts: password, billing & service. Up to 6 msgs/mo. Msg&data rates may apply. Reply HELP for help, STOP to cancel."
+- Program 1 help reply: "OmniCommsAI Account Alerts: Help at support@omnicomms.ai or omnicomms.ai. Msg freq varies, up to 6 msgs/mo. Msg & data rates may apply. Reply STOP to cancel."
+- Program 2, Marketing: webinar invitations, reminders and join links, new content and resources requested, product announcements, and promotional offers.
+- Program 2 opt-in method 1 (web form): Enter a mobile number and actively check the marketing consent checkbox (never pre-selected, separate from the account alerts checkbox) at https://omnicomms.ai/webinar or elsewhere on omnicomms.ai.
+- Program 2 opt-in method 2 (QR code): Scan the QR code on OmniCommsAI marketing materials, which opens the same web form at https://omnicomms.ai/webinar.
+- Program 2 opt-in method 3 (keyword): Text AI to (832) 241-8316, then reply Y to confirm.
+- Program 2 verification auto-reply (sent after the keyword): "OmniCommsAI: Reply Y to confirm you want webinar invites, product updates & offers. Up to 6 msgs/mo. Msg&data rates may apply. Reply HELP for help, STOP to cancel. Terms: omnicomms.ai/terms Privacy: omnicomms.ai/privacy"
+- Program 2 opt-in confirmation (sent after Y): "OmniCommsAI: You are now opted in to marketing & webinar alerts. Up to 6 msgs/mo. Msg&data rates may apply. Reply HELP for help, STOP to cancel."
+- Program 2 help reply: "OmniCommsAI Marketing Alerts: Help at support@omnicomms.ai or omnicomms.ai. Msg freq varies, up to 6 msgs/mo. Msg & data rates may apply. Reply STOP to cancel."
+- Marketing opt-in keyword: AI. The carrier-standard keywords START, YES, and UNSTOP resume messages on a program previously stopped, for either program.
+- Opt-out keywords (both programs): STOP, UNSUBSCRIBE, CANCEL, END, QUIT. A STOP reply applies to the program that sent the message.
+- Help keywords (both programs): HELP, INFO
+- Sending numbers: Messages may be sent from any number in the pool OmniCommsAI operates for these programs; the sending number may vary. These numbers do not accept inbound voice calls.
+- Consent is not a condition of purchase, for either program.
+- Message frequency: Message frequency varies, up to 6 messages per month per program.
 - Rates: Message and data rates may apply depending on your mobile phone service plan.
 - Help: Reply HELP for help, or email support@omnicomms.ai.
 - Opt out: Reply STOP to cancel at any time.
 - Delivery: Carriers are not liable for delayed or undelivered messages.
+- Consent records: We record which program was consented to, the exact consent language shown, the page URL, the timestamp, and the IP address, retained at least four years after the last message for TCPA recordkeeping.
 - Mobile information sharing: No mobile information will be sold, rented, or shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties, excluding aggregators and providers of the text message services.
 - SMS Terms: https://omnicomms.ai/terms (Section 19)
 - SMS Privacy disclosure: https://omnicomms.ai/privacy (Section 14)
